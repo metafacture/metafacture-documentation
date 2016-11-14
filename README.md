@@ -11,3 +11,4 @@ Here are some links to existing documentation:
 - [metafacture-ide Wiki](https://github.com/culturegraph/metafacture-ide/wiki)
 - [metafacture-examples](https://github.com/culturegraph/metafacture-examples)
 - [metafacture-java-examples](https://github.com/hbz/metafacture-java-examples)
+- [Metamorph Book (work in progress, very early version)](http://b3e.net/metamorph-book/latest/)
