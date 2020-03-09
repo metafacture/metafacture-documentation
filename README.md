@@ -8,10 +8,9 @@ Here are some links to existing documentation:
 
 - [metafacture-core README](https://github.com/culturegraph/metafacture-core/blob/master/README.md)
 - [metafacture-core Wiki](https://github.com/culturegraph/metafacture-core/wiki)
-- [metafacture-ide Wiki](https://github.com/culturegraph/metafacture-ide/wiki)
 - [metafacture-examples](https://github.com/culturegraph/metafacture-examples)
 - [metafacture-java-examples](https://github.com/hbz/metafacture-java-examples)
 - [metafacture-flux-examples](https://github.com/hbz/metafacture-flux-examples)
-- [Metafacture Workshop](http://slides.lobid.org/metafacture-workshop)
+- [Introduction to Metafacture (workshop slides)](http://slides.lobid.org/metafacture-2020)
 - [Metamorph Book (work in progress, very early version)](http://b3e.net/metamorph-book/latest/)
 - [Metamorph-Dokumentation (entstanden im Projekt linked-swissbib)](https://swissbib.gitlab.io/metamorph-doku)
