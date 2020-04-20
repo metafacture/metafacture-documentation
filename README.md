@@ -8,6 +8,7 @@ Here are some links to existing documentation:
 
 - [metafacture-core README](https://github.com/culturegraph/metafacture-core/blob/master/README.md)
 - [metafacture-core Wiki](https://github.com/culturegraph/metafacture-core/wiki)
+- [metafacture-core flux-commands](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
 - [metafacture-examples](https://github.com/culturegraph/metafacture-examples)
 - [metafacture-java-examples](https://github.com/hbz/metafacture-java-examples)
 - [metafacture-flux-examples](https://github.com/hbz/metafacture-flux-examples)
