@@ -17,3 +17,12 @@ Here is a table with links to existing documentation:
 | [Introduction to Metafacture (workshop slides)](http://slides.lobid.org/metafacture-2020) | | | | | | | |
 | [Metamorph Book (work in progress, very early version)](http://b3e.net/metamorph-book/latest/) | | | | | | | |
 | [Metamorph-Dokumentation (entstanden im Projekt linked-swissbib)](https://swissbib.gitlab.io/metamorph-doku) | | | | | | | |
+| [metafacture-fix README](https://github.com/metafacture/metafacture-fix) | | | | | | | |
+| [metafacture.github.io README](https://github.com/metafacture/metafacture.github.io/blob/main/README.md) | | | | | | | |
+| [metafacture-flux README](https://github.com/metafacture/metafacture-flux/blob/main/README.md) | | | | | | | |
+| [metafacture-playground README](https://github.com/metafacture/metafacture-playground/blob/1-setUpInitialPlayground/README.md) | | | | | | | |
+| [metafacture-xdm-plugin README](https://github.com/metafacture/metafacture-xdm-plugin/blob/master/README.adoc) | | | | | | | |
+| [metfacture-csv-plugin README](https://github.com/metafacture/metafacture-csv-plugin/blob/master/README.adoc) | | | | | | | |
+| [metafacture-xml-plugin README](https://github.com/metafacture/metafacture-xml-plugin/blob/master/README.adoc) | | | | | | | |
+| [metafacture-sorl-plugin README](https://github.com/metafacture/metafacture-solr-plugin/blob/master/README.adoc) | | | | | | | |
+| [morphviz README](https://github.com/metafacture/morphviz/blob/master/README.adoc) | | | | | | | |
