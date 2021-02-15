@@ -24,5 +24,5 @@ Here is a table with links to existing documentation:
 | [metafacture-xdm-plugin README](https://github.com/metafacture/metafacture-xdm-plugin/blob/master/README.adoc) | | | | | | | | |
 | [metfacture-csv-plugin README](https://github.com/metafacture/metafacture-csv-plugin/blob/master/README.adoc) | | | | | | | | |
 | [metafacture-xml-plugin README](https://github.com/metafacture/metafacture-xml-plugin/blob/master/README.adoc) | | | | | | | | |
-| [metafacture-sorl-plugin README](https://github.com/metafacture/metafacture-solr-plugin/blob/master/README.adoc) | | | | | | | | |
+| [metafacture-solr-plugin README](https://github.com/metafacture/metafacture-solr-plugin/blob/master/README.adoc) | | | | | | | | |
 | [morphviz README](https://github.com/metafacture/morphviz/blob/master/README.adoc) | | | | | | | | |
