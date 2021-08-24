@@ -297,7 +297,7 @@ handle-comarcxml
 handle-generic-xml
 ------------------
 - description:	A generic xml reader
-- options:	recordtagname (String)
+- options:	emitnamespace (boolean), recordtagname (String)
 - signature:	XmlReceiver -> StreamReceiver
 - java class:	org.metafacture.xml.GenericXmlHandler
 
