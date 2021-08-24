@@ -95,7 +95,7 @@ decode-aseq
 decode-csv
 ----------
 - description:	Decodes lines of CSV files. First line is interpreted as header.
-- options:	hasheader (boolean)
+- options:	hasheader (boolean), separator (String)
 - signature:	String -> StreamReceiver
 - java class:	org.metafacture.csv.CsvDecoder
 
@@ -105,9 +105,16 @@ decode-formeta
 - signature:	String -> StreamReceiver
 - java class:	org.metafacture.formeta.FormetaDecoder
 
+decode-html
+-----------
+- description:	Decode HTML to metadata events. The attrValsAsSubfields option can be used to override the default attribute values to be used as subfields (e.g. by default `link rel="canonical" href="http://example.org"` becomes `link.canonical`). It expects an HTTP-style query string specifying as key the attributes whose value should be used as a subfield, and as value the attribute whose value should be the subfield value, e.g. the default contains `link.rel=href`. To use the HTML element text as the value (instead of another attribute), omit the value of the query-string key-value pair, e.g. `title.lang`. To add to the defaults, instead of replacing them, start with an `&`, e.g. `&h3.class`
+- options:	attrvalsassubfields (String)
+- signature:	Reader -> StreamReceiver
+- java class:	org.metafacture.html.HtmlDecoder
+
 decode-json
 -----------
-- options:	recordid (String), recordcount (int), arraymarker (String), arrayname (String)
+- options:	recordid (String), recordcount (int), arraymarker (String), arrayname (String), allowcomments (boolean)
 - signature:	<unknown> -> 
 - java class:	org.metafacture.json.JsonDecoder
 
@@ -224,6 +231,12 @@ encode-xml
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.xml.SimpleXmlEncoder
 
+extract-element
+---------------
+- description:	Extracts the specified element from an HTML document
+- signature:	Reader -> String
+- java class:	org.metafacture.html.ElementExtractor
+
 filter
 ------
 - description:	Filters a stream based on a morph definition. A record is accepted if the morph returns at least one non empty value.
@@ -235,6 +248,13 @@ filter-duplicate-objects
 - description:	Filters consecutive duplicated data objects.
 - signature:	Object -> Object
 - java class:	org.metafacture.mangling.DuplicateObjectFilter
+
+filter-null-values
+------------------
+- description:	Discards or replaces null values
+- options:	replacement (String)
+- signature:	StreamReceiver -> StreamReceiver
+- java class:	org.metafacture.mangling.NullFilter
 
 filter-strings
 --------------
@@ -290,6 +310,7 @@ handle-mabxml
 handle-marcxml
 --------------
 - description:	A marc xml reader
+- options:	namespace (String)
 - signature:	XmlReceiver -> StreamReceiver
 - java class:	org.metafacture.biblio.marc21.MarcXmlHandler
 
@@ -308,6 +329,7 @@ jscript
 
 json-to-elasticsearch-bulk
 --------------------------
+- options:	idkey (String), index (String), type (String)
 - signature:	String -> String
 - java class:	org.metafacture.elasticsearch.JsonToElasticsearchBulk
 
@@ -408,14 +430,14 @@ object-tee
 object-to-literal
 -----------------
 - description:	Outputs a record containing the input object as literal
-- options:	literalname (String)
+- options:	recordid (String), literalname (String)
 - signature:	<unknown> -> StreamReceiver
 - java class:	org.metafacture.mangling.ObjectToLiteral
 
 open-file
 ---------
 - description:	Opens a file.
-- options:	encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ]
+- options:	decompressconcatenated (boolean), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ]
 - signature:	String -> Reader
 - java class:	org.metafacture.io.FileOpener
 
@@ -425,6 +447,13 @@ open-http
 - options:	encoding (String), accept (String)
 - signature:	String -> Reader
 - java class:	org.metafacture.io.HttpOpener
+
+open-oaipmh
+-----------
+- description:	Opens an OAI-PMH stream and passes a reader to the receiver. Mandatory arguments are: BASE_URL, DATE_FROM, DATE_UNTIL, METADATA_PREFIX, SET_SPEC .
+- options:	setspec (String), datefrom (String), encoding (String), dateuntil (String), metadataprefix (String)
+- signature:	String -> Reader
+- java class:	org.metafacture.biblio.OaiPmhOpener
 
 open-resource
 -------------
@@ -448,7 +477,7 @@ pass-through
 print
 -----
 - description:	Writes objects to stdout
-- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	footer (String), header (String), encoding (String), compression (String), separator (String)
 - signature:	Object -> 
 - java class:	org.metafacture.io.ObjectStdoutWriter
 
@@ -486,7 +515,7 @@ read-triples
 
 record-to-entity
 ----------------
-- options:	entityname (String), idliteralname (String)
+- options:	idliteralname (String), entityname (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	org.metafacture.mangling.RecordToEntity
 
