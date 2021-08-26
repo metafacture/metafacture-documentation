@@ -114,8 +114,9 @@ decode-html
 
 decode-json
 -----------
-- options:	recordid (String), recordcount (int), arraymarker (String), arrayname (String), allowcomments (boolean)
-- signature:	<unknown> -> 
+- description:	Decodes JSON to metadata events. The 'setRecordPath' option can be used to set a JsonPath to extract a path as JSON - or to split the data into multiple JSON documents.
+- options:	recordid (String), recordcount (int), arraymarker (String), arrayname (String), recordpath (String), allowcomments (boolean)
+- signature:	String -> StreamReceiver
 - java class:	org.metafacture.json.JsonDecoder
 
 decode-mab
