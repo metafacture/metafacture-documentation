@@ -193,7 +193,7 @@ encode-formeta
 encode-json
 -----------
 - description:	Serialises an object as JSON
-- options:	prettyprinting (boolean)
+- options:	arraymarker (String), prettyprinting (boolean)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.json.JsonEncoder
 
@@ -228,7 +228,7 @@ encode-pica
 encode-xml
 ----------
 - description:	Encodes a stream as xml
-- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), writeroottag (boolean)
+- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.xml.SimpleXmlEncoder
 
@@ -256,6 +256,13 @@ filter-null-values
 - options:	replacement (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	org.metafacture.mangling.NullFilter
+
+filter-records-by-path
+----------------------
+- description:	Splits a stream into records based on entity path
+- options:	path (String), entityseparator (String), recordidformat (String)
+- signature:	StreamReceiver -> StreamReceiver
+- java class:	org.metafacture.mangling.RecordPathFilter
 
 filter-strings
 --------------
@@ -298,7 +305,7 @@ handle-comarcxml
 handle-generic-xml
 ------------------
 - description:	A generic xml reader
-- options:	emitnamespace (boolean), recordtagname (String)
+- options:	emitnamespace (boolean), recordtagname (String), attributemarker (String), valuetagname (String)
 - signature:	XmlReceiver -> StreamReceiver
 - java class:	org.metafacture.xml.GenericXmlHandler
 
@@ -311,7 +318,7 @@ handle-mabxml
 handle-marcxml
 --------------
 - description:	A marc xml reader
-- options:	namespace (String)
+- options:	namespace (String), attributemarker (String)
 - signature:	XmlReceiver -> StreamReceiver
 - java class:	org.metafacture.biblio.marc21.MarcXmlHandler
 
@@ -397,7 +404,7 @@ merge-same-ids
 
 morph
 -----
-- description:	applies a metamorph transformation to the event stream. Metamorph definition is given in brackets.
+- description:	Applies a metamorph transformation to the event stream. Metamorph definition is given in brackets.
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	org.metafacture.metamorph.Metamorph
 
@@ -516,7 +523,7 @@ read-triples
 
 record-to-entity
 ----------------
-- options:	idliteralname (String), entityname (String)
+- options:	entityname (String), idliteralname (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	org.metafacture.mangling.RecordToEntity
 
@@ -596,7 +603,7 @@ stream-to-triples
 stream-to-xml
 -------------
 - description:	Encodes a stream as xml
-- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), writeroottag (boolean)
+- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.xml.SimpleXmlEncoder
 
