@@ -152,6 +152,13 @@ decode-xml
 - signature:	Reader -> XmlReceiver
 - java class:	org.metafacture.xml.XmlDecoder
 
+decode-yaml
+-----------
+- description:  Decodes YAML to metadata events.
+- options:      recordid (String), recordcount (int), arraymarker (String), arrayname (String)
+- signature:    String -> StreamReceiver
+- java class:   org.metafacture.yaml.YamlDecoder
+
 decouple
 --------
 - description:	creates a new thread in which subsequent flow elements run.
@@ -231,6 +238,13 @@ encode-xml
 - options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.xml.SimpleXmlEncoder
+
+encode-yaml
+-----------
+- description:  Serialises an object as YAML
+- options:      arraymarker (String), prettyprinting (boolean)
+- signature:    StreamReceiver -> String
+- java class:   org.metafacture.yaml.YamlEncoder
 
 extract-element
 ---------------
@@ -563,10 +577,10 @@ retrieve-triple-objects
 
 sort-triples
 ------------
-- description:	Sorts triples
-- options:	by [SUBJECT, PREDICATE, OBJECT, ALL], order [INCREASING, DECREASING]
-- signature:	Triple -> Triple
-- java class:	org.metafacture.triples.TripleSort
+- description:  Sorts triples. Several options can be combined, e.g. `by="object",numeric="true",order="decreasing"` will numerically sort the Object of the triples in decreasing order (given that all Objects are indeed of numeric type).
+- options:      by [SUBJECT, PREDICATE, OBJECT, ALL], numeric (boolean), order [INCREASING, DECREASING]
+- signature:    Triple -> Triple
+- java class:   org.metafacture.triples.TripleSort
 
 split-lines
 -----------
