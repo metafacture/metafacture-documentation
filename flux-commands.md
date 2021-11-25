@@ -68,7 +68,7 @@ catch-stream-exception
 
 change-id
 ---------
-- description:	By default changes the record id to the value of the '_id' literal (if present). Use the contructor to choose another literal as id source.
+- description:	By default changes the record ID to the value of the '_id' literal (if present). Use the contructor to choose another literal as ID source.
 - options:	keepidliteral (boolean), idliteral (String), keeprecordswithoutidliteral (boolean)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	org.metafacture.mangling.RecordIdChanger
@@ -94,7 +94,7 @@ decode-aseq
 
 decode-csv
 ----------
-- description:	Decodes lines of CSV files. First line is interpreted as header.
+- description:	Decodes lines of CSV files. First line may be interpreted as header.
 - options:	hasheader (boolean), separator (String)
 - signature:	String -> StreamReceiver
 - java class:	org.metafacture.csv.CsvDecoder
@@ -154,10 +154,10 @@ decode-xml
 
 decode-yaml
 -----------
-- description:  Decodes YAML to metadata events.
-- options:      recordid (String), recordcount (int), arraymarker (String), arrayname (String)
-- signature:    String -> StreamReceiver
-- java class:   org.metafacture.yaml.YamlDecoder
+- description:	Decodes YAML to metadata events.
+- options:	recordid (String), recordcount (int), arraymarker (String), arrayname (String)
+- signature:	String -> StreamReceiver
+- java class:	org.metafacture.yaml.YamlDecoder
 
 decouple
 --------
@@ -221,7 +221,7 @@ encode-marc21
 encode-marcxml
 --------------
 - description:	Encodes a stream into MARCXML.
-- options:	xmlversion (String), formatted (boolean), xmlencoding (String)
+- options:	emitnamespace (boolean), xmlversion (String), formatted (boolean), xmlencoding (String)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.biblio.marc21.MarcXmlEncoder
 
@@ -241,10 +241,10 @@ encode-xml
 
 encode-yaml
 -----------
-- description:  Serialises an object as YAML
-- options:      arraymarker (String), prettyprinting (boolean)
-- signature:    StreamReceiver -> String
-- java class:   org.metafacture.yaml.YamlEncoder
+- description:	Serialises an object as YAML
+- options:	arraymarker (String), prettyprinting (boolean)
+- signature:	StreamReceiver -> String
+- java class:	org.metafacture.yaml.YamlEncoder
 
 extract-element
 ---------------
@@ -280,7 +280,7 @@ filter-records-by-path
 
 filter-strings
 --------------
-- description:	Only forwards records which match (or do not match) a regular expression given in the constructor
+- description:	Only forwards records which match (or do not match) a regular expression.
 - options:	passmatches (boolean)
 - signature:	String -> String
 - java class:	org.metafacture.strings.StringFilter
@@ -499,7 +499,7 @@ pass-through
 print
 -----
 - description:	Writes objects to stdout
-- options:	footer (String), header (String), encoding (String), compression (String), separator (String)
+- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
 - signature:	Object -> 
 - java class:	org.metafacture.io.ObjectStdoutWriter
 
@@ -532,7 +532,8 @@ read-string
 
 read-triples
 ------------
-- signature:	<unknown> -> 
+- description:	Reads triples
+- signature:	String -> Triple
 - java class:	org.metafacture.triples.TripleReader
 
 record-to-entity
@@ -556,7 +557,7 @@ remodel-pica-multiscript
 
 reorder-triple
 --------------
-- description:	Shifts subjectTo predicateTo and object around
+- description:	Shifts subjectTo predicateTo and objectTo around
 - options:	subjectfrom [SUBJECT, PREDICATE, OBJECT], objectfrom [SUBJECT, PREDICATE, OBJECT], predicatefrom [SUBJECT, PREDICATE, OBJECT]
 - signature:	Triple -> Triple
 - java class:	org.metafacture.triples.TripleReorder
@@ -577,10 +578,10 @@ retrieve-triple-objects
 
 sort-triples
 ------------
-- description:  Sorts triples. Several options can be combined, e.g. `by="object",numeric="true",order="decreasing"` will numerically sort the Object of the triples in decreasing order (given that all Objects are indeed of numeric type).
-- options:      by [SUBJECT, PREDICATE, OBJECT, ALL], numeric (boolean), order [INCREASING, DECREASING]
-- signature:    Triple -> Triple
-- java class:   org.metafacture.triples.TripleSort
+- description:	Sorts triples. Several options can be combined, e.g. `by="object",numeric="true",order="decreasing"` will numerically sort the Object of the triples in decreasing order (given that all Objects are indeed of numeric type).
+- options:	by [SUBJECT, PREDICATE, OBJECT, ALL], numeric (boolean), order [INCREASING, DECREASING]
+- signature:	Triple -> Triple
+- java class:	org.metafacture.triples.TripleSort
 
 split-lines
 -----------
@@ -628,7 +629,7 @@ string-list-map-to-stream
 
 template
 --------
-- description:	Builds a String from a template and an Object. Provide template in brackets. ${o} marks the place where the object is to be inserted. If the object in an instance of Triple ${s}, ${p} and ${o} are used instead
+- description:	Builds a String from a template and an Object. Provide template in brackets. ${o} marks the place where the object is to be inserted. If the object is an instance of Triple ${s}, ${p} and ${o} are used instead.
 - signature:	Object -> String
 - java class:	org.metafacture.formatting.ObjectTemplate
 
@@ -660,7 +661,7 @@ write
 -----
 - description:	Writes objects to stdout or a file
 - arguments:	[stdout, PATH]
-- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	footer (String), header (String), encoding (String), compression (String), separator (String)
 - signature:	Object -> Void
 - java class:	org.metafacture.io.ObjectWriter
 
