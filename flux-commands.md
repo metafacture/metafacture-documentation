@@ -241,7 +241,7 @@ encode-xml
 
 encode-yaml
 -----------
-- description:	Serialises an object as YAML
+- description:	Serialises an object as YAML. The paramter 'prettyprinting (boolean)' is deprecated since it's not possible to not pretty print.
 - options:	arraymarker (String), prettyprinting (boolean)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.yaml.YamlEncoder
