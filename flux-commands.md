@@ -629,7 +629,7 @@ string-list-map-to-stream
 
 template
 --------
-- description:	Builds a String from a template and an Object. Provide template in brackets. ${o} marks the place where the object is to be inserted. If the object is an instance of Triple ${s}, ${p} and ${o} are used instead.
+- description:	Builds a String from a template and an Object. Provide template in brackets. `${o}` marks the place where the object is to be inserted. If the object is an instance of Triple `${s}`, `${p}` and `${o}` are used instead.
 - signature:	Object -> String
 - java class:	org.metafacture.formatting.ObjectTemplate
 
@@ -661,7 +661,7 @@ write
 -----
 - description:	Writes objects to stdout or a file
 - arguments:	[stdout, PATH]
-- options:	footer (String), header (String), encoding (String), compression (String), separator (String)
+- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
 - signature:	Object -> Void
 - java class:	org.metafacture.io.ObjectWriter
 
