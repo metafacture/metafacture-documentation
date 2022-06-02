@@ -54,7 +54,7 @@ merged into the master branch, generate a new flux-commands.md like this:
 
 Go to metafacture-core, checkout master and build a distribution and start flux.sh:
 ```bash
-$ ./gradlew installDist`
+$ ./gradlew installDist
 $ cd ./metafacture-runner/build/install/metafacture-core/
 $ flux.sh > flux-commands.md
 ```
