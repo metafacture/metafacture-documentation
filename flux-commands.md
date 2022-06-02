@@ -242,7 +242,7 @@ encode-xml
 encode-yaml
 -----------
 - description:	Serialises an object as YAML
-- options:	arraymarker (String), prettyprinting (boolean)
+- options:	arraymarker (String)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.yaml.YamlEncoder
 
