@@ -127,7 +127,7 @@ decode-mab
 
 decode-marc21
 -------------
-- description:	Decodes MARC 21 records
+- description:	Decodes MARC 21 records (UTF-8 encoding expected).
 - options:	emitleaderaswhole (boolean), ignoremissingid (boolean)
 - signature:	String -> StreamReceiver
 - java class:	org.metafacture.biblio.marc21.Marc21Decoder
