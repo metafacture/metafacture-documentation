@@ -115,7 +115,7 @@ decode-html
 decode-json
 -----------
 - description:	Decodes JSON to metadata events. The 'recordPath' option can be used to set a JsonPath to extract a path as JSON - or to split the data into multiple JSON documents.
-- options:	recordid (String), recordcount (int), arraymarker (String), arrayname (String), recordpath (String), allowcomments (boolean)
+- options:	recordid (String), recordcount (int), booleanmarker (String), arraymarker (String), arrayname (String), recordpath (String), allowcomments (boolean), numbermarker (String)
 - signature:	String -> StreamReceiver
 - java class:	org.metafacture.json.JsonDecoder
 
@@ -200,7 +200,7 @@ encode-formeta
 encode-json
 -----------
 - description:	Serialises an object as JSON
-- options:	arraymarker (String), prettyprinting (boolean)
+- options:	booleanmarker (String), arraymarker (String), prettyprinting (boolean), numbermarker (String)
 - signature:	StreamReceiver -> String
 - java class:	org.metafacture.json.JsonEncoder
 
@@ -465,8 +465,8 @@ open-file
 
 open-http
 ---------
-- description:	Opens a http resource. Supports the setting of Accept and Accept-Charset as http header fields.
-- options:	encoding (String), accept (String)
+- description:	Opens an HTTP resource. Supports setting HTTP header fields `Accept`, `Accept-Charset` and `Content-Type`, as well as generic headers (separated by `\n`). Defaults: request `method` = `GET`, request `url` = `@-` (input data), request `body` = `@-` (input data) if request method supports body and input data not already used, `Accept` header = `*/*`, `Accept-Charset` header (`encoding`) = `UTF-8`, `errorPrefix` = `ERROR: `.
+- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], header (String), encoding (String), body (String), url (String), contenttype (String), accept (String), errorprefix (String)
 - signature:	String -> Reader
 - java class:	org.metafacture.io.HttpOpener
 
