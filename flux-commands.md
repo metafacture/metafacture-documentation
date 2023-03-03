@@ -651,6 +651,13 @@ triples-to-stream
 - signature:	Triple -> StreamReceiver
 - java class:	org.metafacture.triples.TriplesToStream
 
+validate-json
+-------------
+- description:	Validate JSON against a given schema, send only valid input to the receiver. Pass the schema location to validate against. Write valid and/or invalid output to locations specified with `writeValid` and `writeInvalid`. Set the JSON key for the record ID value with `idKey` (for logging output, defaults to `id`).
+- options:	idkey (String), writeinvalid (String), writevalid (String)
+- signature:	String -> String
+- java class:	org.metafacture.json.JsonValidator
+
 wait-for-inputs
 ---------------
 - description:	
@@ -661,13 +668,13 @@ write
 -----
 - description:	Writes objects to stdout or a file
 - arguments:	[stdout, PATH]
-- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
 - signature:	Object -> Void
 - java class:	org.metafacture.io.ObjectWriter
 
 write-files
 -----------
-- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
 - signature:	Object -> 
 - java class:	org.metafacture.io.ObjectFileWriter
 
