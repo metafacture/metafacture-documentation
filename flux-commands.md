@@ -190,6 +190,13 @@ draw-uniform-sample
 - signature:	Object -> Object
 - java class:	org.metafacture.statistics.UniformSampler
 
+encode-csv
+----------
+- description:	Encodes each value in a record as a csv row.
+- options:	includeheader (boolean), noquotes (boolean), separator (String), includerecordid (boolean)
+- signature:	StreamReceiver -> String
+- java class:	org.metafacture.csv.CsvEncoder
+
 encode-formeta
 --------------
 - description:	Encodes streams in formeta format.
