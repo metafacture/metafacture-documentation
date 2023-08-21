@@ -1,20 +1,23 @@
+![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
+
+# Flux User Guide
+
 This document provides a quick introduction to Metafacture Flux, a domain specific language to build data flows for metadata processing.
 The Flux makes use of Metafacture as a stand-alone application - so you build workflows without the need of writing java code.
 
 
+## Installing Flux and Running Flux
 
-# Installing Flux and Running Flux
+## There are different ways of installing and running Metafacture FLUX
+### Stand-alone application (without Java Code)
 
-# There are different ways of installing and running Metafacture FLUX
-## Stand-alone application (without Java Code)
-
-Either use a prebuild distribution by unziping the Metafacture distribution archive. With regard of using FIX we advise to use the Runner provided by the Metafacture Fix repo. See  [releases page](https://github.com/metafacture/metafacture-fix/releases)
+Either use a prebuild distribution by unziping the Metafacture distribution archive. With regard of using FIX we advise to use the Runner provided by the Metafacture Fix repo. See [releases page](https://github.com/metafacture/metafacture-fix/releases)
 
 Then execute the script `flux.sh` or `flux.bat` in the unzipped `bin/` folder.
 
-## More elaborate ways for developers:
+### More elaborate ways for developers:
 
-### Build from local distribution
+#### Build from local distribution
 Check out the repo to build a certain branch and roll your own local distribution like this:
 ```bash
 $ cd metafacture-core; ./gradlew installDist
@@ -22,11 +25,11 @@ $ cd metafacture-core; ./gradlew installDist
 
 Then go to `metafacture-core/metafacture-runner/build/install/metafacture-core` and execute the `flux.*` there.
 
-### Working with the Java source code 
+#### Working with the Java source code 
 
 If you are working with the source code directly, execute the class `org.metafacture.runner.Flux`.
 
-## Run a Flux-File
+### Run a Flux-File
 
 Just provide the flux file you wish to run as first argument.
 
@@ -34,14 +37,14 @@ Just provide the flux file you wish to run as first argument.
 $> flux.sh FILE.flux
 ```
 
-## Provide Arguments
+### Provide Arguments
 To provide arguments add variable assignments after the first argument as follows:
 ```bash
 $> flux.sh FILE.flux var1=value1 var2=value2
 ```
 This sets the variable `var1` to the value 'value1' and `var2` to the value 'value2'.
 
-# Writing Flux files
+## Writing Flux files
 The following snippet shows a simple flux file:
 ```c
 //declare variables
@@ -57,23 +60,13 @@ file
 | write("stdout")
 ;
 ```
-In the first section variables are declared, in the second, we define the flow.
-Linebreaks are optional. Semicolons `;` mark the end of a variable assignment or flow definition. 
+In the first section [variables](#variables) are declared, in the second, we [define the flow](#flow-definitions).
+A flow is a combination of different [FLUX commands. Here is a list to all available Flux-Commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
 
-[List of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
+Linebreaks are optional, but help concerning readability. One can add comments with `//`.
+Semicolons `;` mark the end of a variable assignment or flow definition. 
 
-## Variables
-Variables are always Strings and can be concatenated with the `+` operator. Escape sequences follow the Java String conventions: `\n`=line break, `\t`=tab, `\\`=\, `\u0024`=unicode character, etc.
-
-The `default` keyword tells Flux to assign the respective value _only_ if the variable has 
-not yet been set on the command line. Without `default`, previous assignments will be overwritten.
-
-Paths are always relative to the directory within which the flux command is executed. To address files relative to the location of the executed flux file, use the predefined `FLUX_DIR` variable.
-
-## Comments
-Flux supports single line C/Java-style comments: `//comment`.
-
-## Flow Definitions
+### Flow Definitions
 
 A FLUX contains multiple command-moduls that are doing specific things. E.g.:
 
@@ -102,6 +95,16 @@ Note that unlike shell pipes, the data flowing between Flux commands is _typed_.
 
 To lookup the signatures, execute Flux without arguments or see: [[Metafix-User-Guide#parameters-to-metafix-definitions]]). It will list all available commands, including signatures.
 
+### Variables
+Variables are always Strings and can be concatenated with the `+` operator. Escape sequences follow the Java String conventions: `\n`=line break, `\t`=tab, `\\`=\, `\u0024`=unicode character, etc.
+
+The `default` keyword tells Flux to assign the respective value _only_ if the variable has 
+not yet been set on the command line. Without `default`, previous assignments will be overwritten.
+
+Paths are always relative to the directory within which the flux command is executed. To address files relative to the location of the executed flux file, use the predefined `FLUX_DIR` variable.
+
+### Comments
+Flux supports single line C/Java-style comments: `//comment`.
 
 
 ## Getting Help and Inspiration (TODO: Ersetzen.)
@@ -110,6 +113,9 @@ To lookup the signatures, execute Flux without arguments or see: [[Metafix-User-
 
 _________________________
 # For developers: 
+
+> [!NOTE]
+> Coding in JAVA.
 
 ## Adding new Commands
 Add your class and a descriptive flux shortcut to `flux-commands.properties`. This file acts as a lookup table for flux commands. Use the proper file, i.e. the one residing in the same module where your newly created class resides. If you have e.g. created a class in the module `metafacture-biblio`, you add the flux-command to https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/resources/flux-commands.properties.

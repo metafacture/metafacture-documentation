@@ -1,7 +1,14 @@
+![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
+
+# Framework User Guide
+
+> [!NOTE]
+>Relevant for JAVA developers. For using metafacture without JAVA Code see the [FLUX user guide](/Flux-User-Guide.md).
+
 This page explains how to create a Metafacture objects and how to assemble them to form a processing pipeline. We use as an example a simple pipeline containing a Metamorph instance.
 
 
-# Building a Flow
+## Building a Flow
 
 A Flow consists of a data source, an arbitrary number of pipe elements and finally a data sink.
 The individual elements are connected by calling the `setReceiver()` method. The following code snipped shows an example.
@@ -42,11 +49,11 @@ reader.setReceiver(splitter).setReceiver("Tn", writer1);
 splitter.setReceiver("Tp", writer2);
 ```
 
-# Piping different Objects
+## Piping different Objects
 
 
 
-# Objects as Eventstream
+### Objects as Eventstream
 
 ```java
 public interface StreamSender {
@@ -64,7 +71,7 @@ public interface StreamReceiver {
 }
 ```
 
-# Error Handling
+### Error Handling
 If an exception occurs during the processing of a stream of records, it is back
 propagated to the first element in the chain. This normally means that
 processing is terminated which may not be the preferred action. Imagine

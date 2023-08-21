@@ -1,10 +1,13 @@
+![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
+
+# Fix User Guide
+
 This document provides an introduction to the Metafacture Fix language (short: Metafix or Fix). Fix is a declarative flow oriented language in which transformations of arbitrary metadata/semi-structured data can be defined using the FIX language. The  Fix language for Metafacture is introduced as an alternative to configuring data transformations with Metamorph. Inspired by Catmandu Fix, Metafix processes metadata not as a continuous data stream but as discrete records. The basic idea is to rebuild constructs from the (Catmandu) Fix language like functions, selectors and binds in Java and combine with additional functionalities from the Metamorph toolbox.
 
 ## Part of a metafacture worflow
 Metafacture Fix is a transformation module that can be used in a workflow, for this you have to use this in your pipeline:
-- when using the FLUX: 
-- - address the `fix`-module
-- - 
+
+Flux-Example:
 ```PERL
    infile
    | open-file
@@ -14,7 +17,10 @@ Metafacture Fix is a transformation module that can be used in a workflow, for t
    | encode-json
    | print
    ;
-   ```
+```
+
+- when using the FLUX: 
+- - address the `fix`-module
 - - you can add variables
 - - there are some optiones available
 - - The fix-Transformation can be part of the FLUX `|fix("retain(`245??`)")` - usually useful for short fixes
@@ -71,16 +77,17 @@ end
 **Selectors** can be used as hghlevel filter to filter the records you want.
 
 **Binds** are wrappers for one or more fixes. They give extra control functionality for fixes such as loops.
-All binds have the syntax:
+All binds have the same syntax:
+
 ```PERL
 do Bind(params,…)
    fix(..)
    fix(..)
 end
-``````
+```
 
-For a list of all function, selectors, binds and conditionals have a look at:
-https://github.com/metafacture/metafacture-core/wiki#functions-and-cookbook
+Find here a [list of all function, selectors, binds and conditionals](/Fix-function-and-Cookbook.md).
+
 
 ## Addressing Pieces of Data - of: FIX-Path and the record structure in FIX
 
@@ -88,11 +95,11 @@ Internally FIX knows arrays, objects/hashes and simple elements. How a format is
 
 Since function manipulate, add or remove elements in a record, it is essential to understand the way on can adress source or target elements.
 
-[e.g.:
+e.g.:
 ```PERL
 copy_field("<sourceField>", "<targetField>")
 ```
-]
+
 To adress the source or target element here, you need to provide the path to the element.
 Metafacture Fix is using a path-syntax that is JSON Path like but not identical. It also uses the dot notation but there are some differences with the path structure of arrays and repeated fields. Especially when working with JSON, YAML or records repeated fields.
 
@@ -145,7 +152,7 @@ z :
 To adress paths you can use wildcards. For instance the star-wildcard: `person*` would match all simple literals with element names starting with 'person': 'person\_name', 'person\_age', etc.
 Apart from the star-wildcard, the questionmark-wildcard ('?') is supported. It matches exactly one arbitrary character.
 
-Not yet supported is alteration.
+Not fully supported yet is alteration of pathes.
 
 Besides path wildcards there are array/list wildcards that are used to refrence specific elements or all elements in an array. `g[].*` adresses all strings in the array `g[]`. `g[].$append` would refrence a new element in the array at the end of the array. `g[].$last` refrences the last element in an array.
 
@@ -190,6 +197,35 @@ call_macro("concat-up", source_field:"data2", target_field:"Data2")
 In this case `target_field` and `source_field` serve as a parameter (the name is arbitrary). In the macro definition itsel, the parameters are addressed by `$[target_field]` and `$[source_field]`. 
 
 Parameters are scoped, which means that the ones provided with the `call_macro` function shadow global ones. Macros cannot be nested.
+
+## Parameters to Metamorph Definitions / Using variables
+
+Fix definitions may contain parameters. They follow the pattern `$[NAME]`:
+
+```perl
+add_field("rights","$[rights]")
+```
+
+`$[rights]` in this case is a compile-time variable which is evaluated on
+creation of the respective Fix object.
+
+The `<vars>` section in the Metamorph definition can be used to set defaults:
+
+```xml
+<vars>
+   <var name="rights" value="CC0" />
+</vars>
+```
+
+For Java implementations: Compile-time variable are passed to Fix as a constructor parameter.
+
+```java
+final Map<String, String> vars = new HashMap<String, String>();
+vars.put("rights", "CC-0");
+
+final Metafix metafix = new metafix("fixdef.fix", vars);
+```
+
 
 
 ## Splitting Fixes for Reuse
