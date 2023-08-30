@@ -154,7 +154,7 @@ Apart from the `*` wildcard, the `?` wildcard is supported. It matches exactly o
 
 Not fully supported yet is alteration of pathes.
 
-Besides path wildcards there are array/list wildcards that are used to refrence specific elements or all elements in an array. `g[].*` adresses all strings in the array `g[]`. `g[].$append` would refrence a new element in the array at the end of the array. `g[].$last` refrences the last element in an array.
+Besides path wildcards there are array/list wildcards that are used to reference specific elements or all elements in an array. `g[].*` addresses all strings in the array `g[]`. `g[].$append` would reference a new element in the array at the end of the array. `g[].$last` references the last element in an array.
 
 ## Cleaning up the transformation
 
