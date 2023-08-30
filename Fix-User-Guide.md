@@ -194,7 +194,7 @@ call_macro("concat-up", source_field:"data1", target_field:"Data1")
 call_macro("concat-up", source_field:"data2", target_field:"Data2")
 ``````
 
-In this case `target_field` and `source_field` serve as a parameter (the name is arbitrary). In the macro definition itsel, the parameters are addressed by `$[target_field]` and `$[source_field]`. 
+In this case `target_field` and `source_field` serve as a parameter (the name is arbitrary). In the macro definition itself, the parameters are addressed by `$[target_field]` and `$[source_field]`. 
 
 Parameters are scoped, which means that the ones provided with the `call_macro` function shadow global ones. Macros cannot be nested.
 
