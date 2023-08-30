@@ -233,7 +233,7 @@ final Metafix metafix = new metafix("fixdef.fix", vars);
 In a complex project setting there may be several Fixes in use,
 and it is likely that they share common parts. Imagine for instance a
 transformations from Marc 21 records holding data on books to RDF, and Marc 21
-records hodling data on authors to RDF. Both make use of a table assinging
+records holding data on authors to RDF. Both make use of a table assigning
 country names to ISO country codes. Such a table should only exist once. 
 
 Another scenario would be to reduce the size of a single fix file and create several fix files used for different purposes.
