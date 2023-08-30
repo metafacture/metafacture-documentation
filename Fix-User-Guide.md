@@ -89,7 +89,7 @@ end
 Find here a [list of all functions, selectors, binds and conditionals](/Fix-function-and-Cookbook.md).
 
 
-## Addressing Pieces of Data - of: FIX-Path and the record structure in FIX
+## Addressing Pieces of Data: FIX-Path and the record structure in FIX
 
 Internally FIX knows arrays, objects/hashes and simple elements. How a format is translated depends on the `decode-...` command in the MF Workflow. Only one thing is specific to the fix, as in Catmandu: a repeated field is translated into a list depending on the real input data of the single record. Elements with the suffix `[]` are interpreted as arrays.
 
