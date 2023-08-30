@@ -93,7 +93,7 @@ To some commands the entire environment can be given as an argument. This is don
 
 Note that unlike shell pipes, the data flowing between Flux commands is _typed_. This means that only commands with matching signatures can be combined. Commands expect a certain input and provide a certain output like: `StreamReceiver, `Object`, `Reader` and others.
 
-To lookup the signatures, execute Flux without arguments or see: [[Metafix-User-Guide#parameters-to-metafix-definitions]]). It will list all available commands, including signatures.
+To lookup the signatures, again: execute Flux without arguments or see: [[Metafix-User-Guide#parameters-to-metafix-definitions]]). It will list all available commands, including signatures. Or simply have a look at the  [list of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
 
 ### Variables
 Variables are always Strings and can be concatenated with the `+` operator. Escape sequences follow the Java String conventions: `\n`=line break, `\t`=tab, `\\`=\, `\u0024`=unicode character, etc.
