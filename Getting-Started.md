@@ -37,7 +37,7 @@ TODO: For instance, if you want to use Metamorph in your project, simply add the
 ```xml
 <dependency>
     <groupId>org.metafacture</groupId>
-    <artifactId>metamorph</artifactId>
+    <artifactId>metafacture-io</artifactId>
     <version>$VERSION</version>
 </dependency>
 ```
