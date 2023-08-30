@@ -86,7 +86,7 @@ do Bind(params,…)
 end
 ```
 
-Find here a [list of all function, selectors, binds and conditionals](/Fix-function-and-Cookbook.md).
+Find here a [list of all functions, selectors, binds and conditionals](/Fix-function-and-Cookbook.md).
 
 
 ## Addressing Pieces of Data - of: FIX-Path and the record structure in FIX
