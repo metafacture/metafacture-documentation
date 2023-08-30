@@ -74,7 +74,7 @@ end
 
 **Conditionals** are used to control the processing of function so that they are not process with every workflow but only under certain conditions.
 
-**Selectors** can be used as hghlevel filter to filter the records you want.
+**Selectors** can be used to filter the records you want.
 
 **Binds** are wrappers for one or more fixes. They give extra control functionality for fixes such as loops.
 All binds have the same syntax:
