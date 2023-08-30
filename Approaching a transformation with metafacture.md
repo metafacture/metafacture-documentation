@@ -1,4 +1,4 @@
-Every approach transform metadata with metafacture is quite similiar:
+Every approach to transform metadata with metafacture is quite similiar:
 
 - You need to know what you want:
 	e.g. Transform data from Marc21 from a certain folder to some kind of JSON Data.
