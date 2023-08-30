@@ -15,7 +15,7 @@ For next steps get familar with [FLUX](/Flux-User-Guide.md) and [FIX](/Fix-User-
 
 ## Command line
 
-To use Metafacture as a command-line tool, download the latest metafix-runner from our [releases page](https://github.com/metafacture/metafacture-fix/releases). Extract the downloaded archive and change into the newly created directory (e.g. `cd metafacture-runner-0.5.1`). Run a Flux workflow with:
+To use Metafacture as a command-line tool, download the latest metafix-runner from our [releases page](https://github.com/metafacture/metafacture-fix/releases). Extract the downloaded archive and change into the newly created directory (e.g. `cd metafacture-runner-0.6.1`). Run a Flux workflow with:
 
 `$ ./bin/metafix-runner /path/to/your.flux` on Unix/Linux/Mac or
 `$ ./bin/metafix-runner.bat /path/to/your.flux` on Windows.
@@ -50,7 +50,7 @@ dependencies {
 }
 ```
 
-To use Fix you would declare `metafix` instead of `metafacture-io` in the example above. Note that `metafix` is not published to maven central but only to [github releases](https://github.com/metafacture/metafacture-fix/releases).
+To use Fix you would declare `metafix` instead of `metafacture-io` as in the example above. Note that `metafix` is not published to maven central but only to [github releases](https://github.com/metafacture/metafacture-fix/releases).
 
 Occasionally, we publish snapshot builds on [Sonatype OSS Repository](https://oss.sonatype.org/index.html#nexus-search;gav~org.metafacture~~~~~kw,versionexpand). The version number is derived from the branch name. Snapshot builds from the master branch always have the version `master-SNAPSHOT`. We also provide sometimes pre releases as github packages.
 

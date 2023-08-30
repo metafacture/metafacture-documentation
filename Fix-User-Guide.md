@@ -5,7 +5,7 @@
 This document provides an introduction to the Metafacture Fix language (short: Metafix or Fix). The Fix language for Metafacture is introduced as an alternative to configuring data transformations with Metamorph. Inspired by Catmandu Fix, Metafix processes metadata not as a continuous data stream but as discrete records.
 
 ## Part of a metafacture worflow
-Metafacture Fix is a transformation module that can be used in a workflow, for this you have to use this in your pipeline:
+Metafacture Fix is a transformation module that can be used in a [Flux Workflow](/Flux-User-Guide.md), for this you have to use this in your pipeline:
 
 Flux-Example:
 ```PERL
@@ -22,15 +22,14 @@ Flux-Example:
 - when using the FLUX: 
 - - address the `fix`-module
 - - you can add variables
-- - there are some optiones available
 - - The Fix transformation can be part of the FLUX `|fix("retain(`245??`)")` - usually useful for short fixes
 - - or it can be separated in an external file, that is called in the FLUX-Process as in the code-snipped above
 - when using it in a Java process, just add the library to your process
 
 ## Record-based and metadata manipulating approach
-While Metafature processes the data as a stream, the fix module does not it buffers the incoming stream to distinct records.
+While Metafature processes the data as a stream, the fix module does not, it buffers the incoming stream to distinct records.
 Thus you can manipulate all metadata-elements of a record at once and don't need to think about the order of the incoming stream - which was a really big hassle in the stream-based MORPH.
-The incoming record then can be manipulated, fields can be changed, removed or added. This also differs from the approach in MORPH where you construct a new record and a new data stream, whereas you change stuff in the record in FIX and "only" change the data stream in Metafacture.
+The incoming record then can be manipulated, fields can be changed, removed or added. This also differs from the approach in the other Transformation Module MORPH where you construct a new record and a new data stream. With FIX you change stuff in the record and "only" change the data stream in Metafacture.
 
 
 ## Basic concepts
@@ -149,7 +148,7 @@ z :
 ```
 
 
-To adress paths you can use wildcards. For instance the star-wildcard: `person*` would match all simple literals with element names starting with 'person': 'person\_name', 'person\_age', etc.
+To address paths you can use wildcards. For instance the star-wildcard: `person*` would match all simple literals with element names starting with 'person': 'person\_name', 'person\_age', etc.
 Apart from the `*` wildcard, the `?` wildcard is supported. It matches exactly one arbitrary character.
 
 Not fully supported yet is alteration of pathes.

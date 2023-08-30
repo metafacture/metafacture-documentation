@@ -115,7 +115,7 @@ decode-html
 decode-json
 -----------
 - description:	Decodes JSON to metadata events. The 'recordPath' option can be used to set a JsonPath to extract a path as JSON - or to split the data into multiple JSON documents.
-- options:	recordid (String), recordcount (int), booleanmarker (String), arraymarker (String), arrayname (String), recordpath (String), allowcomments (boolean), numbermarker (String)
+- options:	recordid (String), recordcount (int), booleanmarker (String), arraymarker (String), arrayname (String), recordpath (String), numbermarker (String), allowcomments (boolean)
 - signature:	String -> StreamReceiver
 - java class:	org.metafacture.json.JsonDecoder
 
@@ -299,6 +299,13 @@ filter-triples
 - signature:	Triple -> Triple
 - java class:	org.metafacture.triples.TripleFilter
 
+fix (only available with Metafix)
+---
+- description:	Applies a fix transformation to the event stream.
+- options:	repeatedfieldstoentities (boolean), strictness [PROCESS, RECORD, EXPRESSION], entitymembername (String), strictnesshandlesprocessexceptions (boolean)
+- signature:	StreamReceiver -> StreamReceiver
+- java class:	org.metafacture.metafix.Metafix
+
 flatten
 -------
 - description:	flattens out entities in a stream by introducing dots in literal names
@@ -368,6 +375,20 @@ lines-to-records
 - options:	recordmarkerregexp (String)
 - signature:	String -> String
 - java class:	org.metafacture.strings.LineRecorder
+
+list-fix-paths (only available with Metafix)
+--------------
+- description:	Lists all paths found in the input records. These paths can be used in a Fix to address fields. Options: `count` (output occurence frequency of each path, sorted by highest frequency first; default: `true`), `template` (for formatting the internal triple structure; default: `${o}	|	${s}` if count is true, else `${s}`)`index` (output individual repeated subfields and array elements with index numbers instead of '*'; default: `false`)
+- options:	template (String), count (boolean), index (boolean)
+- signature:	StreamReceiver -> String
+- java class:	org.metafacture.metafix.ListFixPaths
+
+list-fix-values (only available with Metafix)
+---------------
+- description:	Lists all values found for the given path. The paths can be found using fix-list-paths. Options: `count` (output occurence frequency of each value, sorted by highest frequency first; default: `true`)`template` (for formatting the internal triple structure; default: `${o}	|	${s}` if count is true, else `${s}`)
+- options:	template (String), count (boolean)
+- signature:	StreamReceiver -> String
+- java class:	org.metafacture.metafix.ListFixValues
 
 literal-to-object
 -----------------
@@ -466,7 +487,7 @@ object-to-literal
 open-file
 ---------
 - description:	Opens a file.
-- options:	decompressconcatenated (boolean), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ]
+- options:	decompressconcatenated (boolean), encoding (String), compression (String)
 - signature:	String -> Reader
 - java class:	org.metafacture.io.FileOpener
 
@@ -506,7 +527,7 @@ pass-through
 print
 -----
 - description:	Writes objects to stdout
-- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	footer (String), header (String), encoding (String), compression (String), separator (String)
 - signature:	Object -> 
 - java class:	org.metafacture.io.ObjectStdoutWriter
 
@@ -618,7 +639,7 @@ stream-tee
 stream-to-triples
 -----------------
 - description:	Emits the literals which are received as triples such that the name and value become the predicate and the object of the triple. The record id containing the literal becomes the subject. If 'redirect' is true, the value of the subject is determined by using either the value of a literal named '_id', or for individual literals by prefixing their name with '{to:ID}'. Set 'recordPredicate' to encode a complete record in one triple. The value of 'recordPredicate' is used as the predicate of the triple. If 'recordPredicate' is set, no {to:ID}NAME-style redirects are possible.
-- options:	redirect (boolean), recordpredicate (String)
+- options:	recordpredicate (String), redirect (boolean)
 - signature:	StreamReceiver -> Triple
 - java class:	org.metafacture.triples.StreamToTriples
 
@@ -716,4 +737,3 @@ xml-tee
 - description:	Sends an object to more than one receiver.
 - signature:	XmlReceiver -> XmlReceiver
 - java class:	org.metafacture.plumbing.XmlTee
-
