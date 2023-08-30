@@ -46,7 +46,7 @@ or if Gradle is your build tool of choice use:
 
 ```groovy
 dependencies {
-    implementation 'org.metafacture:metamorph:$VERSION'
+    implementation 'org.metafacture:metafacture-io:$VERSION'
 }
 ```
 
