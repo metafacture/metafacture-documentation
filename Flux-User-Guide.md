@@ -88,7 +88,7 @@ Furthermore, some commands have named options. These are set as follows `command
 To learn about the available options of a command, execute Flux without arguments: It will list all available commands, including options. or have a look at: [List of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md) TODO: We need to add FIX to that list!!!
 
 
-To some commands, the entire environment can be given as argument. This is done with the `*` character: `fix("tranformation.fix", *)`. In this case Metafix gains access to all variable assignments made in Flux.
+To some commands the entire environment can be given as an argument. This is done with the `*` character: `fix("tranformation.fix", *)`. In this case Metafix gains access to all variable assignments made in Flux.
 (See also [[Metafix-User-Guide#parameters-to-metafix-definitions]]).
 
 Note that unlike shell pipes, the data flowing between Flux commands is _typed_. This means that only commands with matching signatures can be combined. Commands expect a certain input and provide a certain output like: `StreamReceiver, `Object`, `Reader` and others.
