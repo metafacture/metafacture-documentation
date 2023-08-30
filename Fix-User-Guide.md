@@ -129,7 +129,7 @@ Sometimes an element can have multiple instances. Different data models solve th
 To point to a specific element you state the index number. To adress the value `repeatedField2` the path would be `f.2`` since the repeated field is handled as a list.
 Similarly you address the `listElement3` of the array/list by `g[].3`. The brackets are an array indicator created by the flux command decode-yaml. It helps to interpret an element as array even if the list has only on value.
 
-Working with nested structures and combination of arrays and objects the path is a combination of element names, dots and index numbers.
+When working with nested structures and combinations of arrays and objects the path is a combination of element names, dots and index numbers.
 
 `listObjectElement2.2` has the path: `h[].2.j`
 
