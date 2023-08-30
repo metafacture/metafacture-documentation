@@ -171,7 +171,7 @@ retain("all",
 ```
 This function only keeps all the elements that I wanted. At the moment this only works with top-level elements.
 
-`vacuum()` deletes all emtpy elements.
+`vacuum()` deletes all empty elements.
 
 ## Defining Macros
 
