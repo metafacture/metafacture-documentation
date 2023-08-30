@@ -164,7 +164,7 @@ e.g.: if you transform MARC21 to JSON but you want to keep only certain elements
 
 ```
 retain("all",
-   element",
+   elements",
    "that",
    "I",
    "want")
