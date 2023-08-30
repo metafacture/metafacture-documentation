@@ -121,7 +121,7 @@ h : - i : listObjectElement1.1
 k : l : m : o : deepNestedField
 ```
 
-The path for a simple string-element is adressed by stating the element name: `a`
+The path for a simple string element is addressed by stating the element name: `a`
 For the fields with deeper structure you add a dot ‘.’. The path for elements in nested objects is stated by: `b.c` or `k.l.m.o`
 
 Sometimes an element can have multiple instances. Different data models solve this possibility differently. In XML records element repetition is possible and (partly) allowed in many schemas. Repeatable elements also exist in JSON and YAML but are unusual.
