@@ -198,7 +198,7 @@ In this case `target_field` and `source_field` serve as a parameter (the name is
 
 Parameters are scoped, which means that the ones provided with the `call_macro` function shadow global ones. Macros cannot be nested.
 
-## Parameters to Metamorph Definitions / Using variables
+## Parameters to Fix definitions / Using variables
 
 Fix definitions may contain parameters. They follow the pattern `$[NAME]`:
 
