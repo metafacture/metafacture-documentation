@@ -127,6 +127,6 @@ There are 4 annotations, see this [example](https://github.com/metafacture/metaf
 @Description("A MAB XML reader")
 @In(XmlReceiver.class)
 @Out(StreamReceiver.class)
-@FluxCommand("handle-mabxml")morph
+@FluxCommand("handle-mabxml")
 ```
 If you add a command it would be nice if you also add a flux example to the module `metafacture-runner` so that users can easily see how it's used, see e.g. https://github.com/metafacture/metafacture-core/blob/master/metafacture-runner/src/main/dist/examples/read/regexp/regexp.flux.
