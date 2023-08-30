@@ -32,7 +32,7 @@ If you want to use Metafacture in your own Java projects all you need is to add 
 
 Alternatively, you can simply guess the package names from the top-level folders in the source code repository -- they are the same. 
 
-TODO: For instance, if you want to use Metamorph in your project, simply add the following dependency to your `pom.xml`:
+For instance, if you want to use the `metafacture-io` library in your project, simply add the following dependency to your `pom.xml`:
 
 ```xml
 <dependency>
