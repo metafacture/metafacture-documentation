@@ -150,7 +150,7 @@ z :
 
 
 To adress paths you can use wildcards. For instance the star-wildcard: `person*` would match all simple literals with element names starting with 'person': 'person\_name', 'person\_age', etc.
-Apart from the star-wildcard, the questionmark-wildcard ('?') is supported. It matches exactly one arbitrary character.
+Apart from the `*` wildcard, the `?` wildcard is supported. It matches exactly one arbitrary character.
 
 Not fully supported yet is alteration of pathes.
 
