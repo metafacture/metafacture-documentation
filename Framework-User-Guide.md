@@ -30,7 +30,7 @@ Note that the call `setReceiver()` returns
 its argument, preserving the respective type. Thus the calls can be chained to
 build up a pipeline as shown in the listing. Finally the processing is started
 by calling the respective method on the data source/reader. The method name
-depends on the reader. In the Metamorph project `read()` is used by
+depends on the reader. In the Metafacture project `read()` is used by
 convention.
 
 The following code snippet shows a few more sophisticated connection patterns, such
