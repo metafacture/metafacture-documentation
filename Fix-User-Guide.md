@@ -133,7 +133,7 @@ Working with nested structures and combination of arrays and objects the path is
 
 `listObjectElement2.2` has the path: `h[].2.j`
 
-You do not only need the path name for your source element but also if you want to create a new element. But remember that fix as in catmandu is using repeated fields and arrays as lists so if you want to create a repeated field you have to create an array without suffic [].
+You do not only need the path name for your source element but also if you want to create a new element. But remember that fix, as in catmandu, is using repeated fields and arrays as lists so if you want to create a repeated field you have to create an array without suffix [].
 
 e.g.:
 ```PERL
