@@ -249,4 +249,4 @@ do once("setup")
 end
 ```
 
-For perfomance reason it is useful to integrate macros and maps that are used often in an do once bind.
+For performance reasons it is useful to integrate macros and maps that are used often in a `do once` bind.
