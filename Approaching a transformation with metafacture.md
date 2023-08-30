@@ -10,6 +10,6 @@ Every approach to transform metadata with metafacture is quite similiar:
 	- e.g. use `| list-fix-paths| print` to checkout the metadata-element paths that are provided.
 	- use `| list-fix-values ("specifiedElementPath")| print` to get all element values of a certain element
 - Start to write your transformation successivly and `write` to a specific destination or `print` the result.
- - Start with one element that you want to transform an retain it.
+ - Start with one element that you want to transform and retain it.
  - If you are happy with the result continue.
 - If you have finalized your transformation include it in your application or transform the data you want.
