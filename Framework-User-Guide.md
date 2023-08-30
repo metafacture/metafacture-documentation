@@ -5,7 +5,7 @@
 > [!NOTE]
 >Relevant for Java developers. For using metafacture without Java Code see the [FLUX user guide](/Flux-User-Guide.md).
 
-This page explains how to create a Metafacture objects and how to assemble them to form a processing pipeline. We use as an example a simple pipeline containing a Metamorph instance.
+This page explains how to create a Metafacture objects and how to assemble them to form a processing pipeline. We use as an example a simple pipeline containing a Metafix instance.
 
 
 ## Building a Flow
