@@ -85,7 +85,7 @@ The syntax for defining flows takes its cues from bash pipes. Commands are conca
 
 Some commands take a constructor argument. It is provided within brackets: `command("arg")`.
 Furthermore, some commands have named options. These are set as follows `command(optionname="arg1",annotheroption="arg2")` or with constructor argument: `command("arg",option="arg2")`.
-To learn about the available options of a command, execute Flux without arguments: It will list all available commands, including options. or have a look at: [List of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md) TODO: We need to add FIX to that list!!!
+To learn about the available options of a command, execute Flux without arguments - it will list all available commands, including options. Or simply have a look at the [list of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
 
 
 To some commands the entire environment can be given as an argument. This is done with the `*` character: `fix("tranformation.fix", *)`. In this case Metafix gains access to all variable assignments made in Flux.
