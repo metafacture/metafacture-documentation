@@ -55,4 +55,4 @@ To use Fix you need to
 Occasionally, we publish snapshot builds on [Sonatype OSS Repository](https://oss.sonatype.org/index.html#nexus-search;gav~org.metafacture~~~~~kw,versionexpand). The version number is derived from the branch name. Snapshot builds from the master branch always have the version `master-SNAPSHOT`. We also provide sometimes pre releases as github packages.
 
 
-If you plan to use Metafacture as a Java library or if you wish to add commands to Flux. You should get familar with the [Framework](/Framework-User-Guide.md).
+If you plan to use Metafacture as a Java library or if you wish to add commands to Flux you should get familar with the [Framework](/Framework-User-Guide.md).
