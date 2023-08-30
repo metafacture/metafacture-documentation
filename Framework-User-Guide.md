@@ -16,7 +16,7 @@ The individual elements are connected by calling the `setReceiver()` method. The
 ```java
 // create necessary objects
 final PicaReader reader = new PicaReader();
-final Metafix metafix = new Metafix("defnition.fix");
+final Metafix metafix = new Metafix("definition.fix");
 final ListMapWriter writer = new ListMapWriter();
 
 //connect them
