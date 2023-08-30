@@ -25,7 +25,7 @@ Flux-Example:
 - - there are some optiones available
 - - The Fix transformation can be part of the FLUX `|fix("retain(`245??`)")` - usually useful for short fixes
 - - or it can be separated in an external file, that is called in the FLUX-Process as in the code-snipped above
-- when using it in a JAVA-Process, just add the library to your process
+- when using it in a Java process, just add the library to your process
 
 ## Record-based and metadata manipulating approach
 While Metafature processes the data as a stream, the fix module does not it buffers the incoming stream to distinct records.
