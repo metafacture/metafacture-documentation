@@ -169,7 +169,7 @@ retain("all",
    "I",
    "want")
 ```
-This function only keeps all the elements that I wanted. At the moment this only works with highlevel elements.
+This function only keeps all the elements that I wanted. At the moment this only works with top-level elements.
 
 `vacuum()` deletes all emtpy elements.
 
