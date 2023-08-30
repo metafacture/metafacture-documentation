@@ -3,7 +3,7 @@ Every approach to transform metadata with metafacture is quite similiar:
 - You need to know the type and source of the input and the type and destination of the output:
 	e.g. Transform data from Marc21 from a certain folder to some kind of JSON Data.
 - You have to identify the commands that you need.
-- Combine the commands without the transformation module and test if the workflow goes trough.
+- Combine the commands without the transformation module and test if the workflow goes through.
 - Adjust the workflow until it works.
 - If the general workflow is working, move on to prepare the transformation.
 - Get familar with the incoming data:
