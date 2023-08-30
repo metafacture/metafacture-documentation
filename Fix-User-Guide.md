@@ -217,7 +217,7 @@ The `<vars>` section in the Metamorph definition can be used to set defaults:
 </vars>
 ```
 
-For Java implementations: Compile-time variable are passed to Fix as a constructor parameter.
+For Java implementations: Compile-time variables are passed to Fix as a constructor parameter.
 
 ```java
 final Map<String, String> vars = new HashMap<String, String>();
