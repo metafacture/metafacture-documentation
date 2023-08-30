@@ -2,7 +2,7 @@
 
 # Fix User Guide
 
-This document provides an introduction to the Metafacture Fix language (short: Metafix or Fix). Fix is a declarative flow oriented language in which transformations of arbitrary metadata/semi-structured data can be defined using the FIX language. The  Fix language for Metafacture is introduced as an alternative to configuring data transformations with Metamorph. Inspired by Catmandu Fix, Metafix processes metadata not as a continuous data stream but as discrete records. The basic idea is to rebuild constructs from the (Catmandu) Fix language like functions, selectors and binds in Java and combine with additional functionalities from the Metamorph toolbox.
+This document provides an introduction to the Metafacture Fix language (short: Metafix or Fix). The Fix language for Metafacture is introduced as an alternative to configuring data transformations with Metamorph. Inspired by Catmandu Fix, Metafix processes metadata not as a continuous data stream but as discrete records.
 
 ## Part of a metafacture worflow
 Metafacture Fix is a transformation module that can be used in a workflow, for this you have to use this in your pipeline:
