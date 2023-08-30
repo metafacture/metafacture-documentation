@@ -108,7 +108,7 @@ Flux supports single line C/Java-style comments: `//comment`.
 
 
 ## Getting Help and Inspiration (TODO: Ersetzen.)
-1. Have a look at the [List of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md) or if the flux executed without arguments, Flux will display a short help text along with a list of all registered commands. This is the list of FLUX commands mentioned already above.
+1. Have a look at the [List of available FLUX commands](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md) or execute the flux without arguments to get a short help text along with a list of all registered commands. This is the list of FLUX commands mentioned already above.
 2. There are several example flux files along with sample data in the folder `examples/`: https://github.com/metafacture/metafacture-core/tree/master/metafacture-runner/src/main/dist/examples
 
 _________________________
