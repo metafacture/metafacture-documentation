@@ -107,7 +107,7 @@ Paths are always relative to the directory within which the flux command is exec
 Flux supports single line C/Java-style comments: `//comment`.
 
 
-## Getting Help and Inspiration (TODO: Ersetzen.)
+## Overview of the commands and some examples
 1. Have a look at the [List of available FLUX commands](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md) or execute the flux without arguments to get a short help text along with a list of all registered commands. This is the list of FLUX commands mentioned already above.
 2. There are several example flux files along with sample data in the folder `examples/`: https://github.com/metafacture/metafacture-core/tree/master/metafacture-runner/src/main/dist/examples
 
