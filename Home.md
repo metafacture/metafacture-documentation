@@ -18,7 +18,7 @@ __________________
 While working with the playground or the command line you only need [Flux](#flux) and the transformation module [Fix](#fix).
 Have a look here for [Getting started](/Getting-Started.md).
 
-## Framework for JAVA-Integration/Development
+## Framework for Java integration/development
 
 If you plan to use Metafacture as a Java library or if you wish to add commands to Flux. You should get familar with the [Framework](/Home.md#framework).
 
