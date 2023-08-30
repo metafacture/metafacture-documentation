@@ -43,7 +43,7 @@ If you are using **Metafacture as a Java library**, just create a Metafix object
 The transformation itself is declared in a fix-object which can be a file. For more information on how to declare transformations see [Metafix User Guide](/Fix-User-Guide.md).
 
 > [!NOTE]
-> PS: There is also the transformation modul MORPH but for that have a look at[ the old documentation](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide) and the german cookbook by [Swissbib](https://swissbib.gitlab.io/metamorph-doku/).
+> PS: There is also the transformation modul MORPH. Have a look at[ the old documentation](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide) and the german cookbook by [Swissbib](https://swissbib.gitlab.io/metamorph-doku/).
 
 ## Framework
 
