@@ -125,8 +125,8 @@ For the fields with deeper structure you add a dot ‘.’. The path for element
 
 Sometimes an element can have multiple instances. Different data models solve this possibility differently. In XML records element repetition is possible and (partly) allowed in many schemas. Repeatable elements also exist in JSON and YAML but are unusual.
 
-To point to a specific element you state the index number. To adress the value `repeatedField2` the path would be `f.2`` since the repeated field is handled as a list.
-Similarly you address the `listElement3` of the array/list by `g[].3`. The brackets are an array indicator created by the flux command decode-yaml. It helps to interpret an element as array even if the list has only on value.
+To point to a specific element you state the index number. To adress the value `repeatedField2` the path would be `f.2` since the repeated field is handled as a list.
+Similarly you address the `listElement3` of the array/list by `g[].3`. The brackets are an array indicator created by the flux command `decode-yaml`(or by `decode-json`). It helps to interpret an repeatable element as an array even if the list has only one value.
 
 When working with nested structures and combinations of arrays and objects the path is a combination of element names, dots and index numbers.
 
