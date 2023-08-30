@@ -43,6 +43,8 @@ reader.setReceiver(new LogPipe()).setReceiver(metafix).setReceiver(writer);
 //adding a tee junction
 reader.setReceiver(new Tee()).setReceivers(writer1, writer2);
 
+// create e.g. three threads
+reader.setReceiver(new ObjectThreader<>()).addReceiver(...).addReceiver(...).addReceiver(...);
 //splitting based on a metamorph description
 final Splitter splitter = new Splitter("morph/typeSplitter.xml");
 reader.setReceiver(splitter).setReceiver("Tn", writer1);
