@@ -23,7 +23,7 @@ Flux-Example:
 - - address the `fix`-module
 - - you can add variables
 - - The Fix transformation can be part of the FLUX `|fix("retain(`245??`)")` - usually useful for short fixes
-- - or it can be separated in an external file, that is called in the FLUX-Process as in the code-snipped above
+- - or it can be separated in an external file, that is called in the FLUX-Process as in the code snippet above
 - when using it in a Java process, just add the library to your process
 
 ## Record-based and metadata manipulating approach
