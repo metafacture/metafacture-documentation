@@ -160,7 +160,7 @@ Besides path wildcards there are array/list wildcards that are used to reference
 
 Since FIX is not constructing a new record stream but is manipulating the existing record you usually clean up after you transform the data. There are functions to remove all unnecessary elements and to remove all empty elements.
 
-e.g.: if you transform MARC21 to JSON but you want to keep only certain elements that you created. you state them in a retain function:
+e.g.: if you transform MARC21 to JSON but you want to keep only certain elements that you created, you state them in a `retain` function:
 
 ```
 retain("all",
