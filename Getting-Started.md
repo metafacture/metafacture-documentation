@@ -24,7 +24,7 @@ To get started, you can export a workflow from the Playground (last button, !["E
 
 To set up IDE support for editing your Flux and Fix files, see [the IDE extensions page](https://metafacture.org/ide-extensions/index.html).
 
-For next steps get familar with FLUX (hyper link) and FIX(hyper link). And try out some metafacture workflows.
+For next steps get familar with [FLUX](/Flux-User-Guide.md) and [FIX](/Fix-User-Guide.md). And try out some Metafacture workflows.
 
 ## Using Metafacture as a Java library
 
