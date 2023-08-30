@@ -11,7 +11,7 @@ For commands available in the Flux, see [the Flux commands documentation](/flux-
 
 For functions and usage of the Fix, see [the Fix functions and cookbook](/Fix-functions-and-cookbook).
 
-For next steps get familar with [FLUX](/Flux-User-Guide.md) and [FIX](/Fix-User-Guide.md). And try out some metafacture workflows.
+For next steps get familar with [FLUX](/Flux-User-Guide.md) and [FIX](/Fix-User-Guide.md). And try out some Metafacture workflows.
 
 ## Command line
 
