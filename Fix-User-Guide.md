@@ -91,7 +91,7 @@ Find here a [list of all functions, selectors, binds and conditionals](/Fix-func
 
 ## Addressing Pieces of Data - of: FIX-Path and the record structure in FIX
 
-Internally FIX knows arrays, objects/hashes and simple elements. How a format is translated is depending on the `decode-...` command in the MF Workflow. Only one thing is specific to the fix, as in Catmandu a repeated field is translated into a list depending on the real input data of the single record and elements with the suffix `[]` are interpreted as arrays.
+Internally FIX knows arrays, objects/hashes and simple elements. How a format is translated depends on the `decode-...` command in the MF Workflow. Only one thing is specific to the fix, as in Catmandu: a repeated field is translated into a list depending on the real input data of the single record. Elements with the suffix `[]` are interpreted as arrays.
 
 Since function manipulate, add or remove elements in a record, it is essential to understand the way on can adress source or target elements.
 
