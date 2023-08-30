@@ -232,7 +232,7 @@ final Metafix metafix = new metafix("fixdef.fix", vars);
 
 In a complex project setting there may be several Fixes in use,
 and it is likely that they share common parts. Imagine for instance a
-transformations from Marc 21 record holding data on books to RDF, and Marc 21
+transformations from Marc 21 records holding data on books to RDF, and Marc 21
 records hodling data on authors to RDF. Both make use of a table assinging
 country names to ISO country codes. Such a table should only exist once. 
 
