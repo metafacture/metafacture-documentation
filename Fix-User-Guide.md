@@ -28,7 +28,7 @@ Flux-Example:
 
 ## Record-based and metadata manipulating approach
 While Metafature processes the data as a stream, the fix module does not, it buffers the incoming stream to distinct records.
-Thus you can manipulate all metadata-elements of a record at once and don't need to think about the order of the incoming stream - which was a really big hassle in the stream-based MORPH.
+Thus you can manipulate all metadata elements of a record at once and don't need to think about the order of the incoming stream - which was a really big hassle in the stream-based MORPH.
 The incoming record then can be manipulated, fields can be changed, removed or added. This also differs from the approach in the other Transformation Module MORPH where you construct a new record and a new data stream. With FIX you change stuff in the record and "only" change the data stream in Metafacture.
 
 
