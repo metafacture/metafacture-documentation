@@ -99,7 +99,7 @@ To lookup the signatures, again: execute Flux without arguments or see: [[Metafi
 Variables are always Strings and can be concatenated with the `+` operator. Escape sequences follow the Java String conventions: `\n`=line break, `\t`=tab, `\\`=\, `\u0024`=unicode character, etc.
 
 The `default` keyword tells Flux to assign the respective value _only_ if the variable has 
-not yet been set on the command line. Without `default`, previous assignments will be overwritten.
+not yet been set on the command line. Without `default`, previous assignments, e.g. from command line variables, will be overridden by the explicitly assigned value.
 
 Paths are always relative to the directory within which the flux command is executed. To address files relative to the location of the executed flux file, use the predefined `FLUX_DIR` variable.
 
