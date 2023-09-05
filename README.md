@@ -39,6 +39,8 @@ For more information on how to use Flux, see the [Flux User Guide](/Flux-User-Gu
 
 See [here a list for all available FLUX-Commands](/flux-commands.md).
 
+__________________
+
 ## FIX
 
 Metafix is a domain specific language for metadata transformation based on Catmandu FIX. The FIX object performing the transformation is used as part of a processing pipeline.
@@ -53,6 +55,8 @@ See [here a list for all available FIX functions and a cookbook for using fix](/
 
 > [!NOTE]
 > PS: There is also the transformation modul MORPH. Have a look at[ the old documentation](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide) and the german cookbook by [Swissbib](https://swissbib.gitlab.io/metamorph-doku/).
+
+__________________
 
 ## Framework
 
