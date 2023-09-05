@@ -4,7 +4,7 @@
 
 Metafacture is a toolkit for processing semi-structured data with a focus on library metadata. It provides a versatile set of tools for reading, writing and transforming data. Metafacture can be used as a stand-alone application via CLI or as a Java library in other applications. There is also a playground where you can test workflows.
 
-The name Metafacture is a portmanteau of the words metadata and manufacture.
+The central place for the documentation about Metafacture.
 
 Metafacture comprises three main parts: **Framework**, **Flux** and one of the **Transformation-Modules Fix and Morph**. It can be extended with modules.
 
