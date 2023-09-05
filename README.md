@@ -20,7 +20,7 @@ Deciding which parts are relevant to you depends on the way you are using Metafa
 ## Using Metafacture via playground or CLI
 
 > [!NOTE]
-> No JAVA-Code is necessary!!!
+> No Java-Code is necessary!!!
 
 While working with the playground or the command line you only need [Flux](#flux) and the transformation module [Fix](#fix).
 Have a look here for [Getting started](/Getting-Started.md).
