@@ -27,7 +27,7 @@ Have a look here for [Getting started](/Getting-Started.md).
 
 ## Framework for Java integration/development
 
-If you plan to use Metafacture as a Java library or if you wish to add commands to Flux. You should get familar with the [Framework](/Home.md#framework).
+If you plan to use Metafacture as a Java library or if you wish to add commands to Flux. You should get familar with the [Framework](#framework).
 
 __________________
 
