@@ -9,7 +9,7 @@ The central place for the documentation about Metafacture.
 Metafacture comprises three main parts: **Framework**, **Flux** and one of the **Transformation-Modules Fix and Morph**. It can be extended with modules.
 
 > [!NOTE]
-> With regard on to the Transformation-Modules this documentation focusses on Fix instead of MORPH. If you want to find out more about MORPH. Have a look at [the old documentation](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide) and the german cookbook by [Swissbib](https://swissbib.gitlab.io/metamorph-doku/).
+> With regard to the Transformation-Modules this documentation focusses on Fix instead of MORPH. If you want to find out more about MORPH. Have a look at [the old documentation](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide) and the german cookbook by [Swissbib](https://swissbib.gitlab.io/metamorph-doku/).
 
 
 Our goal with this repo is to collaboratively create comprehensive documentation on Metafacture in the [issue tracker](https://github.com/culturegraph/metafacture-documentation/issues?q=). Feel free to open issues not only for bugs or enhancements, but also questions about Metafacture usage, or to share your experiences. We hope that over time, in that way we can create useful tutorials, how-tos, and collect good practices for using Metafacture.
