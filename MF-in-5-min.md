@@ -1,4 +1,4 @@
-# Metafacture - Introduction - A quick 5 minute introduction to Metafacture
+# Introduction - A quick 5 minute introduction to Metafacture
 
 ## HELLO WORLD
 
