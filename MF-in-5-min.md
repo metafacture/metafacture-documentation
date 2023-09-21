@@ -81,7 +81,7 @@ $ cat yaml2json.flux
 ;
 ```
 
-FIX LANGUAGE
+## FIX LANGUAGE
 
 Many data conversions need a mapping from one field to another field plus optional conversions of the data inside these fields. Metafacture provides the transformation module `fix` that uses the Catmandu-inspired Fix language to assist in these mappings. A full list Fix functon is available at https://github.com/metafacture/metafacture-documentation/blob/master/Fix-function-and-Cookbook.md#functions.
 
@@ -135,9 +135,9 @@ colors:
 In the example we created the Fix Script `example.fix` that contains a combination of mappings and data conversion on (nested) data. We run a YAML to YAML conversion using the example.fix Fix Script. (Note: Differently to Catmandu array/list index are 1-based.)
 
 
-SPECIALIZATIONS
+## SPECIALIZATIONS
 
-Catmandu was mainly created for data conversions of specialized metadata languages in the field of libraries, archives and museums. One of the specialized modules is `decode-marc` and `encode-marc`. 
+Metafacture was mainly created for data conversions of specialized metadata languages in the field of libraries, archives and museums. One of the specialized modules is `decode-marc` and `encode-marc`. 
 
 With them you can read, write and convert MARC files.
 
@@ -169,6 +169,6 @@ The 245 field with its subfields of each MARC record is mapped to the title fiel
 The retain Fix function keeps only the title field in the output. (In contrast to Catmandu there are no special marc or pica fixes since the iternal handling of records and elements is more generic. Also the internal serialization of MARC is not as complex as in Catmandu.)
 
 
-No get started.
+[No get started.](./Getting-Started.md)
 
 (Note: This mini introduction of Metafacture is inspired by the mini introduction of Catmandu here: https://metacpan.org/dist/Catmandu/view/lib/Catmandu/Introduction.pod)
