@@ -8,7 +8,7 @@ $ cat helloWord.flux
 | print
 ;
 ```
-
+[Example in Playground](https://metafacture.org/playground/?flux=%22Hello+World%22%0A%7C+print%0A%3B)
 
 Running this little Flux script on the [CLI Metafacture Runner](https://github.com/metafacture/metafacture-fix/releases) (with `$ ./bin/metafix-runner /path/to/your.flux` on Unix/Linux/Mac or `$ ./bin/metafix-runner.bat /path/to/your.flux` on Windows) or on the [MF Playground](https://metafacture.org/playground/?flux=%22Hello+World%22%0A%7C+print%0A%3B). It generates the string `"Hello World` on the standard output. We just asked Metafacture to print the incoming string.
 
@@ -27,6 +27,8 @@ $ cat helloWorld2.flux
 | print
 ;
 ```
+[Example in Playground](https://metafacture.org/playground/?flux=inputFile%0A%7C+open-file%0A%7C+as-lines%0A%7C+print%0A%3B&data=%7B%22hello%22%3A%22world%22%7D)
+
 Here we ask Metafacture to open the file `file.json`, read each line separatly as a string and generate the string on standard output.
 
 To handle metadata records and ETL (Extract - Transform - Load) we have to build UNIX-like pipelines. For each step in a pipeline we use FLUX commands/moduls. Each FLUX command aids a specific modular step in an ETL process that usually can be subsumed under one of the following steps:
@@ -53,6 +55,7 @@ $ cat yaml2json.flux
 | print
 ;
 ```
+[Example in Playground](https://metafacture.org/playground/?flux=inputFile%0A%7C+open-file%0A%7C+as-records%0A%7C+decode-yaml%0A%7C+encode-json%0A%7C+print%0A%3B&data=hello%3A+world)
 
 We added two modules for decoding and encoding the data: `decode-json` and `encode-yaml` 
 Metafacture provides decoders and encoders for many formats. We also used the `as-records` module instead of `as-lines` to 
@@ -80,6 +83,7 @@ $ cat yaml2json.flux
 | print
 ;
 ```
+[Example in Playground](https://metafacture.org/playground/?flux=inputFile%0A%7C+open-file%0A%7C+as-records%0A%7C+decode-yaml%0A%7C+encode-json%28prettyPrinting%3D%22true%22%29%0A%7C+print%0A%3B&data=hello%3A+world)
 
 ## FIX LANGUAGE
 
@@ -116,9 +120,6 @@ $ cat yaml2yaml.flux
 ;
 ```
 
-
-$ catmandu convert YAML --fix example.fix to YAML < data.yaml
-
 ```
 ---
 address:
@@ -131,6 +132,7 @@ colors:
     - Blue
 ...
 ```
+[Example in Playground](https://metafacture.org/playground/?flux=inputFile%0A%7C+open-file%0A%7C+as-records%0A%7C+decode-yaml%0A%7C+fix%28transformationFile%29%0A%7C+encode-yaml%0A%7C+print%0A%3B&transformation=add_field%28%27address.street%27%2C%27Walker+Street%27%29%0Aadd_field%28%27address.number%27%2C%2715%27%29%0Acopy_field%28%27colors.2%27%2C%27best_color%27%29&data=---%0Acolors%3A%0A-+Red%0A-+Green%0A-+Blue)
 
 In the example we created the Fix Script `example.fix` that contains a combination of mappings and data conversion on (nested) data. We run a YAML to YAML conversion using the example.fix Fix Script. (Note: Differently to Catmandu array/list index are 1-based.)
 
@@ -163,6 +165,8 @@ retain("title", "id")
 | print
 ;
 ```
+
+[Example in Playground](https://metafacture.org/playground/?flux=%22https%3A//raw.githubusercontent.com/metafacture/metafacture-core/master/metafacture-runner/src/main/dist/examples/read/marc21/10.marc21%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-marc21%0A%7C+fix%28transformationFile%29%0A%7C+encode-csv%0A%7C+print%0A%3B&transformation=set_array%28%22title%22%29%0Acopy_field%28%22245%3F%3F.%3F%22%2C%22title.%24append%22%29%0Ajoin_field%28%22title%22%29%0Acopy_field%28%22001%22%2C%22id%22%29%0Aretain%28%22title%22%2C+%22id%22%29)
 
 In the example above marc data is converted to a csv file.
 The 245 field with its subfields of each MARC record is mapped to the title field.
