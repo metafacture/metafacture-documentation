@@ -159,7 +159,7 @@ retain("title", "id")
 "data.mrc"
 | open-file
 | as-records
-| decode-marc
+| decode-marc21
 | fix("title.fix")
 | encode-csv
 | print
