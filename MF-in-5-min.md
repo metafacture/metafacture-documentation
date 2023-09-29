@@ -37,7 +37,7 @@ To handle metadata records and ETL (Extract - Transform - Load) we have to build
 
 ## FORMAT to FORMAT
 
-Metafacture can be used to convert an input format to an output format by building a small pipeline with a FLux script:
+Metafacture can be used to convert an input format to an output format by building a small pipeline with a Flux script:
 
 ```
 $ cat file.json
