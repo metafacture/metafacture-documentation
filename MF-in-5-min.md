@@ -10,7 +10,7 @@ $ cat helloWord.flux
 ```
 [Example in Playground](https://metafacture.org/playground/?flux=%22Hello+World%22%0A%7C+print%0A%3B)
 
-Running this little Flux script on the [CLI Metafacture Runner](https://github.com/metafacture/metafacture-fix/releases) (with `$ ./bin/metafix-runner /path/to/your.flux` on Unix/Linux/Mac or `$ ./bin/metafix-runner.bat /path/to/your.flux` on Windows) or on the [MF Playground](https://metafacture.org/playground/?flux=%22Hello+World%22%0A%7C+print%0A%3B). It generates the string `"Hello World` on the standard output. We just asked Metafacture to print the incoming string.
+Running this little Flux script on the [CLI Metafacture Runner](https://github.com/metafacture/metafacture-fix/releases) (with `$ ./bin/metafix-runner /path/to/your.flux` on Unix/Linux/Mac or `$ ./bin/metafix-runner.bat /path/to/your.flux` on Windows) or on the [MF Playground](https://metafacture.org/playground/?flux=%22Hello+World%22%0A%7C+print%0A%3B). It generates the string `"Hello World"` on the standard output. We just asked Metafacture to print the incoming string.
 
 The same works, when we start with a JSON-file which is a usual form of a metadata record.
 
