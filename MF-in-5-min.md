@@ -65,7 +65,7 @@ read multi-line metadata statements and not each line separately.
 
 Each Metafacture Module can have options that change its behavior. The options can be read in the documentation or by running the runner without arguments.
 
-As an example, we can use a JSON decoder option prettyPrinting to provide a pretty printed version of the JSON:
+As an example, we can use a JSON encoder option prettyPrinting to provide a pretty printed version of the JSON:
 
 ```
 $ cat file.yaml
