@@ -31,7 +31,7 @@ $ cat helloWorld2.flux
 
 Here we ask Metafacture to open the file `file.json`, read each line separatly as a string and generate the string on standard output.
 
-To handle metadata records and ETL (Extract - Transform - Load) we have to build UNIX-like pipelines. For each step in a pipeline we use FLUX commands/moduls. Each FLUX command aids a specific modular step in an ETL process that usually can be subsumed under one of the following steps:
+To handle metadata records and ETL (Extract - Transform - Load) we have to build UNIX-like pipelines. For each step in a pipeline we use FLUX commands/modules. Each FLUX command aids a specific modular step in an ETL process that usually can be subsumed under one of the following steps:
 → read → decode → transform → encode → write → 
 
 
