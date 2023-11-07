@@ -4,7 +4,9 @@
 
 Metafacture is a toolkit for processing semi-structured data with a focus on library metadata. It provides a versatile set of tools for reading, writing and transforming data. Metafacture can be used as a stand-alone application via CLI or as a Java library in other applications. There is also a playground where you can test workflows.
 
-The central place for the documentation about Metafacture.
+[Have a look here for a quick intro into metafacture.](./MF-in-5-min.md)
+
+This is the central place for the documentation about Metafacture.
 
 Metafacture comprises three main parts: **Framework**, **Flux** and one of the **Transformation-Modules Fix and Morph**. It can be extended with modules.
 
@@ -13,6 +15,7 @@ Metafacture comprises three main parts: **Framework**, **Flux** and one of the *
 
 
 Our goal with this repo is to collaboratively create comprehensive documentation on Metafacture in the [issue tracker](https://github.com/culturegraph/metafacture-documentation/issues?q=). Feel free to open issues not only for bugs or enhancements, but also questions about Metafacture usage, or to share your experiences. We hope that over time, in that way we can create useful tutorials, how-tos, and collect good practices for using Metafacture.
+
 __________________
 
 Deciding which parts are relevant to you depends on the way you are using Metafacture:
