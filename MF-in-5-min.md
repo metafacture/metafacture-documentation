@@ -57,7 +57,7 @@ $ cat yaml2json.flux
 ```
 [Example in Playground](https://metafacture.org/playground/?flux=inputFile%0A%7C+open-file%0A%7C+as-records%0A%7C+decode-yaml%0A%7C+encode-json%0A%7C+print%0A%3B&data=hello%3A+world)
 
-We added two modules for decoding and encoding the data: `decode-json` and `encode-yaml`.
+We added two modules for decoding and encoding the data: `decode-yaml` and `encode-json`.
 Metafacture provides decoders and encoders for many formats. We also used the `as-records` module instead of `as-lines` to 
 read multi-line metadata statements and not each line separately.
 
