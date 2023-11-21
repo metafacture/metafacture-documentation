@@ -107,3 +107,4 @@ write-triple-objects	https://github.com/metafacture/metafacture-core/blob/master
 write-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleWriter.java	
 write-xml-files	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlFilenameWriter.java	
 xml-tee	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/XmlTee.java	
+encode-yaml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-yaml/src/main/java/org/metafacture/yaml/YamlEncoder.java
