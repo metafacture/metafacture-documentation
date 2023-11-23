@@ -1,0 +1,109 @@
+flux-commands	code-link	example
+add-oreaggregation	https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/OreAggregationAdder.java	
+add-preamble-epilogue	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/PreambleEpilogueAdder.java	https://metafacture.org/playground/?example=add-preamble-epilogue
+as-formeta-records	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formeta/src/main/java/org/metafacture/formeta/FormetaRecordsReader.java	https://metafacture.org/playground/?example=as-formeta-records
+as-lines	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/LineReader.java	https://metafacture.org/playground/?example=as-lines
+as-records	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/RecordReader.java	https://metafacture.org/playground/?example=as-records
+batch-log	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/StreamBatchLogger.java	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flux-examples/blob/master/sample4/bib-data.pica%3Fraw%3Dtrue%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-pica%0A//+This+cannot+be+shown+by+the+Playground.+Since+it+outputs+to+stoud%3F%0A%7C+batch-log%28batchsize%3D%2220%22%29%0A%7C+encode-json%0A%7C+print%0A%3B
+batch-reset	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/StreamBatchResetter.java	
+calculate-metrics	https://github.com/metafacture/metafacture-core/blob/master/metafacture-statistics/src/main/java/org/metafacture/statistics/CooccurrenceMetricCalculator.java	
+catch-object-exception	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectExceptionCatcher.java	
+catch-stream-exception	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/StreamExceptionCatcher.java	
+change-id	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/RecordIdChanger.java	https://metafacture.org/playground/?example=change-id
+collect-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleCollect.java	https://metafacture.org/playground/?example=collect-triples
+decode-aseq	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/AseqDecoder.java	https://metafacture.org/playground/?example=decode-aseq
+decode-csv	https://github.com/metafacture/metafacture-core/blob/master/metafacture-csv/src/main/java/org/metafacture/csv/CsvDecoder.java	https://metafacture.org/playground/?example=decode-csv
+decode-formeta	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formeta/src/main/java/org/metafacture/formeta/FormetaDecoder.java	https://metafacture.org/playground/?example=decode-formeta
+decode-html	https://github.com/metafacture/metafacture-core/blob/master/metafacture-html/src/main/java/org/metafacture/html/HtmlDecoder.java	https://metafacture.org/playground/?example=decode-html
+decode-json	https://github.com/metafacture/metafacture-core/blob/master/metafacture-json/src/main/java/org/metafacture/json/JsonDecoder.java	https://metafacture.org/playground/?example=decode-json
+decode-mab	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/MabDecoder.java	https://metafacture.org/playground/?example=decode-mab
+decode-marc21	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Decoder.java	https://metafacture.org/playground/?example=decode-marc21
+decode-pica	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaDecoder.java	https://metafacture.org/playground/?example=decode-pica
+decode-string	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringDecoder.java	
+decode-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlDecoder.java	https://metafacture.org/playground/?example=decode-xml
+decode-yaml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-yaml/src/main/java/org/metafacture/yaml/YamlDecoder.java	https://metafacture.org/playground/?example=decode-yaml
+decouple	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectPipeDecoupler.java	
+defer-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/StreamDeferrer.java	
+digest-file	https://github.com/metafacture/metafacture-core/blob/master/metafacture-files/src/main/java/org/metafacture/files/FileDigestCalculator.java	
+discard-events	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamEventDiscarder.java	
+draw-uniform-sample	https://github.com/metafacture/metafacture-core/blob/master/metafacture-statistics/src/main/java/org/metafacture/statistics/UniformSampler.java	
+encode-csv	https://github.com/metafacture/metafacture-core/blob/master/metafacture-csv/src/main/java/org/metafacture/csv/CsvEncoder.java	https://metafacture.org/playground/?example=encode-csv
+encode-formeta	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formeta/src/main/java/org/metafacture/formeta/FormetaEncoder.java	https://metafacture.org/playground/?example=encode-formeta
+encode-json	https://github.com/metafacture/metafacture-core/blob/master/metafacture-json/src/main/java/org/metafacture/json/JsonEncoder.java	https://metafacture.org/playground/?example=encode-json
+encode-literals	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/StreamLiteralFormatter.java	https://metafacture.org/playground/?example=encode-literals
+encode-marc21	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Encoder.java	
+encode-marcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlEncoder.java	https://metafacture.org/playground/?example=encode-marcxml
+encode-pica	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaEncoder.java	
+encode-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/SimpleXmlEncoder.java	https://metafacture.org/playground/?example=encode-xml
+encode-yaml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-yaml/src/main/java/org/metafacture/yaml/YamlEncoder.java	https://metafacture.org/playground/?example=encode-yaml
+extract-element	https://github.com/metafacture/metafacture-core/blob/master/metafacture-html/src/main/java/org/metafacture/html/ElementExtractor.java	https://metafacture.org/playground/?example=extract-element
+filter	https://github.com/metafacture/metafacture-core/blob/master/metamorph/src/main/java/org/metafacture/metamorph/Filter.java	
+filter-duplicate-objects	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/DuplicateObjectFilter.java	
+filter-null-values	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/NullFilter.java	https://metafacture.org/playground/?example=filter-null-values
+filter-records-by-path	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/RecordPathFilter.java	https://metafacture.org/playground/?example=filter-records-by-path
+filter-strings	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringFilter.java	https://metafacture.org/playground/?example=filter-strings
+filter-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleFilter.java	https://metafacture.org/playground/?example=filter-triples
+flatten	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamFlattener.java	https://metafacture.org/playground/?example=flatten
+from-jdom-document	https://github.com/metafacture/metafacture-core/blob/master/metafacture-jdom/src/main/java/org/metafacture/jdom/JDomDocumentToStream.java	
+handle-cg-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/CGXmlHandler.java	
+handle-comarcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/ComarcXmlHandler.java	
+handle-generic-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/GenericXmlHandler.java	https://metafacture.org/playground/?example=handle-generic-xml
+handle-mabxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/AlephMabXmlHandler.java	
+handle-marcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlHandler.java	
+handle-picaxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaXmlHandler.java	
+jscript	https://github.com/metafacture/metafacture-core/blob/master/metafacture-scripting/src/main/java/org/metafacture/scripting/JScriptObjectPipe.java	
+json-to-elasticsearch-bulk	https://github.com/metafacture/metafacture-core/blob/master/metafacture-elasticsearch/src/main/java/org/metafacture/elasticsearch/JsonToElasticsearchBulk.java	
+lines-to-records	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/LineRecorder.java	https://metafacture.org/playground/?example=lines-to-records
+literal-to-object	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/LiteralToObject.java	https://metafacture.org/playground/?example=literal-to-object
+log-object	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/ObjectLogger.java	
+log-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/StreamLogger.java	
+log-stream-time	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/StreamTimer.java	
+log-time	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/ObjectTimer.java	
+map-to-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-javaintegration/src/main/java/org/metafacture/javaintegration/MapToStream.java	
+match	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringMatcher.java	https://metafacture.org/playground/?example=match
+merge-batch-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/StreamBatchMerger.java	
+merge-same-ids	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/StreamMerger.java	https://metafacture.org/playground/?example=merge-same-ids
+morph	https://github.com/metafacture/metafacture-core/blob/master/metamorph/src/main/java/org/metafacture/metamorph/Metamorph.java	https://metafacture.org/playground/?example=morph
+normalize-unicode-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StreamUnicodeNormalizer.java	
+normalize-unicode-string	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/UnicodeNormalizer.java	
+object-batch-log	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/ObjectBatchLogger.java	
+object-tee	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/ObjectTee.java	
+object-to-literal	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/ObjectToLiteral.java	
+open-file	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/FileOpener.java	https://metafacture.org/playground/?example=open-file
+open-http	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/HttpOpener.java	https://metafacture.org/playground/?example=open-http
+open-oaipmh	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/OaiPmhOpener.java	https://metafacture.org/playground/?example=open-oaipmh
+open-resource	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ResourceOpener.java	
+open-tar	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/TarReader.java	
+pass-through	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/IdentityStreamPipe.java	
+print	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectStdoutWriter.java	https://metafacture.org/playground/?example=print
+rdf-macros	https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/RdfMacroPipe.java	
+read-beacon	https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/BeaconReader.java	https://metafacture.org/playground/?example=read-beacon
+read-dir	https://github.com/metafacture/metafacture-core/blob/master/metafacture-files/src/main/java/org/metafacture/files/DirReader.java	
+read-string	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringReader.java	https://metafacture.org/playground/?example=read-string
+read-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleReader.java	
+record-to-entity	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/RecordToEntity.java	
+regex-decode	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/RegexDecoder.java	https://metafacture.org/playground/?example=regex-decode
+remodel-pica-multiscript	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaMultiscriptRemodeler.java	
+reorder-triple	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleReorder.java	
+reset-object-batch	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectBatchResetter.java	
+retrieve-triple-objects	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleObjectRetriever.java	
+sort-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleSort.java	https://metafacture.org/playground/?example=sort-triples
+split-lines	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/LineSplitter.java	
+split-xml-elements	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlElementSplitter.java	
+stream-count	https://github.com/metafacture/metafacture-core/blob/master/metafacture-statistics/src/main/java/org/metafacture/statistics/Counter.java	
+stream-tee	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/StreamTee.java	
+stream-to-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/StreamToTriples.java	https://metafacture.org/playground/?example=stream-to-triples
+stream-to-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/SimpleXmlEncoder.java	
+string-list-map-to-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-javaintegration/src/main/java/org/metafacture/javaintegration/StringListMapToStream.java	
+template	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/ObjectTemplate.java	https://metafacture.org/playground/?example=template
+thread-object-tee	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectThreader.java	
+to-jdom-document	https://github.com/metafacture/metafacture-core/blob/master/metafacture-jdom/src/main/java/org/metafacture/jdom/StreamToJDomDocument.java	
+triples-to-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TriplesToStream.java	
+validate-json	https://github.com/metafacture/metafacture-core/blob/4bfe2d09df6423a55c20f6ff057b8e24c18ad9f0/metafacture-json/src/main/java/org/metafacture/json/JsonValidator.java	
+wait-for-inputs	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/CloseSuppressor.java	https://metafacture.org/playground/?example=wait-for-inputs
+write	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectWriter.java	
+write-files	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectFileWriter.java	
+write-triple-objects	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleObjectWriter.java	
+write-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleWriter.java	
+write-xml-files	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlFilenameWriter.java	
+xml-tee	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/XmlTee.java	
