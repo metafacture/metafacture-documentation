@@ -137,7 +137,7 @@ put_vars(
 
 ##### `add_field`
 
-Creates (or appends to) a field with a defined value.
+Creates a field with a defined value.
 
 ```perl
 add_field("<targetFieldName>", "<fieldValue>")
@@ -179,7 +179,7 @@ call_macro("<macroName>"[, <dynamicLocalVariables>...])
 
 ##### `copy_field`
 
-Copies (or appends to) a field from an existing field.
+Copies a field from an existing field.
 
 ```perl
 copy_field("<sourceField>", "<targetField>")
@@ -211,7 +211,7 @@ hash("foo")
 
 ##### `move_field`
 
-Moves (or appends to) a field from an existing field. Can be used to rename a field.
+Moves a field from an existing field. Can be used to rename a field.
 
 ```perl
 move_field("<sourceField>", "<targetField>")
@@ -611,8 +611,19 @@ upcase("<sourceField>")
 
 Encodes a field value as URI. Aka percent-encoding.
 
+Options:
+
+- `plus_for_space`: Sets whether "space" (` `) will be substituted by a "plus" (`+`) or be percent escaped (`%20`). (Default: `true`)
+- `safe_chars`: Sets characters that won't be escaped. Safe characters are the ranges 0..9, a..z and A..Z. These are always safe and should not be specified. (Default: `.-*_`)
+
 ```perl
-uri_encode("<sourceField>")
+uri_encode("<sourceField>"[, <options>...])
+```
+
+E.g.:
+
+```perl
+uri_encode("path.to.field", plus_for_space:"false", safe_chars:"")
 ```
 
 ### Selectors
@@ -853,3 +864,4 @@ Executes the functions if/unless the field value does not match the regular expr
 ##### `str_match`
 
 Executes the functions if/unless the string matches the regular expression pattern.
+
