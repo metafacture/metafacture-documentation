@@ -183,7 +183,7 @@ of the function are used as parameters:
 do put_macro("concat-up")
    set_array("$[target_field]")
    copy_field("$[source_field]","$[target_field].$append")
-   case("$[target_field].*")
+   upcase("$[target_field].*")
    join_field("$[target_field]",", ")
 end
 
