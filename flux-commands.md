@@ -529,8 +529,8 @@ open-file
 
 open-http
 ---------
-- description:	Opens an HTTP resource. Supports setting HTTP header fields `Accept`, `Accept-Charset` and `Content-Type`, as well as generic headers (separated by `\n`). Defaults: request `method` = `GET`, request `url` = `@-` (input data), request `body` = `@-` (input data) if request method supports body and input data not already used, `Accept` header = `*/*`, `Accept-Charset` header (`encoding`) = `UTF-8`, `errorPrefix` = `ERROR: `.
-- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], header (String), encoding (String), body (String), url (String), contenttype (String), accept (String), errorprefix (String)
+- description:	Opens an HTTP resource. Supports setting HTTP header fields `Accept`, `Accept-Charset`, `Accept-Encoding`, `Content-Encoding` and `Content-Type`, as well as generic headers (separated by `\n`). Defaults: request `method` = `GET`, request `url` = `@-` (input data), request `body` = `@-` (input data) if request method supports body and input data not already used, `Accept` header (`accept`) = `*/*`, `Accept-Charset` header (`acceptcharset`) = `UTF-8`, `errorprefix` = `ERROR: `.
+- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), contenttype (String), accept (String), errorprefix (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-http)
 - java class:	[org.metafacture.io.HttpOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/HttpOpener.java)
