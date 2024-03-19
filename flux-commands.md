@@ -264,7 +264,7 @@ encode-pica
 encode-xml
 ----------
 - description:	Encodes a stream as xml
-- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean)
+- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean), namespaces (String)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-xml)
 - java class:	[org.metafacture.xml.SimpleXmlEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/SimpleXmlEncoder.java)
