@@ -1,3 +1,10 @@
+---
+layout: default
+title: Fix User Guide
+parent: Fix
+nav_order: 1
+---
+
 ![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
 
 # Fix User Guide

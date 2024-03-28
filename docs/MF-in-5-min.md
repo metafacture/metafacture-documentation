@@ -1,3 +1,9 @@
+---
+layout: default
+title: 5 min Intro into MF
+nav_order: 3
+---
+
 # Introduction - A quick 5 minute introduction to Metafacture
 
 ## HELLO WORLD

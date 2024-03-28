@@ -1,3 +1,10 @@
+---
+layout: default
+title: Flux User Guide
+parent: Flux
+nav_order: 1
+---
+
 ![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
 
 # Flux User Guide

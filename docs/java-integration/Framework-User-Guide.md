@@ -1,3 +1,10 @@
+---
+layout: default
+title: Framework User Guide
+parent: Java Integration
+nav_order: 1
+---
+
 ![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
 
 # Framework User Guide
