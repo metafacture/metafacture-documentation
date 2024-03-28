@@ -10,11 +10,11 @@ nav_order: 2
 
 The easiest way to get started with Metafacture is the Playground. Take a look at the [first example](https://metafacture.org/playground/?flux=PG_DATA%0A%7Cas-lines%0A%7Cdecode-formeta%0A%7Cfix%0A%7Cencode-xml%28rootTag%3D%22collection%22%29%0A%7Cprint%0A%3B&fix=move_field%28_id%2C+id%29%0Amove_field%28a%2C+title%29%0Apaste%28author%2C+b.v%2C+b.n%2C+%27~aus%27%2C+c%29%0Aretain%28id%2C+title%2C+author%29&data=1%7Ba%3A+Faust%2C+b+%7Bn%3A+Goethe%2C+v%3A+JW%7D%2C+c%3A+Weimar%7D%0A2%7Ba%3A+R%C3%A4uber%2C+b+%7Bn%3A+Schiller%2C+v%3A+F%7D%2C+c%3A+Weimar%7D&active-editor=fix) and run it by pressing the !["Process"](https://metafacture.org/img/process.png) button. Check out the other examples (first button, !["Load Examples"](https://metafacture.org/img/load-exmples.png)) for different input sources, transformations, and output formats.
 
-For commands available in the Flux, see [the Flux commands documentation](/flux-commands.md).
+For commands available in the Flux, see [the Flux commands documentation](/docs/flux/flux-commands.html).
 
-For functions and usage of the Fix, see [the Fix functions and cookbook](/Fix-functions-and-cookbook).
+For functions and usage of the Fix, see [the Fix functions and cookbook](/docs/fix/Fix-functions-and-cookbook.html).
 
-For next steps get familar with [FLUX](/Flux-User-Guide.md) and [FIX](/Fix-User-Guide.md). And try out some Metafacture workflows.
+For next steps get familar with [FLUX](/docs/flux/Flux-User-Guide.html) and [FIX](/docs/fix/Fix-User-Guide.html). And try out some Metafacture workflows.
 
 ## Command line
 
@@ -27,7 +27,7 @@ To get started, you can export a workflow from the Playground (last button, !["E
 
 To set up IDE support for editing your Flux and Fix files, see [the IDE extensions page](https://metafacture.org/ide-extensions/index.html).
 
-For next steps get familar with [FLUX](/Flux-User-Guide.md) and [FIX](/Fix-User-Guide.md). And try out some Metafacture workflows.
+For next steps get familar with [FLUX](/docs/flux/Flux-User-Guide.html) and [FIX](/docs/fix/Fix-User-Guide.html). And try out some Metafacture workflows.
 
 ## Using Metafacture as a Java library
 
@@ -58,4 +58,4 @@ To use Fix you would declare `metafix` instead of `metafacture-io` as in the exa
 Occasionally, we publish snapshot builds on [Sonatype OSS Repository](https://oss.sonatype.org/index.html#nexus-search;gav~org.metafacture~~~~~kw,versionexpand). The version number is derived from the branch name. Snapshot builds from the master branch always have the version `master-SNAPSHOT`. We also provide sometimes pre releases as github packages.
 
 
-If you plan to use Metafacture as a Java library or if you wish to add commands to Flux you should get familar with the [Framework](/Framework-User-Guide.md).
+If you plan to use Metafacture as a Java library or if you wish to add commands to Flux you should get familar with the [Framework](/docs/java-integration/Framework-User-Guide.html).

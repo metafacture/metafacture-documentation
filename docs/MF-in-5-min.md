@@ -93,7 +93,7 @@ $ cat yaml2json.flux
 
 ## FIX LANGUAGE
 
-Many data conversions need a mapping from one field to another field plus optional conversions of the data inside these fields. Metafacture provides the transformation module `fix` that uses the Catmandu-inspired Fix language to assist in these mappings. A full list Fix functions is available at https://github.com/metafacture/metafacture-documentation/blob/master/Fix-function-and-Cookbook.md#functions.
+Many data conversions need a mapping from one field to another field plus optional conversions of the data inside these fields. Metafacture provides the transformation module `fix` that uses the Catmandu-inspired Fix language to assist in these mappings. See the [full list of Fix functions](/docs/fix/Fix-functions-and-Cookbook.html#functions).
 
 Fixes can be provided inline as text argument of the fix module in the Flux script, or as a pointer to a Fix script. A Fix script groups one or more fixes in a file.
 

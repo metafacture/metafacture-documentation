@@ -10,7 +10,7 @@ permalink: /
 
 Metafacture is a toolkit for processing semi-structured data with a focus on library metadata. It provides a versatile set of tools for reading, writing and transforming data. Metafacture can be used as a stand-alone application via CLI or as a Java library in other applications. There is also a playground where you can test workflows.
 
-[Have a look here for a quick intro into metafacture.](./MF-in-5-min.md)
+[Have a look here for a quick intro into metafacture.](./docs/MF-in-5-min.html)
 
 This is the central place for the documentation about Metafacture.
 
@@ -31,5 +31,5 @@ Deciding which parts are relevant to you depends on the way you are using Metafa
 > [!NOTE]
 > No Java-Code is necessary!!!
 
-While working with the playground or the command line you only need [Flux](#flux) and the transformation module [Fix](#fix).
-Have a look here for [Getting started](/Getting-Started.md).
+While working with the playground or the command line you only need [Flux](/docs/flux/flux.html) and the transformation module [Fix](/docs/fix/fix.html).
+Have a look here for [Getting started](/docs/Getting-Started.html).

@@ -10,7 +10,7 @@ nav_order: 1
 This document provides an introduction to the Metafacture Fix language (short: Metafix or Fix). The Fix language for Metafacture is introduced as an alternative to configuring data transformations with Metamorph. Inspired by Catmandu Fix, Metafix processes metadata not as a continuous data stream but as discrete records.
 
 ## Part of a metafacture worflow
-Metafacture Fix is a transformation module that can be used in a [Flux Workflow](/Flux-User-Guide.md), for this you have to use this in your pipeline:
+Metafacture Fix is a transformation module that can be used in a [Flux Workflow](/docs/flux/Flux-User-Guide.html), for this you have to use this in your pipeline:
 
 Flux-Example:
 ```PERL
@@ -90,7 +90,7 @@ do Bind(params,…)
 end
 ```
 
-Find here a [list of all functions, selectors, binds and conditionals](/Fix-function-and-Cookbook.md).
+Find here a [list of all functions, selectors, binds and conditionals](//docs/fix/s-and-Cookbook.html).
 
 
 ## Addressing Pieces of Data: FIX-Path and the record structure in FIX
