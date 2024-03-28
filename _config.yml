@@ -26,3 +26,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 
 # Custom colors, see _sass/color_schemes/metafacture.scss
 color_scheme: metafacture
+
+# see https://just-the-docs.github.io/just-the-docs/docs/search/#search-granularity
+search.heading_level: 6
+search.previews: 6
