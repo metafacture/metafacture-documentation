@@ -179,6 +179,6 @@ The 245 field with its subfields of each MARC record is mapped to the title fiel
 The `retain` Fix function keeps only the title field in the output. (In contrast to Catmandu there are no special marc or pica fixes since the internal handling of records and elements is more generic. Also the internal serialization of MARC is not as complex as in Catmandu.)
 
 
-Now you should be ready to [get started](./Getting-Started.md).
+Now you should be ready to [get started](/docs/Getting-Started.html).
 
 (Note: This mini introduction to Metafacture is inspired by the mini introduction to Catmandu here: https://metacpan.org/dist/Catmandu/view/lib/Catmandu/Introduction.pod)
