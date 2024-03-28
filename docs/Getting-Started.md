@@ -4,9 +4,6 @@ title: Getting Started
 nav_order: 2
 ---
 
-![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
-
-
 # Getting started!
 
 ## Playground

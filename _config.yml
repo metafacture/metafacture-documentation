@@ -5,4 +5,8 @@ theme: just-the-docs
 url: https://Phu2.github.io/metafacture-documentation
 
 aux_links:
-  Template Repository: https://github.com/Phu2/metafacture-documentation
+  Metafacture Documentation on Github: https://github.com/Phu2/metafacture-documentation
+
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "/assets/images/metafacture_small.png"
+favicon_ico: "/assets/images/favicon.ico"

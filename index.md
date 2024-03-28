@@ -6,8 +6,6 @@ description: "This is the central place for the documentation about Metafacture.
 permalink: /
 ---
 
-![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
-
 # Metafacture Documentation
 
 Metafacture is a toolkit for processing semi-structured data with a focus on library metadata. It provides a versatile set of tools for reading, writing and transforming data. Metafacture can be used as a stand-alone application via CLI or as a Java library in other applications. There is also a playground where you can test workflows.

@@ -5,8 +5,6 @@ parent: Fix
 nav_order: 1
 ---
 
-![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
-
 # Fix User Guide
 
 This document provides an introduction to the Metafacture Fix language (short: Metafix or Fix). The Fix language for Metafacture is introduced as an alternative to configuring data transformations with Metamorph. Inspired by Catmandu Fix, Metafix processes metadata not as a continuous data stream but as discrete records.
