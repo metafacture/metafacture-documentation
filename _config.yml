@@ -1,0 +1,33 @@
+title: Metafacture Documentation
+description: This is the central place for the documentation about Metafacture.
+theme: just-the-docs
+
+url: https://Phu2.github.io/metafacture-documentation
+
+aux_links:
+  Metafacture Documentation on Github: https://github.com/Phu2/metafacture-documentation
+
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "/assets/images/metafacture_small.png"
+favicon_ico: "/assets/images/favicon.ico"
+
+# Footer content
+# appears at the bottom of every page's main content
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: "Metafacture Documentation is maintained by the <a href=\"https://lobid.org/team-en/\">Open infrastructure team of hbz.</a>"
+
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Custom colors, see _sass/color_schemes/metafacture.scss
+color_scheme: metafacture
+
+# see https://just-the-docs.github.io/just-the-docs/docs/search/#search-granularity
+search:
+  heading_level: 6
+  previews: 6

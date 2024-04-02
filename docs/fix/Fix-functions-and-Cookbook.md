@@ -1,3 +1,10 @@
+---
+layout: default
+title: Fix Functions and Cookbook
+parent: Fix
+nav_order: 2
+---
+
 This page is a replication of the passage of the Fix Readme.md.
 
 ## Functions and cookbook

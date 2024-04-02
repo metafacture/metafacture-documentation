@@ -1,3 +1,10 @@
+---
+layout: default
+title: Maintainer Guide
+nav_order: 8
+---
+
+# Maintainer Guide
 
 ## how to change flux-commands.md
 

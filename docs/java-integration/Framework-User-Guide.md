@@ -1,9 +1,14 @@
-![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
+---
+layout: default
+title: Framework User Guide
+parent: Java Integration
+nav_order: 1
+---
 
 # Framework User Guide
 
 > [!NOTE]
->Relevant for Java developers. For using metafacture without Java Code see the [FLUX user guide](/Flux-User-Guide.md).
+>Relevant for Java developers. For using metafacture without Java Code see the [FLUX user guide](/docs/flux/Flux-User-Guide.html).
 
 This page explains how to create a Metafacture objects and how to assemble them to form a processing pipeline. We use as an example a simple pipeline containing a Metafix instance.
 
