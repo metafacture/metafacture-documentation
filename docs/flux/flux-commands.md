@@ -1,3 +1,10 @@
+---
+layout: default
+title: Flux Commands
+parent: Flux
+nav_order: 2
+---
+
 Available flux commands
 =======================
 
