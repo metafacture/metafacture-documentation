@@ -15,5 +15,5 @@ The transformation itself is declared in a fix-object which can be a file. For m
 
 See [here a list for all available FIX functions and a cookbook for using fix](//docs/fix/Fix-functions-and-Cookbook.html).
 
-> [!NOTE]
+{: .note }
 > PS: There is also the transformation modul MORPH. Have a look at[ the old documentation](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide) and the german cookbook by [Swissbib](https://swissbib.gitlab.io/metamorph-doku/).
