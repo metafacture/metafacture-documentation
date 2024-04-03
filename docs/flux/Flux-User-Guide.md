@@ -121,7 +121,7 @@ Flux supports single line C/Java-style comments: `//comment`.
 _________________________
 ## For developers: 
 
-> [!NOTE]
+{: .note }
 > Coding in JAVA.
 
 ### Adding new Commands
