@@ -8,7 +8,7 @@ has_children: true
 ## Framework for Java integration/development
 
 {: .note }
-> Relevant for developers
+Relevant for developers
 
 The framework includes the interfaces and abstract classes which form the foundation of the data processing pipelines. This part of Metafacture is only relevant for you if you plan to use Metafacture as a Java library or if you wish to add pipe elements to Flux.
 

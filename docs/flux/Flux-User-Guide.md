@@ -122,7 +122,7 @@ _________________________
 ## For developers: 
 
 {: .note }
-> Coding in JAVA.
+Coding in JAVA.
 
 ### Adding new Commands
 Add your class and a descriptive flux shortcut to `flux-commands.properties`. This file acts as a lookup table for flux commands. Use the proper file, i.e. the one residing in the same module where your newly created class resides. If you have e.g. created a class in the module `metafacture-biblio`, you add the flux-command to https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/resources/flux-commands.properties.
