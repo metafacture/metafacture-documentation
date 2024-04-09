@@ -1,4 +1,4 @@
-This page is a replication of the passage of the Fix Readme.md.
+This page is a replication of the passage of the Fix Readme.md. Status: [Fix Release 1.0.0](https://github.com/metafacture/metafacture-fix/releases/tag/1.0.0)
 
 ## Functions and cookbook
 
@@ -66,6 +66,8 @@ Does nothing. It is used for benchmarking in Catmandu.
 nothing()
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=nothing)
+
 ##### `put_filemap`
 
 Defines an external map for [lookup](#lookup) from a file or a URL. Maps with more than 2 columns are supported but are reduced to a defined key and a value column.
@@ -73,6 +75,8 @@ Defines an external map for [lookup](#lookup) from a file or a URL. Maps with mo
 ```perl
 put_filemap("<sourceFile>", "<mapName>", sep_char: "\t")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=put_filemap)
 
 The separator (`sep_char`) will vary depending on the source file, e.g.:
 
@@ -103,6 +107,8 @@ put_map("<mapName>",
 )
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=put_map)
+
 ##### `put_rdfmap`
 
 Defines an external RDF map for lookup from a file or an HTTP(S) resource.
@@ -114,6 +120,8 @@ put_rdfmap("<rdfResource>", "<rdfMapName>", target: "<rdfProperty>")
 put_rdfmap("<rdfResource>", "<rdfMapName>", target: "<rdfProperty>", select_language: "<rdfLanguageTag>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=put_rdfmap)
+
 ##### `put_var`
 
 Defines a single global variable that can be referenced with `$[<variableName>]`.
@@ -121,6 +129,8 @@ Defines a single global variable that can be referenced with `$[<variableName>]`
 ```perl
 put_var("<variableName>", "<variableValue>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=put_var)
 
 ##### `put_vars`
 
@@ -133,6 +143,8 @@ put_vars(
 )
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=put_vars)
+
 #### Record-level functions
 
 ##### `add_field`
@@ -142,6 +154,8 @@ Creates a field with a defined value.
 ```perl
 add_field("<targetFieldName>", "<fieldValue>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=add_field)
 
 ##### `array`
 
@@ -177,6 +191,8 @@ end
 call_macro("<macroName>"[, <dynamicLocalVariables>...])
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=call_macro)
+
 ##### `copy_field`
 
 Copies a field from an existing field.
@@ -184,6 +200,9 @@ Copies a field from an existing field.
 ```perl
 copy_field("<sourceField>", "<targetField>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=copy_field)
+
 
 ##### `format`
 
@@ -217,6 +236,9 @@ Moves a field from an existing field. Can be used to rename a field.
 move_field("<sourceField>", "<targetField>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=move_field)
+
+
 ##### `parse_text`
 
 Parses a text into an array or hash of values.
@@ -247,6 +269,8 @@ E.g.:
 paste("my.string", "~Hi", "a", "~how are you?")
 # "my.string": "Hi eeny how are you?"
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=paste)
 
 ##### `print_record`
 
@@ -297,6 +321,8 @@ Removes a field.
 remove_field("<sourceField>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=remove_field)
+
 ##### `rename`
 
 Replaces a regular expression pattern in subfield names of a field. Does not change the name of the source field itself.
@@ -304,6 +330,8 @@ Replaces a regular expression pattern in subfield names of a field. Does not cha
 ```perl
 rename("<sourceField>", "<regexp>", "<replacement>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=rename)
 
 ##### `retain`
 
@@ -313,6 +341,8 @@ Deletes all fields except the ones listed (incl. subfields).
 retain("<sourceField_1>"[, ...])
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=retain)
+
 ##### `set_array`
 
 Creates a new array (with optional values).
@@ -321,6 +351,8 @@ Creates a new array (with optional values).
 set_array("<targetFieldName>")
 set_array("<targetFieldName>", "<value_1>"[, ...])
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=set_array)
 
 ##### `set_field`
 
@@ -361,6 +393,8 @@ Deletes empty fields, arrays and objects.
 vacuum()
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=vacuum)
+
 #### Field-level functions
 
 ##### `append`
@@ -371,6 +405,8 @@ Adds a string at the end of a field value.
 append("<sourceField>", "<appendString>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=append)
+
 ##### `capitalize`
 
 Upcases the first character in a field value.
@@ -378,6 +414,8 @@ Upcases the first character in a field value.
 ```perl
 capitalize("<sourceField>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=capitalize)
 
 ##### `count`
 
@@ -395,6 +433,8 @@ Downcases all characters in a field value.
 downcase("<sourceField>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=downcase)
+
 ##### `filter`
 
 Only keeps field values that match the regular expression pattern. Works only with array of strings/repeated fields.
@@ -410,6 +450,8 @@ Flattens a nested array field.
 ```perl
 flatten("<sourceField>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=flatten)
 
 ##### `from_json`
 
@@ -445,6 +487,8 @@ Options:
 isbn("<sourceField>"[, to: "<isbnFormat>"][, verify_check_digit: "<boolean>"][, error_string: "<errorValue>"])
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=isbn)
+
 ##### `join_field`
 
 Joins an array of strings into a single string.
@@ -452,6 +496,8 @@ Joins an array of strings into a single string.
 ```perl
 join_field("<sourceField>", "<separator>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=join_field)
 
 ##### `lookup`
 
@@ -520,6 +566,8 @@ Adds a string at the beginning of a field value.
 prepend("<sourceField>", "<prependString>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=prepend)
+
 ##### `replace_all`
 
 Replaces a regular expression pattern in field values with a replacement string. Regexp capturing is possible; refer to capturing groups by number (`$<number>`) or name (`${<name>}`).
@@ -527,6 +575,8 @@ Replaces a regular expression pattern in field values with a replacement string.
 ```perl
 replace_all("<sourceField>", "<regexp>", "<replacement>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=replace_all)
 
 ##### `reverse`
 
@@ -546,6 +596,8 @@ sort_field("<sourceField>", reverse: "true")
 sort_field("<sourceField>", numeric: "true")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=sort_field)
+
 ##### `split_field`
 
 Splits a string into an array and replaces the field value with this array.
@@ -553,6 +605,8 @@ Splits a string into an array and replaces the field value with this array.
 ```perl
 split_field("<sourceField>", "<separator>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=split_field)
 
 ##### `substring`
 
@@ -591,6 +645,8 @@ Deletes whitespace at the beginning and the end of a field value.
 trim("<sourceField>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=trim)
+
 ##### `uniq`
 
 Deletes duplicate values in an array.
@@ -599,6 +655,9 @@ Deletes duplicate values in an array.
 uniq("<sourceField>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=uniq)
+
+
 ##### `upcase`
 
 Upcases all characters in a field value.
@@ -606,6 +665,8 @@ Upcases all characters in a field value.
 ```perl
 upcase("<sourceField>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=upcase)
 
 ##### `uri_encode`
 
@@ -638,6 +699,8 @@ if <condition>
 end
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=reject)
+
 ### Binds
 
 #### `do list`
@@ -650,6 +713,8 @@ do list(path: "<sourceField>")
 end
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=do_list)
+
 Only the current element is accessible in this case (as the root element).
 
 When specifying a variable name for the current element, the record remains accessible as the root element and the current element is accessible through the variable name:
@@ -659,6 +724,8 @@ do list(path: "<sourceField>", "var": "<variableName>")
   ...
 end
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=do_list_with_var)
 
 #### `do list_as`
 
@@ -692,6 +759,8 @@ do once()
   ...
 end
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=do_once)
 
 In order to execute multiple blocks only once, tag them with unique identifiers:
 
@@ -728,6 +797,8 @@ do put_macro("<macroName>"[, <staticLocalVariables>...])
 end
 call_macro("<macroName>"[, <dynamicLocalVariables>...])
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=do_put_macro)
 
 ### Conditionals
 
@@ -865,3 +936,6 @@ Executes the functions if/unless the field value does not match the regular expr
 
 Executes the functions if/unless the string matches the regular expression pattern.
 
+## Xtext
+
+This repo has been originally set up with [Xtext](https://www.eclipse.org/Xtext/) 2.17.0 and Eclipse for Java 2019-03, following [https://www.eclipse.org/Xtext/documentation/104_jvmdomainmodel.html](https://www.eclipse.org/Xtext/documentation/104_jvmdomainmodel.html).
