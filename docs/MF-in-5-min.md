@@ -167,12 +167,12 @@ retain("title", "id")
 | as-records
 | decode-marc21
 | fix("titles.fix")
-| encode-csv
+| encode-csv(includeHeader="true")
 | print
 ;
 ```
 
-[Example in Playground](https://metafacture.org/playground/?flux=%22https%3A//raw.githubusercontent.com/metafacture/metafacture-core/master/metafacture-runner/src/main/dist/examples/read/marc21/10.marc21%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-marc21%0A%7C+fix%28transformationFile%29%0A%7C+encode-csv%0A%7C+print%0A%3B&transformation=set_array%28%22title%22%29%0Acopy_field%28%22245%3F%3F.%3F%22%2C%22title.%24append%22%29%0Ajoin_field%28%22title%22%29%0Acopy_field%28%22001%22%2C%22id%22%29%0Aretain%28%22title%22%2C+%22id%22%29)
+[Example in Playground](https://metafacture.org/playground/?flux=%22https%3A//raw.githubusercontent.com/metafacture/metafacture-tutorial/main/data/sample.marc21%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-marc21%0A%7C+fix%28transformationFile%29%0A%7C+encode-csv%28includeheader%3D%22true%22%29%0A%7C+print%0A%3B&transformation=set_array%28%22title%22%29%0Acopy_field%28%22245%3F%3F.%3F%22%2C%22title.%24append%22%29%0Ajoin_field%28%22title%22%29%0Acopy_field%28%22001%22%2C%22id%22%29%0Aretain%28%22title%22%2C+%22id%22%29)
 
 In the example above marc data is converted to a csv file.
 The 245 field with its subfields of each MARC record is mapped to the title field.
