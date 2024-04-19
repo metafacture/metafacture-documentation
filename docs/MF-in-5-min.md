@@ -93,7 +93,7 @@ $ cat yaml2json.flux
 
 ## FIX LANGUAGE
 
-Many data conversions need a mapping from one field to another field plus optional conversions of the data inside these fields. Metafacture provides the transformation module `fix` that uses the Catmandu-inspired Fix language to assist in these mappings. See the [full list of Fix functions](/docs/fix/Fix-functions-and-Cookbook.html#functions).
+Many data conversions need a mapping from one field to another field plus optional conversions of the data inside these fields. Metafacture provides the transformation module `fix` that uses the Catmandu-inspired Fix language to assist in these mappings. A full list Fix functions is available at https://github.com/metafacture/metafacture-documentation/blob/master/Fix-function-and-Cookbook.md#functions.
 
 Fixes can be provided inline as text argument of the fix module in the Flux script, or as a pointer to a Fix script. A Fix script groups one or more fixes in a file.
 
@@ -167,18 +167,18 @@ retain("title", "id")
 | as-records
 | decode-marc21
 | fix("titles.fix")
-| encode-csv
+| encode-csv(includeHeader="true")
 | print
 ;
 ```
 
-[Example in Playground](https://metafacture.org/playground/?flux=%22https%3A//raw.githubusercontent.com/metafacture/metafacture-core/master/metafacture-runner/src/main/dist/examples/read/marc21/10.marc21%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-marc21%0A%7C+fix%28transformationFile%29%0A%7C+encode-csv%0A%7C+print%0A%3B&transformation=set_array%28%22title%22%29%0Acopy_field%28%22245%3F%3F.%3F%22%2C%22title.%24append%22%29%0Ajoin_field%28%22title%22%29%0Acopy_field%28%22001%22%2C%22id%22%29%0Aretain%28%22title%22%2C+%22id%22%29)
+[Example in Playground](https://metafacture.org/playground/?flux=%22https%3A//raw.githubusercontent.com/metafacture/metafacture-tutorial/main/data/sample.marc21%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-marc21%0A%7C+fix%28transformationFile%29%0A%7C+encode-csv%28includeheader%3D%22true%22%29%0A%7C+print%0A%3B&transformation=set_array%28%22title%22%29%0Acopy_field%28%22245%3F%3F.%3F%22%2C%22title.%24append%22%29%0Ajoin_field%28%22title%22%29%0Acopy_field%28%22001%22%2C%22id%22%29%0Aretain%28%22title%22%2C+%22id%22%29)
 
 In the example above marc data is converted to a csv file.
 The 245 field with its subfields of each MARC record is mapped to the title field.
 The `retain` Fix function keeps only the title field in the output. (In contrast to Catmandu there are no special marc or pica fixes since the internal handling of records and elements is more generic. Also the internal serialization of MARC is not as complex as in Catmandu.)
 
 
-Now you should be ready to [get started](/docs/Getting-Started.html).
+Now you should be ready to [get started](./Getting-Started.md).
 
 (Note: This mini introduction to Metafacture is inspired by the mini introduction to Catmandu here: https://metacpan.org/dist/Catmandu/view/lib/Catmandu/Introduction.pod)
