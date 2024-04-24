@@ -54,6 +54,8 @@ handle-picaxml	https://github.com/metafacture/metafacture-core/blob/master/metaf
 jscript	https://github.com/metafacture/metafacture-core/blob/master/metafacture-scripting/src/main/java/org/metafacture/scripting/JScriptObjectPipe.java	
 json-to-elasticsearch-bulk	https://github.com/metafacture/metafacture-core/blob/master/metafacture-elasticsearch/src/main/java/org/metafacture/elasticsearch/JsonToElasticsearchBulk.java	
 lines-to-records	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/LineRecorder.java	https://metafacture.org/playground/?example=lines-to-records
+list-fix-path	https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/ListFixPaths.java 	https://metafacture.org/playground/?example=list-fix-paths
+list-fix-values	https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/ListFixValues.java	https://metafacture.org/playground/?example=list-fix-values
 literal-to-object	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/LiteralToObject.java	https://metafacture.org/playground/?example=literal-to-object
 log-object	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/ObjectLogger.java	
 log-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/StreamLogger.java	
