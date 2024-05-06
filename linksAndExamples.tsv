@@ -26,12 +26,12 @@ decouple	https://github.com/metafacture/metafacture-core/blob/master/metafacture
 defer-stream	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/StreamDeferrer.java	
 digest-file	https://github.com/metafacture/metafacture-core/blob/master/metafacture-files/src/main/java/org/metafacture/files/FileDigestCalculator.java	
 discard-events	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamEventDiscarder.java	
-draw-uniform-sample	https://github.com/metafacture/metafacture-core/blob/master/metafacture-statistics/src/main/java/org/metafacture/statistics/UniformSampler.java	
+draw-uniform-sample	https://github.com/metafacture/metafacture-core/blob/master/metafacture-statistics/src/main/java/org/metafacture/statistics/UniformSampler.java	https://metafacture.org/playground/?example=draw-uniform-sample
 encode-csv	https://github.com/metafacture/metafacture-core/blob/master/metafacture-csv/src/main/java/org/metafacture/csv/CsvEncoder.java	https://metafacture.org/playground/?example=encode-csv
 encode-formeta	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formeta/src/main/java/org/metafacture/formeta/FormetaEncoder.java	https://metafacture.org/playground/?example=encode-formeta
 encode-json	https://github.com/metafacture/metafacture-core/blob/master/metafacture-json/src/main/java/org/metafacture/json/JsonEncoder.java	https://metafacture.org/playground/?example=encode-json
 encode-literals	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/StreamLiteralFormatter.java	https://metafacture.org/playground/?example=encode-literals
-encode-marc21	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Encoder.java	
+encode-marc21	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Encoder.java	https://metafacture.org/playground/?example=encode-marc21
 encode-marcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlEncoder.java	https://metafacture.org/playground/?example=encode-marcxml
 encode-pica	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaEncoder.java	
 encode-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/SimpleXmlEncoder.java	https://metafacture.org/playground/?example=encode-xml
@@ -49,7 +49,7 @@ handle-cg-xml	https://github.com/metafacture/metafacture-core/blob/master/metafa
 handle-comarcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/ComarcXmlHandler.java	
 handle-generic-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/GenericXmlHandler.java	https://metafacture.org/playground/?example=handle-generic-xml
 handle-mabxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/AlephMabXmlHandler.java	
-handle-marcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlHandler.java	
+handle-marcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlHandler.java	https://metafacture.org/playground/?example=handle-marcxml
 handle-picaxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaXmlHandler.java	
 jscript	https://github.com/metafacture/metafacture-core/blob/master/metafacture-scripting/src/main/java/org/metafacture/scripting/JScriptObjectPipe.java	
 json-to-elasticsearch-bulk	https://github.com/metafacture/metafacture-core/blob/master/metafacture-elasticsearch/src/main/java/org/metafacture/elasticsearch/JsonToElasticsearchBulk.java	
@@ -108,4 +108,4 @@ write-files	https://github.com/metafacture/metafacture-core/blob/master/metafact
 write-triple-objects	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleObjectWriter.java	
 write-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleWriter.java	
 write-xml-files	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlFilenameWriter.java	
-xml-tee	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/XmlTee.java	
+xml-tee	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/XmlTee.java	https://metafacture.org/playground/?example=write
