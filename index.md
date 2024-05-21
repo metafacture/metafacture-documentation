@@ -31,10 +31,10 @@ Deciding which parts are relevant to you depends on the way you are using Metafa
 {: .note }
 No Java-Code is necessary!!!
 
-While working with the playground or the command line you only need [Flux](/docs/flux/flux.html) and the transformation module [Fix](/docs/fix/fix.html).
-Have a look here for [Getting started](/docs/Getting-Started.html).
+While working with the playground or the command line you only need [Flux](docs/flux/flux.html) and the transformation module [Fix](docs/fix/fix.html).
+Have a look here for [Getting started](docs/Getting-Started.html).
 
 
 ## Framework for Java integration/development
 
-If you plan to use Metafacture as a Java library or if you wish to add commands to Flux. You should get familar with the [Framework](#framework).
+If you plan to use Metafacture as a Java library or if you wish to add commands to Flux. You should get familar with the [Framework](docs/java-integration/Framework-User-Guide.html).

@@ -93,7 +93,7 @@ $ cat yaml2json.flux
 
 ## FIX LANGUAGE
 
-Many data conversions need a mapping from one field to another field plus optional conversions of the data inside these fields. Metafacture provides the transformation module `fix` that uses the Catmandu-inspired Fix language to assist in these mappings. See the [full list of Fix functions](/docs/fix/Fix-functions-and-Cookbook.html#functions).
+Many data conversions need a mapping from one field to another field plus optional conversions of the data inside these fields. Metafacture provides the transformation module `fix` that uses the Catmandu-inspired Fix language to assist in these mappings. See the [full list of Fix functions](fix/Fix-functions-and-Cookbook.html#functions).
 
 Fixes can be provided inline as text argument of the fix module in the Flux script, or as a pointer to a Fix script. A Fix script groups one or more fixes in a file.
 
@@ -179,6 +179,6 @@ The 245 field with its subfields of each MARC record is mapped to the title fiel
 The `retain` Fix function keeps only the title field in the output. (In contrast to Catmandu there are no special marc or pica fixes since the internal handling of records and elements is more generic. Also the internal serialization of MARC is not as complex as in Catmandu.)
 
 
-Now you should be ready to [get started](/docs/Getting-Started.html).
+Now you should be ready to [get started](Getting-Started.html).
 
 (Note: This mini introduction to Metafacture is inspired by the mini introduction to Catmandu here: https://metacpan.org/dist/Catmandu/view/lib/Catmandu/Introduction.pod)

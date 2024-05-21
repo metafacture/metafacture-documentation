@@ -8,7 +8,7 @@ nav_order: 1
 # Framework User Guide
 
 {: .note }
-Relevant for Java developers. For using metafacture without Java Code see the [FLUX user guide](/docs/flux/Flux-User-Guide.html).
+Relevant for Java developers. For using metafacture without Java Code see the [FLUX user guide](../flux/Flux-User-Guide.html).
 
 This page explains how to create a Metafacture objects and how to assemble them to form a processing pipeline. We use as an example a simple pipeline containing a Metafix instance.
 
