@@ -181,4 +181,4 @@ The `retain` Fix function keeps only the title field in the output. (In contrast
 
 Now you should be ready to [get started](Getting-Started.html).
 
-(Note: This mini introduction to Metafacture is inspired by the mini introduction to Catmandu here: https://metacpan.org/dist/Catmandu/view/lib/Catmandu/Introduction.pod)
+(Note: This mini introduction to Metafacture is inspired by the mini [introduction to Catmandu](https://metacpan.org/dist/Catmandu/view/lib/Catmandu/Introduction.pod))
