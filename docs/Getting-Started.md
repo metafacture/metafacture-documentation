@@ -12,7 +12,7 @@ The easiest way to get started with Metafacture is the Playground. Take a look a
 
 For commands available in the Flux, see [the Flux commands documentation](flux/flux-commands.html).
 
-For functions and usage of the Fix, see [the Fix functions and cookbook](fix/Fix-functions-and-cookbook.html).
+For functions and usage of the Fix, see [the Fix functions and cookbook](fix/Fix-functions-and-Cookbook.html).
 
 For next steps get familar with [FLUX](flux/Flux-User-Guide.html) and [FIX](fix/Fix-User-Guide.html). And try out some Metafacture workflows.
 
@@ -25,7 +25,7 @@ To use Metafacture as a command-line tool, download the latest metafix-runner fr
 
 To get started, you can export a workflow from the Playground (last button, !["Export Workflow"](https://metafacture.org/img/export.png)).
 
-To set up IDE support for editing your Flux and Fix files, see [the IDE extensions page](https://metafacture.org/ide-extensions/index.html).
+To set up IDE support for editing your Flux and Fix files, see [the IDE extensions page](https://metafacture.org/ide-extensions.html).
 
 For next steps get familar with [FLUX](flux/Flux-User-Guide.html) and [FIX](fix/Fix-User-Guide.html). And try out some Metafacture workflows.
 
