@@ -7,6 +7,11 @@ url: https://metafacture.github.io/metafacture-documentation
 aux_links:
   Metafacture Documentation on Github: https://github.com/metafacture/metafacture-documentation
 
+# External navigation links
+nav_external_links:
+  - title: LICENSE
+    url: https://github.com/metafacture/metafacture-core/blob/master/LICENSE
+
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/metafacture_small.png"
 favicon_ico: "/assets/images/favicon.ico"
