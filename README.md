@@ -7,7 +7,7 @@ For the documentation see: http://metafacture.github.io/metafacture-documentatio
 
 This repo is the central place for the documentation about Metafacture that we render using the jekyll template [Just the docs](https://github.com/just-the-docs/just-the-docs).
 
-The content pages can be found [here](/docs/)
+The content pages can be found [here in `/docs/`](/docs/)
 
 > [!NOTE]
 > With regard to the Transformation-Modules this documentation focusses on Fix instead of MORPH. If you want to find out more about MORPH. Have a look at [the old documentation](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide) and the german cookbook by [Swissbib](https://swissbib.gitlab.io/metamorph-doku/).
