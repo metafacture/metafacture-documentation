@@ -6,9 +6,9 @@ nav_order: 8
 
 # Maintainer Guide
 
-## how to change [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md)
+## how to change [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md)
 
-The entries in [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md) describe the usage of commands used by flux.
+The entries in [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md) describe the usage of commands used by flux.
 flux-commands.md is fully automatically generated. To make this happen one has to
 fill in the proper annotations in the correponding java classes. E.g.
 
