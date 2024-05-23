@@ -1,3 +1,9 @@
+---
+layout: default
+title: Approaching a transformation with metafacture
+nav_order: 4
+---
+
 Every approach to transform metadata with metafacture is quite similiar:
 
 - You need to know the type and source of the input and the type and destination of the output:

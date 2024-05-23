@@ -1,7 +1,14 @@
+---
+layout: default
+title: Maintainer Guide
+nav_order: 8
+---
 
-## how to change flux-commands.md
+# Maintainer Guide
 
-The entries in flux-commands.md describe the usage of commands used by flux.
+## how to change [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md)
+
+The entries in [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md) describe the usage of commands used by flux.
 flux-commands.md is fully automatically generated. To make this happen one has to
 fill in the proper annotations in the correponding java classes. E.g.
 
@@ -30,7 +37,7 @@ The option's name is produced by cutting away the "set" from the methods name, l
 "BatchSize" which is then lowercased. The parameter of this option is generated from the
 parameter type of the method - here an "int"eger.
 
-## how to publish flux-commands.md
+## how to publish [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md)
 
 If you have updated some of these annotations, say "description", and these changes are
 merged into the master branch, generate a new flux-commands.md like this:
@@ -43,6 +50,7 @@ $ flux.sh > flux-commands.md
 ```
 
 Open the generated flux-commands.md and remove some boilerplate at the beginning of the
-file manually. Save it, copy it here, commit and push.
+file manually. Add the naviagtion part of the page, save it, copy it [here](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md), commit and push.
+
 
 The [publishing process will be automated with an github action](https://github.com/metafacture/metafacture-core/issues/368).

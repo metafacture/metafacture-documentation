@@ -1,4 +1,9 @@
-![logo](https://github.com/culturegraph/metafacture-core/wiki/img/metafacture_small.png)
+---
+layout: default
+title: Flux User Guide
+parent: Flux
+nav_order: 1
+---
 
 # Flux User Guide
 
@@ -46,6 +51,7 @@ This sets the variable `var1` to the value 'value1' and `var2` to the value 'val
 
 ## Writing Flux files
 The following snippet shows a simple flux file:
+
 ```c
 //declare variables
 default file = FLUX_DIR + "10.marc21";
@@ -60,8 +66,9 @@ file
 | write("stdout")
 ;
 ```
+
 In the first section [variables](#variables) are declared, in the second, we [define the flow](#flow-definitions).
-A flow is a combination of different [FLUX commands. Here is a list to all available Flux-Commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
+A flow is a combination of different FLUX commands. [Here is a list of all available Flux-Commands.](flux-commands.html)
 
 Linebreaks are optional, but help concerning readability. One can add comments with `//`.
 Semicolons `;` mark the end of a variable assignment or flow definition. 
@@ -85,7 +92,7 @@ The syntax for defining flows takes its cues from bash pipes. Commands are conca
 
 Some commands take a constructor argument. It is provided within brackets: `command("arg")`.
 Furthermore, some commands have named options. These are set as follows `command(optionname="arg1",annotheroption="arg2")` or with constructor argument: `command("arg",option="arg2")`.
-To learn about the available options of a command, execute Flux without arguments - it will list all available commands, including options. Or simply have a look at the [list of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
+To learn about the available options of a command, execute Flux without arguments - it will list all available commands, including options. Or simply have a look at the [list of available FLUX commands.](flux-commands.html)
 
 
 To some commands the entire environment can be given as an argument. This is done with the `*` character: `fix("tranformation.fix", *)`. In this case Metafix gains access to all variable assignments made in Flux.
@@ -93,7 +100,7 @@ To some commands the entire environment can be given as an argument. This is don
 
 Note that unlike shell pipes, the data flowing between Flux commands is _typed_. This means that only commands with matching signatures can be combined. Commands expect a certain input and provide a certain output like: `StreamReceiver, `Object`, `Reader` and others.
 
-To lookup the signatures, again: execute Flux without arguments or see: [[Metafix-User-Guide#parameters-to-metafix-definitions]]). It will list all available commands, including signatures. Or simply have a look at the  [list of available FLUX commands.](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md)
+To lookup the signatures, again: execute Flux without arguments or see: [[Metafix-User-Guide#parameters-to-metafix-definitions]]). It will list all available commands, including signatures. Or simply have a look at the  [list of available FLUX commands.](flux-commands.html)
 
 ### Variables
 Variables are always Strings and can be concatenated with the `+` operator. Escape sequences follow the Java String conventions: `\n`=line break, `\t`=tab, `\\`=\, `\u0024`=unicode character, etc.
@@ -108,16 +115,16 @@ Flux supports single line C/Java-style comments: `//comment`.
 
 
 ## Overview of the commands and some examples
-1. Have a look at the [List of available FLUX commands](https://github.com/metafacture/metafacture-documentation/blob/master/flux-commands.md) or execute the flux without arguments to get a short help text along with a list of all registered commands. This is the list of FLUX commands mentioned already above.
-2. There are several example flux files along with sample data in the folder `examples/`: https://github.com/metafacture/metafacture-core/tree/master/metafacture-runner/src/main/dist/examples
+1. Have a look at the [list of available FLUX commands](flux-commands.html) or execute the flux without arguments to get a short help text along with a list of all registered commands. This is the list of FLUX commands mentioned already above.
+2. There are several example flux files along with sample data in the repo folder `examples/`: [https://github.com/metafacture/metafacture-core/tree/master/metafacture-runner/src/main/dist/examples](https://github.com/metafacture/metafacture-core/tree/master/metafacture-runner/src/main/dist/examples)
 
 _________________________
-# For developers: 
+## For developers: 
 
-> [!NOTE]
-> Coding in JAVA.
+{: .note }
+Coding in JAVA.
 
-## Adding new Commands
+### Adding new Commands
 Add your class and a descriptive flux shortcut to `flux-commands.properties`. This file acts as a lookup table for flux commands. Use the proper file, i.e. the one residing in the same module where your newly created class resides. If you have e.g. created a class in the module `metafacture-biblio`, you add the flux-command to https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/resources/flux-commands.properties.
 Recompile. That's all to add a command.
 
