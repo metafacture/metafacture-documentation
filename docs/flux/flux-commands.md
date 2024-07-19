@@ -212,6 +212,7 @@ draw-uniform-sample
 -------------------
 - description:	Draws a uniform sample of records from the input stream.
 - signature:	Object -> Object
+- [example in Playground](https://metafacture.org/playground/?example=draw-uniform-sample)
 - java class:	[org.metafacture.statistics.UniformSampler](https://github.com/metafacture/metafacture-core/blob/master/metafacture-statistics/src/main/java/org/metafacture/statistics/UniformSampler.java)
 
 encode-csv
@@ -251,12 +252,13 @@ encode-marc21
 - description:	Encodes MARC21 records
 - options:	generateidfield (boolean)
 - signature:	StreamReceiver -> String
+- [example in Playground](https://metafacture.org/playground/?example=encode-marc21)
 - java class:	[org.metafacture.biblio.marc21.Marc21Encoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Encoder.java)
 
 encode-marcxml
 --------------
-- description:	Encodes a stream into MARCXML.
-- options:	emitnamespace (boolean), xmlversion (String), formatted (boolean), xmlencoding (String)
+- description:	Encodes a stream into MARCXML. If you can't ensure valid MARC21 (e.g. the leader isn't correct or not set as one literal) then set the parameter `ensureCorrectMarc21Xml` to `true`.
+- options:	ensurecorrectmarc21xml (boolean), emitnamespace (boolean), xmlversion (String), formatted (boolean), xmlencoding (String)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-marcxml)
 - java class:	[org.metafacture.biblio.marc21.MarcXmlEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlEncoder.java)
@@ -335,6 +337,12 @@ filter-triples
 - [example in Playground](https://metafacture.org/playground/?example=filter-triples)
 - java class:	[org.metafacture.triples.TripleFilter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleFilter.java)
 
+find-fix-paths
+--------------
+- description:	Finds all paths that have values that match the given pattern. Allows for regex. These paths can be used in a Fix to address fields.
+- signature:	StreamReceiver -> String
+- java class:	org.metafacture.metafix.FindFixPaths
+
 fix
 ---
 - options:	repeatedfieldstoentities (boolean), strictness [PROCESS, RECORD, EXPRESSION], entitymembername (String), strictnesshandlesprocessexceptions (boolean)
@@ -385,6 +393,7 @@ handle-marcxml
 - description:	A marc xml reader
 - options:	namespace (String), attributemarker (String)
 - signature:	XmlReceiver -> StreamReceiver
+- [example in Playground](https://metafacture.org/playground/?example=handle-marcxml)
 - java class:	[org.metafacture.biblio.marc21.MarcXmlHandler](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlHandler.java)
 
 handle-picaxml
@@ -426,7 +435,8 @@ list-fix-values
 - description:	Lists all values found for the given path. The paths can be found using fix-list-paths. Options: `count` (output occurence frequency of each value, sorted by highest frequency first; default: `true`)`template` (for formatting the internal triple structure; default: `${o}	|	${s}` if count is true, else `${s}`)
 - options:	template (String), count (boolean)
 - signature:	StreamReceiver -> String
-- java class:	org.metafacture.metafix.ListFixValues
+- [example in Playground](https://metafacture.org/playground/?example=list-fix-values)
+- java class:	[org.metafacture.metafix.ListFixValues](https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/ListFixValues.java)
 
 literal-to-object
 -----------------
@@ -697,7 +707,7 @@ stream-to-triples
 stream-to-xml
 -------------
 - description:	Encodes a stream as xml
-- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean)
+- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean), namespaces (String)
 - signature:	StreamReceiver -> String
 - java class:	[org.metafacture.xml.SimpleXmlEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/SimpleXmlEncoder.java)
 
@@ -749,7 +759,7 @@ write
 -----
 - description:	Writes objects to stdout or a file
 - arguments:	[stdout, PATH]
-- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression (String), separator (String)
+- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
 - signature:	Object -> Void
 - java class:	[org.metafacture.io.ObjectWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectWriter.java)
 
@@ -789,5 +799,6 @@ xml-tee
 -------
 - description:	Sends an object to more than one receiver.
 - signature:	XmlReceiver -> XmlReceiver
+- [example in Playground](https://metafacture.org/playground/?example=write)
 - java class:	[org.metafacture.plumbing.XmlTee](https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/XmlTee.java)
 
