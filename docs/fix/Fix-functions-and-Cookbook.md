@@ -732,6 +732,16 @@ to_json("<sourceField>"[, pretty: "<boolean>"][, error_string: "<errorValue>"])
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+to_json+{")
 
+##### `to_base64`
+
+Replaces the value with its Base64 encoding.
+
+```perl
+to_base64("<sourceField>")
+```
+
+[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+to_base64+{")
+
 ##### `trim`
 
 Deletes whitespace at the beginning and the end of a field value.
@@ -1089,3 +1099,4 @@ Executes the functions if/unless the field value does not match the regular expr
 Executes the functions if/unless the string matches the regular expression pattern.
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+str_match+{")
+
