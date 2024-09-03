@@ -5,7 +5,7 @@ parent: Fix
 nav_order: 2
 ---
 
-This page is a replication of the passage [Fix Functions and Cookbook](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#functions-and-cookbook) of the Fix Readme.md. Status: [Fix Release 1.0.0](https://github.com/metafacture/metafacture-fix/releases/tag/1.0.0)
+This page is a replication of the passage [Fix Functions and Cookbook](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#functions-and-cookbook) of the Fix Readme.md. Status: [Fix Release 1.1.2](https://github.com/metafacture/metafacture-fix/releases/tag/1.1.2)
 
 ## Functions and cookbook
 
@@ -195,6 +195,8 @@ array("foo")
 # {"name":"value"} => ["name", "value"]
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=array)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+array+{")
 
 ##### `call_macro`
@@ -258,6 +260,8 @@ hash("foo")
 # ["name", "value"] => {"name":"value"}
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=hash)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+hash+{")
 
 ##### `move_field`
@@ -281,6 +285,8 @@ Parses a text into an array or hash of values.
 ```perl
 parse_text("<sourceField>", "<parsePattern>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=parse_text)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+parse_text+{")
 
@@ -352,6 +358,8 @@ Creates (or replaces) a field with a random number (less than the specified maxi
 random("<targetField>", "<maximum>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=random)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+random+{")
 
 ##### `remove_field`
@@ -422,6 +430,8 @@ set_hash("<targetFieldName>")
 set_hash("<targetFieldName>", "subfieldName": "<subfieldValue>"[, ...])
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=set_hash)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+set_hash+{")
 
 ##### `timestamp`
@@ -437,6 +447,8 @@ Options:
 ```perl
 timestamp("<targetField>"[, format: "<formatPattern>"][, timezone: "<timezoneCode>"][, language: "<languageCode>"])
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=timestamp)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+timestamp+{")
 
@@ -486,6 +498,8 @@ Counts the number of elements in an array or a hash and replaces the field value
 count("<sourceField>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=count)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+count+{")
 
 ##### `downcase`
@@ -507,6 +521,8 @@ Only keeps field values that match the regular expression pattern. Works only wi
 ```perl
 filter("<sourceField>", "<regexp>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=filter)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+filter+{")
 
@@ -543,6 +559,8 @@ Returns the index position of a substring in a field and replaces the field valu
 ```perl
 index("<sourceField>", "<substring>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=index)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+index+{")
 
@@ -669,6 +687,8 @@ Reverses the character order of a string or the element order of an array.
 reverse("<sourceField>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=reverse)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+reverse+{")
 
 ##### `sort_field`
@@ -705,6 +725,8 @@ Replaces a string with its substring as defined by the start position (offset) a
 substring("<sourceField>", "<startPosition>", "<length>")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=substring)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+substring+{")
 
 ##### `sum`
@@ -714,6 +736,8 @@ Sums numbers in an array and replaces the field value with this number.
 ```perl
 sum("<sourceField>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=sum)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+sum+{")
 
@@ -730,6 +754,8 @@ Options:
 to_json("<sourceField>"[, pretty: "<boolean>"][, error_string: "<errorValue>"])
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=to_json)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+to_json+{")
 
 ##### `to_base64`
@@ -739,6 +765,8 @@ Replaces the value with its Base64 encoding.
 ```perl
 to_base64("<sourceField>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=to_base64)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+to_base64+{")
 
@@ -797,6 +825,8 @@ E.g.:
 uri_encode("path.to.field", plus_for_space:"false", safe_chars:"")
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=uri_encode)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+uri_encode+{")
 
 ### Selectors
@@ -846,6 +876,8 @@ end
 #### `do list_as`
 
 Iterates over each _named_ element of an array (like [`do list`](#do-list) with a variable name). If multiple arrays are given, iterates over the _corresponding_ elements from each array (i.e., all elements with the same array index, skipping elements whose arrays have already been exhausted).
+
+[Example in Playground](https://metafacture.org/playground/?example=do+list_as)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixBind.java+"+list_as+{")
 
@@ -958,11 +990,15 @@ end
 
 Executes the functions if/unless the field contains the value. If it is an array or a hash all field values must contain the string.
 
+[Example in Playground](https://metafacture.org/playground/?example=all_contain)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+all_contain+{")
 
 ##### `any_contain`
 
 Executes the functions if/unless the field contains the value. If it is an array or a hash one or more field values must contain the string.
+
+[Example in Playground](https://metafacture.org/playground/?example=any_contain)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+any_contain+{")
 
@@ -970,11 +1006,15 @@ Executes the functions if/unless the field contains the value. If it is an array
 
 Executes the functions if/unless the field does not contain the value. If it is an array or a hash none of the field values may contain the string.
 
+[Example in Playground](https://metafacture.org/playground/?example=none_contain)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+none_contain+{")
 
 ##### `str_contain`
 
 Executes the functions if/unless the first string contains the second string.
+
+[Example in Playground](https://metafacture.org/playground/?example=str_contain)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+str_contain+{")
 
@@ -984,11 +1024,15 @@ Executes the functions if/unless the first string contains the second string.
 
 Executes the functions if/unless the field value equals the string. If it is an array or a hash all field values must equal the string.
 
+[Example in Playground](https://metafacture.org/playground/?example=all_equal)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+all_equal+{")
 
 ##### `any_equal`
 
 Executes the functions if/unless the field value equals the string. If it is an array or a hash one or more field values must equal the string.
+
+[Example in Playground](https://metafacture.org/playground/?example=any_equal)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+any_equal+{")
 
@@ -996,11 +1040,15 @@ Executes the functions if/unless the field value equals the string. If it is an 
 
 Executes the functions if/unless the field value does not equal the string. If it is an array or a hash none of the field values may equal the string.
 
+[Example in Playground](https://metafacture.org/playground/?example=none_equal)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+none_equal+{")
 
 ##### `str_equal`
 
 Executes the functions if/unless the first string equals the second string.
+
+[Example in Playground](https://metafacture.org/playground/?example=str_equal)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+str_equal+{")
 
@@ -1011,6 +1059,9 @@ Executes the functions if/unless the field exists.
 ```perl
 if exists("<sourceField>")
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=exists)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+exists+{")
 
 #### `in`
@@ -1018,6 +1069,8 @@ if exists("<sourceField>")
 Executes the functions if/unless the field value [is contained in](https://perldoc.perl.org/perlop#Smartmatch-Operator) the value of the other field.
 
 _Also aliased as [`is_contained_in`](#is_contained_in)._
+
+[Example in Playground](https://metafacture.org/playground/?example=in)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+in+{")
 
@@ -1029,11 +1082,15 @@ _Alias for [`in`](#in)._
 
 Executes the functions if/unless the field value is an array.
 
+[Example in Playground](https://metafacture.org/playground/?example=is_array)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+is_array+{")
 
 #### `is_empty`
 
 Executes the functions if/unless the field value is empty.
+
+[Example in Playground](https://metafacture.org/playground/?example=is_empty)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+is_empty+{")
 
@@ -1041,17 +1098,23 @@ Executes the functions if/unless the field value is empty.
 
 Executes the functions if/unless the field value equals `false` or `0`.
 
+[Example in Playground](https://metafacture.org/playground/?example=is_false)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+is_false+{")
 
 #### `is_hash`
 
 _Alias for [`is_object`](#is_object)._
 
+[Example in Playground](https://metafacture.org/playground/?example=is_hash)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+is_hash+{")
 
 #### `is_number`
 
 Executes the functions if/unless the field value is a number.
+
+[Example in Playground](https://metafacture.org/playground/?example=is_number)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+is_number+{")
 
@@ -1065,11 +1128,15 @@ _Also aliased as [`is_hash`](#is_hash)._
 
 Executes the functions if/unless the field value is a string (and not a number).
 
+[Example in Playground](https://metafacture.org/playground/?example=is_string)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+is_string+{")
 
 #### `is_true`
 
 Executes the functions if/unless the field value equals `true` or `1`.
+
+[Example in Playground](https://metafacture.org/playground/?example=is_true)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+is_true+{")
 
@@ -1080,11 +1147,15 @@ Executes the functions if/unless the field value equals `true` or `1`.
 
 Executes the functions if/unless the field value matches the regular expression pattern. If it is an array or a hash all field values must match the regular expression pattern.
 
+[Example in Playground](https://metafacture.org/playground/?example=all_match)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+all_match+{")
 
 ##### `any_match`
 
 Executes the functions if/unless the field value matches the regular expression pattern. If it is an array or a hash one or more field values must match the regular expression pattern.
+
+[Example in Playground](https://metafacture.org/playground/?example=any_match)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+any_match+{")
 
@@ -1092,11 +1163,14 @@ Executes the functions if/unless the field value matches the regular expression 
 
 Executes the functions if/unless the field value does not match the regular expression pattern. If it is an array or a hash none of the field values may match the regular expression pattern.
 
+[Example in Playground](https://metafacture.org/playground/?example=none_match)
+
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+none_match+{")
 
 ##### `str_match`
 
 Executes the functions if/unless the string matches the regular expression pattern.
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+str_match+{")
+[Example in Playground](https://metafacture.org/playground/?example=str_match)
 
+[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixConditional.java+"+str_match+{")
