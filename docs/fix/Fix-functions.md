@@ -1,49 +1,11 @@
 ---
 layout: default
-title: Fix Functions and Cookbook
+title: Fix Functions
 parent: Fix
 nav_order: 2
 ---
 
-This page is a replication of the passage [Fix Functions and Cookbook](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#functions-and-cookbook) of the Fix Readme.md. Status: [Fix Release 1.1.2](https://github.com/metafacture/metafacture-fix/releases/tag/1.1.2)
-
-## Functions and cookbook
-
-### Best practices and guidelines for working with Metafacture Fix
-
-- We recommend to use double quotation marks for arguments and values in functions, binds and conditionals.
-- If using a `list` bind with a variable, the `var` option requires quotation marks (`do list(path: "<sourceField>", "var": "<variableName>")`).
-- Fix turns repeated fields into arrays internally but only marked arrays (with `[]` at the end of the field name) are also emitted as "arrays" (entities with indexed literals), all other arrays are emitted as repeated fields.
-- Every Fix file should end with a final newline.
-
-### Glossary
-
-#### Array wildcards
-
-Array wildcards resemble [Catmandu's concept of wildcards](http://librecat.org/Catmandu/#wildcards).
-
-When working with arrays and repeated fields you can use wildcards instead of an index number to select elements of an array.
-
-| Wildcard | Meaning |
-|----------|:--------|
-| `*` | Selects _all_ elements of an array. |
-| `$first` | Selects only the _first_ element of an array. |
-| `$last` | Selects only the _last_ element of an array. |
-| `$prepend` | Selects the position _before_ the first element of an array. Can only be used when adding new elements to an array. |
-| `$append` | Selects the position _after_ the last element of an array. Can only be used when adding new elements to an array. |
-
-#### Path wildcards
-
-Path wildcards resemble [Metamorph's concept of wildcards](https://github.com/metafacture/metafacture-core/wiki/Metamorph-User-Guide#addressing-pieces-of-data). They are not supported in Catmandu (it has [specialized Fix functions](https://librecat.org/Catmandu/#marc-mab-pica-paths) instead).
-
-You can use path wildcards to select fields matching a pattern. They only match path _segments_ (field names), though, not _whole_ paths of nested fields. These wildcards cannot be used to add new elements.
-
-| Wildcard | Meaning |
-|----------|:--------|
-| `*` | Placeholder for zero or more characters. |
-| `?` | Placeholder for exactly one character. |
-| `\|` | Alternation of multiple patterns. |
-| `[...]` | Enumeration of characters. |
+This page is a replication of the passage [Functions](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#functions) of the Fix Readme.md. Status: [Fix Release 1.1.2](https://github.com/metafacture/metafacture-fix/releases/tag/1.1.2)
 
 ### Functions
 
