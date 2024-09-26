@@ -5,7 +5,7 @@ parent: Flux
 nav_order: 2
 ---
 
-Available flux commands
+Available flux commands (With Release 1.1.2)
 =======================
 
 add-oreaggregation
@@ -341,7 +341,8 @@ find-fix-paths
 --------------
 - description:	Finds all paths that have values that match the given pattern. Allows for regex. These paths can be used in a Fix to address fields.
 - signature:	StreamReceiver -> String
-- java class:	org.metafacture.metafix.FindFixPaths
+- [example in Playground](https://metafacture.org/playground/?example=find-fix-paths)
+- java class:	[org.metafacture.metafix.FindFixPaths](https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/FindFixPaths.java )
 
 fix
 ---
@@ -428,7 +429,8 @@ list-fix-paths
 - description:	Lists all paths found in the input records. These paths can be used in a Fix to address fields. Options: `count` (output occurence frequency of each path, sorted by highest frequency first; default: `true`), `template` (for formatting the internal triple structure; default: `${o}	|	${s}` if count is true, else `${s}`)`index` (output individual repeated subfields and array elements with index numbers instead of '*'; default: `false`)
 - options:	template (String), count (boolean), index (boolean)
 - signature:	StreamReceiver -> String
-- java class:	org.metafacture.metafix.ListFixPaths
+- [example in Playground](https://metafacture.org/playground/?example=list-fix-paths)
+- java class:	[org.metafacture.metafix.ListFixPaths](https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/ListFixPaths.java )
 
 list-fix-values
 ---------------
@@ -539,7 +541,7 @@ object-to-literal
 open-file
 ---------
 - description:	Opens a file.
-- options:	decompressconcatenated (boolean), encoding (String), compression (String)
+- options:	decompressconcatenated (boolean), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ]
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-file)
 - java class:	[org.metafacture.io.FileOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/FileOpener.java)
@@ -547,7 +549,7 @@ open-file
 open-http
 ---------
 - description:	Opens an HTTP resource. Supports setting HTTP header fields `Accept`, `Accept-Charset`, `Accept-Encoding`, `Content-Encoding` and `Content-Type`, as well as generic headers (separated by `\n`). Defaults: request `method` = `GET`, request `url` = `@-` (input data), request `body` = `@-` (input data) if request method supports body and input data not already used, `Accept` header (`accept`) = `*/*`, `Accept-Charset` header (`acceptcharset`) = `UTF-8`, `errorprefix` = `ERROR: `.
-- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), contenttype (String), accept (String), errorprefix (String)
+- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), accept (String), errorprefix (String), contenttype (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-http)
 - java class:	[org.metafacture.io.HttpOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/HttpOpener.java)
@@ -582,7 +584,7 @@ pass-through
 print
 -----
 - description:	Writes objects to stdout
-- options:	footer (String), header (String), encoding (String), compression (String), separator (String)
+- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
 - signature:	Object -> 
 - [example in Playground](https://metafacture.org/playground/?example=print)
 - java class:	[org.metafacture.io.ObjectStdoutWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectStdoutWriter.java)
@@ -759,7 +761,7 @@ write
 -----
 - description:	Writes objects to stdout or a file
 - arguments:	[stdout, PATH]
-- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression (String), separator (String)
 - signature:	Object -> Void
 - java class:	[org.metafacture.io.ObjectWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectWriter.java)
 
