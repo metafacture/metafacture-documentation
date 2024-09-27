@@ -12,7 +12,7 @@ The easiest way to get started with Metafacture is the Playground. Take a look a
 
 For commands available in the Flux, see [the Flux commands documentation](flux/flux-commands.html).
 
-For functions and usage of the Fix, see [the Fix functions and cookbook](fix/Fix-functions-and-Cookbook.html).
+For functions of the Fix, see [the Fix functions](fix/Fix-functions-and-Cookbook.html).
 
 For next steps get familar with [FLUX](flux/Flux-User-Guide.html) and [FIX](fix/Fix-User-Guide.html). And try out some Metafacture workflows.
 
