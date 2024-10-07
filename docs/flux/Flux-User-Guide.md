@@ -77,14 +77,14 @@ Semicolons `;` mark the end of a variable assignment or flow definition.
 
 A FLUX contains multiple command-moduls that are doing specific things. E.g.:
 
-```C
-"file/path.mrc"
-| open-file -> This opens the file of the provided `file/path.mrc`-path.
-| as-lines - This reads the file by lines.
-| decode-marc21 -> This decodes the data as binary marc21 into an internal format.
-| fix(FLUX_DIR + "fix-marc21.fix")  -> This executes the provided Fix-transformation.
-| encode-json(prettyPrinting="true") -> This encodes the transformed data as JSON-Format.
-| write("stdout") -> This writes the Json-Data to standard output.
+```c
+"file/path.mrc" //-> Provides incoming sTring e.g. filepath.
+| open-file //-> This opens the file of the provided `file/path.mrc`-path.
+| as-lines //-> This reads the file by lines.
+| decode-marc21 //-> This decodes the data as binary marc21 into an internal format.
+| fix(FLUX_DIR + "fix-marc21.fix")  //-> This executes the provided Fix-transformation.
+| encode-json(prettyPrinting="true") //-> This encodes the transformed data as JSON-Format.
+| write("stdout") //-> This writes the Json-Data to standard output.
 ;
 ``````
 
