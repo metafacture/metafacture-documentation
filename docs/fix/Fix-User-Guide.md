@@ -25,10 +25,10 @@ Flux-Example:
 ```
 
 - when using the FLUX: 
-- - address the `fix`-module
-- - you can add variables
-- - The Fix transformation can be part of the FLUX `|fix("retain('245??')")` - usually useful for short fixes
-- - or it can be separated in an external file, that is called in the FLUX-Process as in the code snippet above
+   - address the `fix`-module
+   - you can add variables
+   - The Fix transformation can be part of the FLUX `|fix("retain('245??')")` - usually useful for short fixes
+   - or it can be separated in an external file, that is called in the FLUX-Process as in the code snippet above
 - when using it in a Java process, just add the library to your process
 
 ## Record-based and metadata manipulating approach
@@ -126,7 +126,7 @@ k : l : m : o : deepNestedField
 ```
 
 The path for a simple string element is addressed by stating the element name: `a`
-For the fields with deeper structure you add a dot ‘.’. The path for elements in nested objects is stated by: `b.c` or `k.l.m.o`
+For the fields with deeper structure you add a dot `.`. The path for elements in nested objects is stated by: `b.c` or `k.l.m.o`
 
 Sometimes an element can have multiple instances. Different data models solve this possibility differently. In XML records element repetition is possible and (partly) allowed in many schemas. Repeatable elements also exist in JSON and YAML but are unusual.
 
@@ -139,21 +139,18 @@ When working with nested structures and combinations of arrays and objects the p
 
 You do not only need the path name for your source element but also if you want to create a new element. But remember that fix, as in catmandu, is using repeated fields and arrays as lists so if you want to create a repeated field you have to create an array without suffix [].
 
-e.g.:
-```PERL
-copy_field("a", "z.y.x")
-```
+e.g.: `copy_field("a", "z.y.x")`
 
 This would copy the value of z in a nested object:
 
-```
+```YAML
 z : 
    y: 
       x : simpleField
 ```
 
 
-To address paths you can use wildcards. For instance the star-wildcard: `person*` would match all simple literals with element names starting with 'person': 'person\_name', 'person\_age', etc.
+To address paths you can use wildcards. For instance the star-wildcard: `person*` would match all simple literals with element names starting with `'person'`: `'person\_name'`, `'person\_age'`, etc.
 Apart from the `*` wildcard, the `?` wildcard is supported. It matches exactly one arbitrary character.
 
 Not fully supported yet is alteration of pathes.
@@ -166,7 +163,7 @@ Since FIX is not constructing a new record stream but is manipulating the existi
 
 e.g.: if you transform MARC21 to JSON but you want to keep only certain elements that you created, you state them in a `retain` function:
 
-```
+```perl
 retain("all",
    elements",
    "that",
