@@ -13,7 +13,7 @@ This document provides an introduction to the Metafacture Fix language (short: M
 Metafacture Fix is a transformation module that can be used in a [Flux Workflow](../flux/Flux-User-Guide.html), for this you have to use this in your pipeline:
 
 Flux-Example:
-```PERL
+```perl
    infile
    | open-file
    | as-lines
@@ -41,7 +41,7 @@ The incoming record then can be manipulated, fields can be changed, removed or a
 The four main concepts of FIX (introduced by catmandu) are [functions](https://librecat.org/Catmandu/#functions), [selector](https://librecat.org/Catmandu/#selectors), [conditionals](https://librecat.org/Catmandu/#conditionals) and [binds](https://librecat.org/Catmandu/#binds). The following code snippet shows examples of eachs of these concepts:
 
 
-```PERL
+```perl
 
 # Simple fix function
 
@@ -83,7 +83,7 @@ end
 **Binds** are wrappers for one or more fixes. They give extra control functionality for fixes such as loops.
 All binds have the same syntax:
 
-```PERL
+```perl
 do Bind(params,…)
    fix(..)
    fix(..)
@@ -100,7 +100,7 @@ Internally FIX knows arrays, objects/hashes and simple elements. How a format is
 Since functions manipulate, add or remove elements in a record, it is essential to understand the way you can address source or target elements.
 
 e.g.:
-```PERL
+```perl
 copy_field("<sourceField>", "<targetField>")
 ```
 
@@ -181,7 +181,7 @@ mechanism later.
 Macros are called with the `call_macro` function. Attributes
 of the function are used as parameters:
 
-```PERL
+```perl
 do put_macro("concat-up")
    set_array("$[target_field]")
    copy_field("$[source_field]","$[target_field].$append")
