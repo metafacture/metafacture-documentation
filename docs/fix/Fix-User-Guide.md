@@ -107,7 +107,7 @@ copy_field("<sourceField>", "<targetField>")
 To address the source or target element here, you need to provide the path to the element.
 Metafacture Fix uses a path syntax that is JSON-Path-like but not identical. It also uses the dot notation but there are some differences with the path structure of arrays and repeated fields. Especially when working with JSON, YAML, or records with repeated fields.
 
-```
+```yaml
 a : simpleField
 b : c : objectField1
    d : objectField2
