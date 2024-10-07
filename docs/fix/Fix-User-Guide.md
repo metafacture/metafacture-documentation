@@ -210,12 +210,15 @@ add_field("rights","$[rights]")
 `$[rights]` in this case is a compile-time variable which is evaluated on
 creation of the respective Fix object.
 
-The `<vars>` section in the Metamorph definition can be used to set defaults:
+With the fix functions `put_var` and `put_vars` you can set defaults:
 
-```xml
-<vars>
-   <var name="rights" value="CC0" />
-</vars>
+```perl
+put_var("rights","CC0)
+
+put_vars(
+   "another_rights": "CC-BY",
+   "additional_rights": "CC-BY-SA"
+)
 ```
 
 For Java implementations: Compile-time variables are passed to Fix as a constructor parameter.
