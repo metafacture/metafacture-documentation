@@ -13,15 +13,15 @@ This document provides an introduction to the Metafacture Fix language (short: M
 Metafacture Fix is a transformation module that can be used in a [Flux Workflow](../flux/Flux-User-Guide.html), for this you have to use this in your pipeline:
 
 Flux-Example:
-```perl
-   infile
-   | open-file
-   | as-lines
-   | decode-marc21
-   | fix(FLUX_DIR + "fixFile.fix")
-   | encode-json
-   | print
-   ;
+```java
+infile
+| open-file
+| as-lines
+| decode-marc21
+| fix(FLUX_DIR + "fixFile.fix")
+| encode-json
+| print
+;
 ```
 
 - when using the FLUX: 
