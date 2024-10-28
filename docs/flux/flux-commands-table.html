@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="../../assets/css/sortTable.css">
+ <script src="../../assets/js/sortable-table.js"></script>
+ <script>
+  function getValue(param) {
+  // Declare variables
+  var filter, table, tr, td, i, txtValue, column;
+
+  input3 = document.getElementById("3");
+  filter3 = input3.querySelector('.name').value.toUpperCase();
+
+  input4 = document.getElementById("4");
+  filter4 = input4.querySelector('.name').value.toUpperCase();
+
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td3 = tr[i].getElementsByTagName("td")[3];
+    td4 = tr[i].getElementsByTagName("td")[4];
+    if (td3 && td4) {
+      txtValue3 = td3.textContent || td3.innerText;
+      txtValue4 = td4.textContent  || td4.innerText;
+      if ((txtValue3.toUpperCase().indexOf(filter3) > -1 || filter3==="*") && (txtValue4.toUpperCase().indexOf(filter4) > -1 || filter4==="*" )) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="table-wrap">
+ <table class="sortable" id="myTable">
+  <caption>
+    Flux commands
+    <span class="sr-only"> (column headers with buttons are sortable).</span>
+  </caption>
+  <thead>
+    <tr>
+      <th>
+        <button>
+          Name
+          <span aria-hidden="true"></span>
+        </button>
+      </th>
+      <th class="no-sort">description</th>
+      <th class="no-sort">options</th>
+      <th id="3">
+        <label for="filterColumn3">Filter IN Signature   :</label>
+        <select id="3" onchange="getValue();" class="name">
+          <option value="*">*</option>
+          <option value="StreamReceiver">StreamReceiver</option>
+          <option value="String">String</option>
+          <option value="Object">Object</option>
+          <option value="Void">Void</option>
+        </select>
+      </th>
+      <th id="4">
+        <label for="filterColumn4">Filter OUT Signature:</label>
+        <select id="4" onchange="getValue();" class="name">
+          <option value="*">*</option>
+          <option value="StreamReceiver">StreamReceiver</option>
+          <option value="String">String</option>
+          <option value="Object">Object</option>
+          <option value="Void">Void</option>
+        </select>
+      </th>
+      <th class="no-sort">example in Playground</th>
+      <th class="no-sort">java class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>add-oreaggregation</td>
+      <td>Adds ore:Aggregation to an Europeana Data Model stream. The aggregation id is set by emitting literal('aggregation_id', id)</td>
+      <td>-</td>
+      <td>StreamReceiver</td>
+      <td>StreamReceiver</td>
+      <td>-</td>
+      <td><a href="https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/OreAggregationAdder.java">org.metafacture.linkeddata.OreAggregationAdder</a></td>
+    </tr>
+    <tr>
+      <td>add-preamble-epilogue</td>
+      <td>Adds a String preamle and/or epilogue to the stream</td>
+      <td>preamble (String), epilogue (String)</td>
+      <td>String</td>
+      <td>String</td>
+      <td><a href="https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/PreambleEpilogueAdder.java">example in Playground</a></td>
+      <td><a href="">org.metafacture.formatting.PreambleEpilogueAdder</a></td>
+    </tr>
+    <tr>
+      <td>badd-preamble-epilogue</td>
+      <td>bAdds a String preamle and/or epilogue to the stream</td>
+      <td>preamble (String), epilogue (String)</td>
+      <td>String</td>
+      <td>StreamReceiver</td>
+      <td><a href="https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/PreambleEpilogueAdder.java">example in Playground</a></td>
+      <td><a href="">org.metafacture.formatting.PreambleEpilogueAdder</a></td>
+    </tr>
+
+    <tr>
+      <td>badd-preamble-epilogue</td>
+      <td>bAdds a String preamle and/or epilogue to the stream</td>
+      <td>preamble (String), epilogue (String)</td>
+      <td>StreamReceiver</td>
+      <td>String</td>
+      <td><a href="https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/PreambleEpilogueAdder.java">example in Playground</a></td>
+      <td><a href="">org.metafacture.formatting.PreambleEpilogueAdder</a></td>
+    </tr>
+  </tbody>
+ </table>
+</div>
+</body>
+</html>
+
