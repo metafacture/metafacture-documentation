@@ -8,7 +8,6 @@ nav_order: 2
 This page is a replication of the passage [Functions](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#functions) of the Fix Readme.md. Status: [Fix Release 1.1.2](https://github.com/metafacture/metafacture-fix/releases/tag/1.1.2)
 
 ### Functions
-
 #### Script-level functions
 
 ##### `include`
@@ -28,6 +27,24 @@ include("<path>"[, <dynamicLocalVariables>...])
 ```
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+include+{")
+
+##### `log`
+
+Sends a message to the logs.
+
+Parameters:
+
+- `logMessage` (required): Message to log.
+
+Options:
+
+- `level`: Log level to log at (one of `DEBUG`, `INFO`, `WARN` or `ERROR`). (Default: `INFO`)
+
+```perl
+log("<logMessage>"[, level: "<logLevel>"])
+```
+
+[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+log+{")
 
 ##### `nothing`
 
@@ -128,7 +145,36 @@ put_vars(
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+put_vars+{")
 
+##### `to_var`
+
+Defines a single global variable that can be referenced with `$[<variableName>]` and assigns the value of the `<sourceField>`.
+
+```perl
+to_var("<sourceField>", "<variableName>")
+```
+
+Options:
+
+- `default`: Default value if source field does not exist. The option needs to be written in quotation marks because it is a reserved word in Java. (Default: Empty string)
+
+[Example in Playground](https://metafacture.org/playground/?example=to_var)
+
+[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+to_var+{")
+
 #### Record-level functions
+
+##### `add_array`
+
+Creates a new array (with optional values).
+
+```perl
+add_array("<targetFieldName>")
+add_array("<targetFieldName>", "<value_1>"[, ...])
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=add_array)
+
+[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+add_array+{")
 
 ##### `add_field`
 
@@ -141,6 +187,19 @@ add_field("<targetFieldName>", "<fieldValue>")
 [Example in Playground](https://metafacture.org/playground/?example=add_field)
 
 [Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+add_field+{")
+
+##### `add_hash`
+
+Creates a new hash (with optional values).
+
+```perl
+add_hash("<targetFieldName>")
+add_hash("<targetFieldName>", "subfieldName": "<subfieldValue>"[, ...])
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=add_hash)
+
+[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+add_hash+{")
 
 ##### `array`
 
@@ -362,39 +421,21 @@ retain("<sourceField_1>"[, ...])
 
 ##### `set_array`
 
-Creates a new array (with optional values).
+_Currently alias for [`add_array`](#add_array)._
 
-```perl
-set_array("<targetFieldName>")
-set_array("<targetFieldName>", "<value_1>"[, ...])
-```
-
-[Example in Playground](https://metafacture.org/playground/?example=set_array)
-
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+set_array+{")
+We advise you to use [`add_array`](#add_array) instead of `set_array` due to changing behaviour in an upcoming release. For more information see: [#309](https://github.com/metafacture/metafacture-fix/issues/309)
 
 ##### `set_field`
 
-Creates (or replaces) a field with a defined value.
+_Currently alias for [`add_field`](#add_field)._
 
-```perl
-set_field("<targetFieldName>", "<fieldValue>")
-```
-
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+set_field+{")
+We advise you to use [`add_field`](#add_field) instead of `set_field` due to changing behaviour in an upcoming release. For more information see: [#309](https://github.com/metafacture/metafacture-fix/issues/309)
 
 ##### `set_hash`
 
-Creates a new hash (with optional values).
+_Currently alias for [`add_hash`](#add_hash)._
 
-```perl
-set_hash("<targetFieldName>")
-set_hash("<targetFieldName>", "subfieldName": "<subfieldValue>"[, ...])
-```
-
-[Example in Playground](https://metafacture.org/playground/?example=set_hash)
-
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-fix+path:FixMethod.java+"+set_hash+{")
+We advise you to use [`add_hash`](#add_hash) instead of `set_hash` due to changing behaviour in an upcoming release. For more information see: [#309](https://github.com/metafacture/metafacture-fix/issues/309)
 
 ##### `timestamp`
 
@@ -567,7 +608,7 @@ Parameters:
 
 Options:
 
-- `__default`: Default value to use for unknown values. (Default: Old value)
+- `default`: Default value to use for unknown values. The option needs to be written in quotation marks because it is a reserved word in Java. (Default: Old value)
 - `delete`: Whether to delete unknown values. (Default: `false`)
 - `print_unknown`: Whether to print unknown values. (Default: `false`)
 
@@ -609,7 +650,7 @@ put_rdfmap("path/to/file", "rdf-map", target: "<rdfProperty>")
 lookup("path.to.field", "rdf-map")
 
 # with default value
-lookup("path.to.field", "map-name", __default: "NA")
+lookup("path.to.field", "map-name", "default": "NA")
 
 # with printing unknown values to a file
 lookup("path.to.field", "map-name", print_unknown: "true", destination: "unknown.txt")
@@ -724,8 +765,12 @@ to_json("<sourceField>"[, pretty: "<boolean>"][, error_string: "<errorValue>"])
 
 Replaces the value with its Base64 encoding.
 
+Options:
+
+-`url_safe`: Perform URL-safe encoding (uses Base64URL format). (Default: `false`)
+
 ```perl
-to_base64("<sourceField>")
+to_base64("<sourceField>"[, url_safe: "<boolean>"])
 ```
 
 [Example in Playground](https://metafacture.org/playground/?example=to_base64)
