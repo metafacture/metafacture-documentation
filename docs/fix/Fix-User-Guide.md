@@ -255,7 +255,7 @@ For performance reasons it is useful to integrate macros and maps that are used 
 
 ## Cookbook
 
-This page is a replication of the passages [Best practices and guidelines for working with Metafacture Fix](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#best-practices-and-guidelines-for-working-with-metafacture-fix) and [Glossary](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#glossary) of the Fix Readme.md. Status: [Fix Release 1.1.2](https://github.com/metafacture/metafacture-fix/releases/tag/1.1.2)
+This page is a replication of the passages [Best practices and guidelines for working with Metafacture Fix](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#best-practices-and-guidelines-for-working-with-metafacture-fix) and [Glossary](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#glossary) of the Fix Readme.md. Status: [Fix Release 1.2.0](https://github.com/metafacture/metafacture-fix/releases/tag/1.2.0)
 
 ### Best practices and guidelines for working with Metafacture Fix
 
