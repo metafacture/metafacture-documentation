@@ -5,8 +5,9 @@ parent: Flux
 nav_order: 2
 ---
 
-Available flux commands (with release 1.2.0)
+Available flux commands on master branch
 =======================
+
 
 add-oreaggregation
 ------------------
@@ -133,7 +134,7 @@ decode-html
 decode-json
 -----------
 - description:	Decodes JSON to metadata events. The 'recordPath' option can be used to set a JsonPath to extract a path as JSON - or to split the data into multiple JSON documents.
-- options:	recordid (String), booleanmarker (String), recordcount (int), arraymarker (String), arrayname (String), recordpath (String), numbermarker (String), allowcomments (boolean)
+- options:	recordid (String), recordcount (int), booleanmarker (String), arraymarker (String), arrayname (String), recordpath (String), allowcomments (boolean), numbermarker (String)
 - signature:	String -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-json)
 - java class:	[org.metafacture.json.JsonDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-json/src/main/java/org/metafacture/json/JsonDecoder.java)
@@ -166,6 +167,7 @@ decode-string
 - description:	Splits a String into several Strings, either by extracting parts that match a regexp or by splitting by a regexp.
 - options:	mode [SPLIT, EXTRACT]
 - signature:	String -> String
+- [example in Playground](https://metafacture.org/playground/?example=decode-string)
 - java class:	[org.metafacture.strings.StringDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringDecoder.java)
 
 decode-xml
@@ -593,8 +595,8 @@ print
 
 rdf-macros
 ----------
-- description:	Expands some macros for RDF/XML
-- options:	autoaddedsubject (String)
+- description:	Expands some macros for RDF/XML. When using Fix, configure `referenceMarker` to any char but the default `*`
+- options:	autoaddedsubject (String), referencemarker (String), languagemarker (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.linkeddata.RdfMacroPipe](https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/RdfMacroPipe.java)
 

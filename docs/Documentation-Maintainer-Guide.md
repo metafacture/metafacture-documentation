@@ -6,7 +6,7 @@ nav_order: 8
 
 # Maintainer Guide
 
-## how to change [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md)
+## How to change [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md)
 
 The entries in [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md) describe the usage of commands used by flux.
 flux-commands.md is fully automatically generated. To make this happen one has to
@@ -37,9 +37,23 @@ The option's name is produced by cutting away the "set" from the methods name, l
 "BatchSize" which is then lowercased. The parameter of this option is generated from the
 parameter type of the method - here an "int"eger.
 
-## how to publish [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md)
+## How to publish [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md)
 
 If you have updated some of these annotations, say "description", and these changes are
-merged into the master branch, generate a new flux-commands.md like explained in https://github.com/metafacture/metafacture-fix/wiki/Maintainer-Guidelines#update-flux-commands.
+merged into the master branch, generate a new flux-commands.md:
+go to the metafacture-core repo, build a distribution and start the flux script by doing:
+
+```
+ cd git/metafacture-core # go to the mf-core repo
+ ./gradlew metafacture-runner:signArchive # make a standalone distribution
+ find . -name "metafacture-core*dist.tar.gz" # find the distribution
+ tar xfz $pathToDst # unpack the distribution
+ find . -name "flux.sh" # find the start script
+ bash $pathToFlux.sh
+```
+
+Modify the generated output (i.e. the header), copy it to docs/flux/flux-commands.md and commit it.
+
+Note that the example links to playground will only be generated if the "metafacture-documentation" repo is checked out and the file "linksAndExamples.tsv" is accessible via "../linksAndExamples.tsv" from the "metafacture-core" repo.
 
 The [publishing process will be automated with an github action](https://github.com/metafacture/metafacture-core/issues/368).

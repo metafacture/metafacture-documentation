@@ -19,7 +19,7 @@ decode-json	https://github.com/metafacture/metafacture-core/blob/master/metafact
 decode-mab	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/MabDecoder.java	https://metafacture.org/playground/?example=decode-mab
 decode-marc21	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Decoder.java	https://metafacture.org/playground/?example=decode-marc21
 decode-pica	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaDecoder.java	https://metafacture.org/playground/?example=decode-pica
-decode-string	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringDecoder.java	
+decode-string	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringDecoder.java	https://metafacture.org/playground/?example=decode-string
 decode-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlDecoder.java	https://metafacture.org/playground/?example=decode-xml
 decode-yaml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-yaml/src/main/java/org/metafacture/yaml/YamlDecoder.java	https://metafacture.org/playground/?example=decode-yaml
 decouple	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectPipeDecoupler.java	
