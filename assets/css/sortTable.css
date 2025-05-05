@@ -3,6 +3,22 @@
   top: -30em;
 }
 
+tr thead{
+width: 100%;
+table-layout: fixed;
+}
+
+table{
+ height: 80%;
+ display: block;
+}
+tbody{
+  overflow-y: scroll;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+}
+
 table.sortable td,
 table.sortable th {
   padding: 0.125em 0.25em;
