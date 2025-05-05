@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
- <link rel="stylesheet" href="../../assets/css/sortTable.css">
- <script src="../../assets/js/sortable-table.js"></script>
- <script>
+<link rel="stylesheet" href="../../assets/css/sortTable.css" />
+
+<script src="../../assets/js/sortable-table.js"></script>
+
+<script>
   function getValue(param) {
-  // Declare variables
   var filter, table, tr, td, i, txtValue, column;
 
   input3 = document.getElementById("3");
@@ -17,7 +15,6 @@
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
 
-  // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     td3 = tr[i].getElementsByTagName("td")[3];
     td4 = tr[i].getElementsByTagName("td")[4];
@@ -33,7 +30,7 @@
   }
 }
 </script>
-</head>
+
 <body>
 
 <div class="table-wrap">
@@ -44,10 +41,10 @@
   </caption>
   <thead>
     <tr>
-      <th>
+      <th aria-sort="ascending">
         <button>
-          Name
-          <span aria-hidden="true"></span>
+          Commands
+          <span aria-hidden="false"></span>
         </button>
       </th>
       <th class="no-sort">Description</th>
@@ -82,7 +79,12 @@
         </select>
       </th>
       <th class="no-sort">Example in Playground</th>
-      <th class="no-sort">Java class</th>
+      <th aria-sort="ascending">
+        <button>
+          Java class
+          <span aria-hidden="false"></span>
+        </button>
+      </th>
     </tr>
   </thead>
 
@@ -152,7 +154,7 @@
       </tr>
       <tr>
         <td>calculate-metrics</td>
-        <td>Calculates values for various cooccurrence metrics. The expected inputs are triples containing as subject the var name and as object the count. Marginal counts must appear first, joint counts second. Marinal counts must be written as 1:A, Joint counts as 2:A&B</td>
+        <td>Calculates values for various cooccurrence metrics. The expected inputs are triples containing as subject the var name and as object the count. Marginal counts must appear first, joint counts second. Marinal counts must be written as 1:A, Joint counts as 2:A&amp;B</td>
         <td></td>
         <td>Triple</td>
 <td>Triple</td>
@@ -233,7 +235,7 @@
       </tr>
       <tr>
         <td>decode-html</td>
-        <td>Decode HTML to metadata events. The attrValsAsSubfields option can be used to override the default attribute values to be used as subfields (e.g. by default `link rel="canonical" href="http://example.org"` becomes `link.canonical`). It expects an HTTP-style query string specifying as key the attributes whose value should be used as a subfield, and as value the attribute whose value should be the subfield value, e.g. the default contains `link.rel=href`. To use the HTML element text as the value (instead of another attribute), omit the value of the query-string key-value pair, e.g. `title.lang`. To add to the defaults, instead of replacing them, start with an `&`, e.g. `&h3.class`</td>
+        <td>Decode HTML to metadata events. The attrValsAsSubfields option can be used to override the default attribute values to be used as subfields (e.g. by default `link rel="canonical" href="http://example.org"` becomes `link.canonical`). It expects an HTTP-style query string specifying as key the attributes whose value should be used as a subfield, and as value the attribute whose value should be the subfield value, e.g. the default contains `link.rel=href`. To use the HTML element text as the value (instead of another attribute), omit the value of the query-string key-value pair, e.g. `title.lang`. To add to the defaults, instead of replacing them, start with an `&amp;`, e.g. `&amp;h3.class`</td>
         <td>attrvalsassubfields (String)</td>
         <td>Reader</td>
 <td>StreamReceiver</td>
@@ -1110,6 +1112,5 @@ Arguments: [stdout, PATH]</td>
 
  </table>
 </div>
-</body>
-</html>
 
+</body>
