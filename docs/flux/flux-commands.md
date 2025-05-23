@@ -5,7 +5,7 @@ parent: Flux
 nav_order: 2
 ---
 
-Available flux commands (with release 1.2.0)
+Available flux commands (with release 7.0.0)
 =======================
 
 add-oreaggregation
@@ -166,6 +166,7 @@ decode-string
 - description:	Splits a String into several Strings, either by extracting parts that match a regexp or by splitting by a regexp.
 - options:	mode [SPLIT, EXTRACT]
 - signature:	String -> String
+- [example in Playground](https://metafacture.org/playground/?example=decode-string)
 - java class:	[org.metafacture.strings.StringDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringDecoder.java)
 
 decode-xml
@@ -357,7 +358,7 @@ flatten
 - description:	flattens out entities in a stream by introducing dots in literal names
 - options:	entitymarker (String)
 - signature:	StreamReceiver -> StreamReceiver
-- [example in Playground](https://metafacture.org/playground/?example=flatten)
+- [example in Playground](https://metafacture.org/playground/?example=flatten_in_flux)
 - java class:	[org.metafacture.mangling.StreamFlattener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamFlattener.java)
 
 from-jdom-document
@@ -543,7 +544,7 @@ object-to-literal
 open-file
 ---------
 - description:	Opens a file.
-- options:	decompressconcatenated (boolean), encoding (String), compression (String)
+- options:	decompressconcatenated (boolean), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ]
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-file)
 - java class:	[org.metafacture.io.FileOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/FileOpener.java)
@@ -551,7 +552,7 @@ open-file
 open-http
 ---------
 - description:	Opens an HTTP resource. Supports setting HTTP header fields `Accept`, `Accept-Charset`, `Accept-Encoding`, `Content-Encoding` and `Content-Type`, as well as generic headers (separated by `\n`). Defaults: request `method` = `GET`, request `url` = `@-` (input data), request `body` = `@-` (input data) if request method supports body and input data not already used, `Accept` header (`accept`) = `*/*`, `Accept-Charset` header (`acceptcharset`) = `UTF-8`, `errorprefix` = `ERROR: `.
-- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), contenttype (String), accept (String), errorprefix (String)
+- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), accept (String), errorprefix (String), contenttype (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-http)
 - java class:	[org.metafacture.io.HttpOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/HttpOpener.java)
@@ -586,15 +587,15 @@ pass-through
 print
 -----
 - description:	Writes objects to stdout
-- options:	footer (String), header (String), encoding (String), compression (String), separator (String)
+- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
 - signature:	Object -> Void
 - [example in Playground](https://metafacture.org/playground/?example=print)
 - java class:	[org.metafacture.io.ObjectStdoutWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectStdoutWriter.java)
 
 rdf-macros
 ----------
-- description:	Expands some macros for RDF/XML
-- options:	autoaddedsubject (String)
+- description:	Expands some macros for RDF/XML. When using Fix, configure `referenceMarker` to any char but the default `*`
+- options:	autoaddedsubject (String), referencemarker (String), languagemarker (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.linkeddata.RdfMacroPipe](https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/RdfMacroPipe.java)
 
@@ -670,7 +671,7 @@ retrieve-triple-objects
 sleep
 -----
 - description:	Lets the process sleep for a specific amount of time between objects.
-- options:	sleeptime (int), timeunit [NANOSECONDS, MICROSECONDS, MILLISECONDS, SECONDS, MINUTES, HOURS, DAYS]
+- options:	sleeptime (int), timeunit (String)
 - signature:	Object -> Object
 - java class:	org.metafacture.flowcontrol.ObjectSleeper
 
@@ -770,7 +771,7 @@ write
 -----
 - description:	Writes objects to stdout or a file
 - arguments:	[stdout, PATH]
-- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression (String), separator (String)
 - signature:	Object -> Void
 - java class:	[org.metafacture.io.ObjectWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectWriter.java)
 
