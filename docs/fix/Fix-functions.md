@@ -5,7 +5,7 @@ parent: Fix
 nav_order: 2
 ---
 
-This page is a replication of the passage [Functions](https://github.com/metafacture/metafacture-fix?tab=readme-ov-file#functions) of the Fix Readme.md. Status: [Fix Release 1.2.0](https://github.com/metafacture/metafacture-fix/releases/tag/1.2.0)
+This page is a replication of the passage [Functions](https://github.com/metafacture/metafacture-core?tab=readme-ov-file#functions) of the Fix Readme.md. Status: [Core Release 7.0.0](https://github.com/metafacture/metafacture-core/releases/tag/metafacture-core-7.0.0)
 
 ### Functions
 #### Script-level functions
