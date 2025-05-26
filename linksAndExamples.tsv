@@ -19,7 +19,7 @@ decode-json	https://github.com/metafacture/metafacture-core/blob/master/metafact
 decode-mab	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/MabDecoder.java	https://metafacture.org/playground/?example=decode-mab
 decode-marc21	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Decoder.java	https://metafacture.org/playground/?example=decode-marc21
 decode-pica	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaDecoder.java	https://metafacture.org/playground/?example=decode-pica
-decode-string	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringDecoder.java	
+decode-string	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringDecoder.java	https://metafacture.org/playground/?example=decode-string
 decode-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlDecoder.java	https://metafacture.org/playground/?example=decode-xml
 decode-yaml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-yaml/src/main/java/org/metafacture/yaml/YamlDecoder.java	https://metafacture.org/playground/?example=decode-yaml
 decouple	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectPipeDecoupler.java	
@@ -44,7 +44,7 @@ filter-records-by-path	https://github.com/metafacture/metafacture-core/blob/mast
 filter-strings	https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringFilter.java	https://metafacture.org/playground/?example=filter-strings
 filter-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleFilter.java	https://metafacture.org/playground/?example=filter-triples
 find-fix-paths	https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/FindFixPaths.java 	https://metafacture.org/playground/?example=find-fix-paths
-flatten	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamFlattener.java	https://metafacture.org/playground/?example=flatten
+flatten	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamFlattener.java	https://metafacture.org/playground/?example=flatten_in_flux
 from-jdom-document	https://github.com/metafacture/metafacture-core/blob/master/metafacture-jdom/src/main/java/org/metafacture/jdom/JDomDocumentToStream.java	
 handle-cg-xml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/CGXmlHandler.java	
 handle-comarcxml	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/ComarcXmlHandler.java	
