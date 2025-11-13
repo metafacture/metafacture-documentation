@@ -18,10 +18,18 @@ For next steps get familar with [FLUX](flux/Flux-User-Guide.html) and [FIX](fix/
 
 ## Command line
 
-To use Metafacture as a command-line tool, download the latest Metafacture release from our [releases page](https://github.com/metafacture/metafacture-core/releases). Extract the downloaded archive and change into the newly created directory (e.g. `cd metafacture-runner-0.6.1`). Run a Flux workflow with:
+Check if Java 11 or higher is installed with java -version in your terminal. If not, install Java 11 or higher.
 
-`$ ./bin/metafix-runner /path/to/your.flux` on Unix/Linux/Mac or
-`$ ./bin/metafix-runner.bat /path/to/your.flux` on Windows.
+To use Metafacture as a command-line tool, download the latest Metafacture release from our [releases page](https://github.com/metafacture/metafacture-core/releases).
+
+Download metafacture-core-$VERSION-dist.tar.gz or the zip version and extract the archive to your choosen folder. In the folder you find the flux.bat and flux.sh
+
+The code below assumes you moved the resulting folder to your home directory and renamed it to "metafacture".
+
+Run a Flux workflow with:
+
+`$ ./metafacture/flux.sh /path/to/your.flux` on Unix/Linux/Mac or
+`$ ./metafacture/flux.bat /path/to/your.flux` on Windows.
 
 To get started, you can export a workflow from the Playground (last button, !["Export Workflow"](https://metafacture.org/img/export.png)).
 
