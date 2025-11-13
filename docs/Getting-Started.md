@@ -18,7 +18,7 @@ For next steps get familar with [FLUX](flux/Flux-User-Guide.html) and [FIX](fix/
 
 ## Command line
 
-Check if Java 11 or higher is installed with java -version in your terminal. If not, install Java 11 or higher.
+Check if Java 11 or higher is installed with `java -version` in your terminal. If not, install Java 11 or higher.
 
 To use Metafacture as a command-line tool, download the latest Metafacture release from our [releases page](https://github.com/metafacture/metafacture-core/releases).
 
