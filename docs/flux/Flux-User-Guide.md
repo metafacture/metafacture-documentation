@@ -25,7 +25,7 @@ Then execute the script `flux.sh` or `flux.bat` in the unzipped `bin/` folder.
 #### Build from local distribution
 Check out the repo to build a certain branch and roll your own local distribution like this:
 ```bash
-$ cd metafacture-core; ./gradlew installDist
+$ cd metafacture-core; ./gradlew clean installDist
 ```
 
 Then go to `metafacture-core/metafacture-runner/build/install/metafacture-core` and execute the `flux.*` there.
