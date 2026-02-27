@@ -5,9 +5,10 @@ parent: Fix
 nav_order: 2
 ---
 
-This page is a replication of the passage [Functions](https://github.com/metafacture/metafacture-core?tab=readme-ov-file#functions) of the Fix Readme.md. Status: [Core Release 7.0.0](https://github.com/metafacture/metafacture-core/releases/tag/metafacture-core-7.0.0)
+This page is a replication of the passage [Functions](https://github.com/metafacture/metafacture-core?tab=readme-ov-file#functions) of the Fix Readme.md. Status: [Core Release 8.0.0](https://github.com/metafacture/metafacture-core/releases/tag/metafacture-core-8.0.0)
 
 ### Functions
+
 #### Script-level functions
 
 ##### `include`
@@ -26,7 +27,9 @@ Options:
 include("<path>"[, <dynamicLocalVariables>...])
 ```
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+include+{")
+[Example for Metafacture Runner](https://github.com/metafacture/metafacture-core/blob/master/metafacture-runner/src/main/dist/examples/transform/miscFix/include/base.fix)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/Include.java)
 
 ##### `log`
 
@@ -44,7 +47,9 @@ Options:
 log("<logMessage>"[, level: "<logLevel>"])
 ```
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+log+{")
+[Example for Metafacture Runner](https://github.com/metafacture/metafacture-core/blob/master/metafacture-runner/src/main/dist/examples/transform/miscFix/log/base.fix)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/Log.java)
 
 ##### `nothing`
 
@@ -56,7 +61,7 @@ nothing()
 
 [Example in Playground](https://metafacture.org/playground/?example=nothing)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+nothing+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/Nothing.java)
 
 ##### `put_filemap`
 
@@ -65,8 +70,6 @@ Defines an external map for [lookup](#lookup) from a file or a URL. Maps with mo
 ```perl
 put_filemap("<sourceFile>", "<mapName>", sep_char: "\t")
 ```
-
-[Example in Playground](https://metafacture.org/playground/?example=put_filemap)
 
 The separator (`sep_char`) will vary depending on the source file, e.g.:
 
@@ -85,7 +88,11 @@ Options:
 - `key_column`: Defines the column to be used for keys. Uses zero index. (Default: `0`)
 - `value_column`: Defines the column to be used for values. Uses zero index. (Default: `1`)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+put_filemap+{")
+[Example in Playground](https://metafacture.org/playground/?example=put_filemap)
+
+[Example for Metafacture Runner](https://github.com/metafacture/metafacture-core/blob/master/metafacture-runner/src/main/dist/examples/transform/miscFix/putFilemapLocally/base.fix)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/PutFileMap.java)
 
 ##### `put_map`
 
@@ -101,7 +108,7 @@ put_map("<mapName>",
 
 [Example in Playground](https://metafacture.org/playground/?example=put_map)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+put_map+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/PutMap.java)
 
 ##### `put_rdfmap`
 
@@ -116,7 +123,7 @@ put_rdfmap("<rdfResource>", "<rdfMapName>", target: "<rdfProperty>", select_lang
 
 [Example in Playground](https://metafacture.org/playground/?example=put_rdfmap)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+put_rdfmap+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/PutRdfMap.java)
 
 ##### `put_var`
 
@@ -128,7 +135,7 @@ put_var("<variableName>", "<variableValue>")
 
 [Example in Playground](https://metafacture.org/playground/?example=put_var)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+put_var+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/PutVar.java)
 
 ##### `put_vars`
 
@@ -143,7 +150,7 @@ put_vars(
 
 [Example in Playground](https://metafacture.org/playground/?example=put_vars)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+put_vars+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/PutVars.java)
 
 ##### `to_var`
 
@@ -159,7 +166,7 @@ Options:
 
 [Example in Playground](https://metafacture.org/playground/?example=to_var)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+to_var+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/script/ToVar.java)
 
 #### Record-level functions
 
@@ -174,7 +181,7 @@ add_array("<targetFieldName>", "<value_1>"[, ...])
 
 [Example in Playground](https://metafacture.org/playground/?example=add_array)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+add_array+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/AddArray.java)
 
 ##### `add_field`
 
@@ -186,7 +193,7 @@ add_field("<targetFieldName>", "<fieldValue>")
 
 [Example in Playground](https://metafacture.org/playground/?example=add_field)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+add_field+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/AddField.java)
 
 ##### `add_hash`
 
@@ -199,7 +206,7 @@ add_hash("<targetFieldName>", "subfieldName": "<subfieldValue>"[, ...])
 
 [Example in Playground](https://metafacture.org/playground/?example=add_hash)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+add_hash+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/AddHash.java)
 
 ##### `array`
 
@@ -218,7 +225,7 @@ array("foo")
 
 [Example in Playground](https://metafacture.org/playground/?example=array)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+array+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Array.java)
 
 ##### `call_macro`
 
@@ -241,7 +248,7 @@ call_macro("<macroName>"[, <dynamicLocalVariables>...])
 
 [Example in Playground](https://metafacture.org/playground/?example=call_macro)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+call_macro+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/CallMacro.java)
 
 ##### `copy_field`
 
@@ -253,19 +260,19 @@ copy_field("<sourceField>", "<targetField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=copy_field)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+copy_field+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/CopyField.java)
 
 ##### `format`
 
-Replaces the value with a formatted (`sprintf`-like) version.
-
----- TODO: THIS NEEDS MORE CONTENT -----
+Replaces the value with a formatted (`sprintf`-like) version as in [java.util.Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html).
 
 ```perl
 format("<sourceField>", "<formatString>")
 ```
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+format+{")
+[Example in Playground](https://metafacture.org/playground/?example=format)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Format.java)
 
 ##### `hash`
 
@@ -283,7 +290,7 @@ hash("foo")
 
 [Example in Playground](https://metafacture.org/playground/?example=hash)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+hash+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Hash.java)
 
 ##### `move_field`
 
@@ -295,21 +302,41 @@ move_field("<sourceField>", "<targetField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=move_field)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+move_field+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/MoveField.java)
 
 ##### `parse_text`
 
-Parses a text into an array or hash of values.
-
----- TODO: THIS NEEDS MORE CONTENT -----
+Parses a text into an array or hash of values using regular expressions and grouping.
 
 ```perl
 parse_text("<sourceField>", "<parsePattern>")
 ```
 
+E.g.:
+
+```perl
+# date1: "2015-03-07"
+parse_text("date1", "(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)")
+# "date1": "2015",
+# "date1": "03".
+# "date1": "07"
+# This repeated field is internally an array, if you rename the field by adding a `[]` suffix the json/yaml encoder would also interpret this repeated element as array.
+
+# "date2": "2015-03-07"
+parse_text("date2", "(?<year>\\d\\d\\d\\d)-(?<month>\\d\\d)-(?<day>\\d\\d)")
+# "date2":
+#   "year": "2015"
+#   "month": "03"
+#   "day": "07"
+
+# date: "abcd"
+parse_text(date, '(\d\d\d\d)-(\d\d)-(\d\d)')
+# date: "abcd"
+```
+
 [Example in Playground](https://metafacture.org/playground/?example=parse_text)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+parse_text+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/ParseText.java)
 
 ##### `paste`
 
@@ -334,7 +361,7 @@ paste("my.string", "~Hi", "a", "~how are you?")
 
 [Example in Playground](https://metafacture.org/playground/?example=paste)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+paste+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Paste.java)
 
 ##### `print_record`
 
@@ -369,7 +396,9 @@ print_record(destination: "record-%2$s.json", id: "001", pretty: "true")
 print_record(destination: "record-%03d.json.gz", header: "After transformation: ")
 ```
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+print_record+{")
+[Example for Metafacture Runner](https://github.com/metafacture/metafacture-core/blob/master/metafacture-runner/src/main/dist/examples/transform/miscFix/printRecord/base.fix)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/PrintRecord.java)
 
 ##### `random`
 
@@ -381,7 +410,7 @@ random("<targetField>", "<maximum>")
 
 [Example in Playground](https://metafacture.org/playground/?example=random)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+random+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Random.java)
 
 ##### `remove_field`
 
@@ -393,7 +422,7 @@ remove_field("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=remove_field)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+remove_field+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/RemoveField.java)
 
 ##### `rename`
 
@@ -405,7 +434,7 @@ rename("<sourceField>", "<regexp>", "<replacement>")
 
 [Example in Playground](https://metafacture.org/playground/?example=rename)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+rename+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Rename.java)
 
 ##### `retain`
 
@@ -417,25 +446,45 @@ retain("<sourceField_1>"[, ...])
 
 [Example in Playground](https://metafacture.org/playground/?example=retain)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+retain+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Retain.java)
 
 ##### `set_array`
 
-_Currently alias for [`add_array`](#add_array)._
+Creates a new array (with optional values), provided that the intermediate structures (i.e. parent fields) exist. To create any missing intermediate structures, use [`add_array`](#add_array) instead.
 
-We advise you to use [`add_array`](#add_array) instead of `set_array` due to changing behaviour in an upcoming release. For more information see: [#309](https://github.com/metafacture/metafacture-fix/issues/309)
+```perl
+set_array("<targetFieldName>")
+set_array("<targetFieldName>", "<value_1>"[, ...])
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=set_array)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/SetArray.java)
 
 ##### `set_field`
 
-_Currently alias for [`add_field`](#add_field)._
+Creates a field with a defined value, provided that the intermediate structures (i.e. parent fields) exist. To create any missing intermediate structures, use [`add_field`](#add_field) instead.
 
-We advise you to use [`add_field`](#add_field) instead of `set_field` due to changing behaviour in an upcoming release. For more information see: [#309](https://github.com/metafacture/metafacture-fix/issues/309)
+```perl
+set_field("<targetFieldName>", "<fieldValue>")
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=set_field)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/SetField.java)
 
 ##### `set_hash`
 
-_Currently alias for [`add_hash`](#add_hash)._
+Creates a new hash (with optional values), provided that the intermediate structures (i.e. parent fields) exist. To create any missing intermediate structures, use [`add_hash`](#add_hash) instead.
 
-We advise you to use [`add_hash`](#add_hash) instead of `set_hash` due to changing behaviour in an upcoming release. For more information see: [#309](https://github.com/metafacture/metafacture-fix/issues/309)
+```perl
+set_hash("<targetFieldName>")
+set_hash("<targetFieldName>", "subfieldName": "<subfieldValue>"[, ...])
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=set_hash)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/SetHash.java)
 
 ##### `timestamp`
 
@@ -453,7 +502,7 @@ timestamp("<targetField>"[, format: "<formatPattern>"][, timezone: "<timezoneCod
 
 [Example in Playground](https://metafacture.org/playground/?example=timestamp)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+timestamp+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Timestamp.java)
 
 ##### `vacuum`
 
@@ -465,7 +514,7 @@ vacuum()
 
 [Example in Playground](https://metafacture.org/playground/?example=vacuum)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+vacuum+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Vacuum.java)
 
 #### Field-level functions
 
@@ -479,7 +528,7 @@ append("<sourceField>", "<appendString>")
 
 [Example in Playground](https://metafacture.org/playground/?example=append)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+append+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Append.java)
 
 ##### `capitalize`
 
@@ -491,7 +540,7 @@ capitalize("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=capitalize)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+capitalize+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Capitalize.java)
 
 ##### `count`
 
@@ -503,7 +552,7 @@ count("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=count)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+count+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Count.java)
 
 ##### `downcase`
 
@@ -515,7 +564,7 @@ downcase("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=downcase)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+downcase+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Downcase.java)
 
 ##### `filter`
 
@@ -527,7 +576,7 @@ filter("<sourceField>", "<regexp>")
 
 [Example in Playground](https://metafacture.org/playground/?example=filter)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+filter+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Filter.java)
 
 ##### `flatten`
 
@@ -539,7 +588,7 @@ flatten("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=flatten)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+flatten+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Flatten.java)
 
 ##### `from_json`
 
@@ -553,7 +602,21 @@ Options:
 from_json("<sourceField>"[, error_string: "<errorValue>"])
 ```
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+from_json+{")
+[Example in Playground](https://metafacture.org/playground/?example=from_json)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/FromJson.java)
+
+##### `html_to_text`
+
+Turns HTML text to plain text.
+
+```perl
+html_to_text("<sourceField>")
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=html_to_text)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/HtmlToText.java)
 
 ##### `index`
 
@@ -565,7 +628,7 @@ index("<sourceField>", "<substring>")
 
 [Example in Playground](https://metafacture.org/playground/?example=index)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+index+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Index.java)
 
 ##### `isbn`
 
@@ -583,7 +646,7 @@ isbn("<sourceField>"[, to: "<isbnFormat>"][, verify_check_digit: "<boolean>"][, 
 
 [Example in Playground](https://metafacture.org/playground/?example=isbn)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+isbn+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Isbn.java)
 
 ##### `join_field`
 
@@ -595,7 +658,7 @@ join_field("<sourceField>", "<separator>")
 
 [Example in Playground](https://metafacture.org/playground/?example=join_field)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+join_field+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/JoinField.java)
 
 ##### `lookup`
 
@@ -656,7 +719,21 @@ lookup("path.to.field", "map-name", "default": "NA")
 lookup("path.to.field", "map-name", print_unknown: "true", destination: "unknown.txt")
 ```
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+lookup+{")
+[Example in Playground](https://metafacture.org/playground/?example=lookup)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Lookup.java)
+
+##### `normalize_utf8`
+
+Performs normalization of diacritics in UTF-8 encoded strings.
+
+```perl
+normalize_utf8("<sourceField>")
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=normalize_utf8)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/NormalizeUTF8.java)
 
 ##### `prepend`
 
@@ -668,7 +745,7 @@ prepend("<sourceField>", "<prependString>")
 
 [Example in Playground](https://metafacture.org/playground/?example=prepend)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+prepend+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Prepend.java)
 
 ##### `replace_all`
 
@@ -680,7 +757,7 @@ replace_all("<sourceField>", "<regexp>", "<replacement>")
 
 [Example in Playground](https://metafacture.org/playground/?example=replace_all)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+replace_all+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/ReplaceAll.java)
 
 ##### `reverse`
 
@@ -692,7 +769,7 @@ reverse("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=reverse)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+reverse+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Reverse.java)
 
 ##### `sort_field`
 
@@ -706,7 +783,7 @@ sort_field("<sourceField>", numeric: "true")
 
 [Example in Playground](https://metafacture.org/playground/?example=sort_field)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+sort_field+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/SortField.java)
 
 ##### `split_field`
 
@@ -718,7 +795,7 @@ split_field("<sourceField>", "<separator>")
 
 [Example in Playground](https://metafacture.org/playground/?example=split_field)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+split_field+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/SplitField.java)
 
 ##### `substring`
 
@@ -730,7 +807,7 @@ substring("<sourceField>", "<startPosition>", "<length>")
 
 [Example in Playground](https://metafacture.org/playground/?example=substring)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+substring+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Substring.java)
 
 ##### `sum`
 
@@ -742,7 +819,23 @@ sum("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=sum)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+sum+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Sum.java)
+
+##### `to_base64`
+
+Replaces the value with its Base64 encoding.
+
+Options:
+
+-`url_safe`: Perform URL-safe encoding (uses Base64URL format). (Default: `false`)
+
+```perl
+to_base64("<sourceField>"[, url_safe: "<boolean>"])
+```
+
+[Example in Playground](https://metafacture.org/playground/?example=to_base64)
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/ToBase64.java)
 
 ##### `to_json`
 
@@ -759,23 +852,7 @@ to_json("<sourceField>"[, pretty: "<boolean>"][, error_string: "<errorValue>"])
 
 [Example in Playground](https://metafacture.org/playground/?example=to_json)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+to_json+{")
-
-##### `to_base64`
-
-Replaces the value with its Base64 encoding.
-
-Options:
-
--`url_safe`: Perform URL-safe encoding (uses Base64URL format). (Default: `false`)
-
-```perl
-to_base64("<sourceField>"[, url_safe: "<boolean>"])
-```
-
-[Example in Playground](https://metafacture.org/playground/?example=to_base64)
-
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+to_base64+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/ToJson.java)
 
 ##### `trim`
 
@@ -787,7 +864,7 @@ trim("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=trim)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+trim+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Trim.java)
 
 ##### `uniq`
 
@@ -799,7 +876,7 @@ uniq("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=uniq)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+uniq+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Uniq.java)
 
 ##### `upcase`
 
@@ -811,7 +888,7 @@ upcase("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=upcase)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+upcase+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/Upcase.java)
 
 ##### `uri_encode`
 
@@ -834,7 +911,7 @@ uri_encode("path.to.field", plus_for_space:"false", safe_chars:"")
 
 [Example in Playground](https://metafacture.org/playground/?example=uri_encode)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+uri_encode+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/field/UriEncode.java)
 
 ### Selectors
 
@@ -850,7 +927,7 @@ end
 
 [Example in Playground](https://metafacture.org/playground/?example=reject)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixMethod.java+"+reject+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/method/record/Reject.java)
 
 ### Binds
 
@@ -858,7 +935,7 @@ end
 
 Iterates over each element of an array. In contrast to Catmandu, it can also iterate over a single object or string.
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixBind.java+"+list+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/bind/List.java)
 
 ```perl
 do list(path: "<sourceField>")
@@ -886,7 +963,7 @@ Iterates over each _named_ element of an array (like [`do list`](#do-list) with 
 
 [Example in Playground](https://metafacture.org/playground/?example=do+list_as)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixBind.java+"+list_as+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/bind/ListAs.java)
 
 ```perl
 do list_as(element_1: "<sourceField_1>"[, ...])
@@ -919,7 +996,7 @@ end
 
 [Example in Playground](https://metafacture.org/playground/?example=do_once)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixBind.java+"+once+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/bind/Once.java)
 
 In order to execute multiple blocks only once, tag them with unique identifiers:
 
@@ -959,7 +1036,7 @@ call_macro("<macroName>"[, <dynamicLocalVariables>...])
 
 [Example in Playground](https://metafacture.org/playground/?example=do_put_macro)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixBind.java+"+put_macro+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/bind/PutMacro.java)
 
 ### Conditionals
 
@@ -975,11 +1052,15 @@ if <condition(params, ...)>
 end
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=if-conditional)
+
 ```perl
 unless <condition(params, ...)>
   ...
 end
 ```
+
+[Example in Playground](https://metafacture.org/playground/?example=unless-conditional)
 
 ```perl
 if <condition(params, ...)>
@@ -991,6 +1072,8 @@ else
 end
 ```
 
+[Example in Playground](https://metafacture.org/playground/?example=if-elsif-else-conditionals)
+
 #### `contain`
 
 ##### `all_contain`
@@ -999,7 +1082,7 @@ Executes the functions if/unless the field contains the value. If it is an array
 
 [Example in Playground](https://metafacture.org/playground/?example=all_contain)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+all_contain+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/AllContain.java)
 
 ##### `any_contain`
 
@@ -1007,7 +1090,7 @@ Executes the functions if/unless the field contains the value. If it is an array
 
 [Example in Playground](https://metafacture.org/playground/?example=any_contain)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+any_contain+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/AnyContain.java)
 
 ##### `none_contain`
 
@@ -1015,7 +1098,7 @@ Executes the functions if/unless the field does not contain the value. If it is 
 
 [Example in Playground](https://metafacture.org/playground/?example=none_contain)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+none_contain+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/NoneContain.java)
 
 ##### `str_contain`
 
@@ -1023,7 +1106,7 @@ Executes the functions if/unless the first string contains the second string.
 
 [Example in Playground](https://metafacture.org/playground/?example=str_contain)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+str_contain+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/StrContain.java)
 
 #### `equal`
 
@@ -1033,7 +1116,7 @@ Executes the functions if/unless the field value equals the string. If it is an 
 
 [Example in Playground](https://metafacture.org/playground/?example=all_equal)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+all_equal+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/AllEqual.java)
 
 ##### `any_equal`
 
@@ -1041,7 +1124,7 @@ Executes the functions if/unless the field value equals the string. If it is an 
 
 [Example in Playground](https://metafacture.org/playground/?example=any_equal)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+any_equal+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/AnyEqual.java)
 
 ##### `none_equal`
 
@@ -1049,7 +1132,7 @@ Executes the functions if/unless the field value does not equal the string. If i
 
 [Example in Playground](https://metafacture.org/playground/?example=none_equal)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+none_equal+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/NoneEqual.java)
 
 ##### `str_equal`
 
@@ -1057,7 +1140,7 @@ Executes the functions if/unless the first string equals the second string.
 
 [Example in Playground](https://metafacture.org/playground/?example=str_equal)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+str_equal+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/StrEqual.java)
 
 #### `exists`
 
@@ -1069,7 +1152,7 @@ if exists("<sourceField>")
 
 [Example in Playground](https://metafacture.org/playground/?example=exists)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+exists+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/Exists.java)
 
 #### `greater_than`
 
@@ -1077,7 +1160,7 @@ Executes the functions if/unless the field value is greater than the given value
 
 [Example in Playground](https://metafacture.org/playground/?example=greater_than)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+greater_than+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/GreaterThan.java)
 
 #### `in`
 
@@ -1087,11 +1170,13 @@ _Also aliased as [`is_contained_in`](#is_contained_in)._
 
 [Example in Playground](https://metafacture.org/playground/?example=in)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+in+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/In.java)
 
 #### `is_contained_in`
 
 _Alias for [`in`](#in)._
+
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsContainedIn.java)
 
 #### `is_array`
 
@@ -1099,7 +1184,7 @@ Executes the functions if/unless the field value is an array.
 
 [Example in Playground](https://metafacture.org/playground/?example=is_array)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+is_array+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsArray.java)
 
 #### `is_empty`
 
@@ -1107,7 +1192,7 @@ Executes the functions if/unless the field value is empty.
 
 [Example in Playground](https://metafacture.org/playground/?example=is_empty)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+is_empty+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsEmpty.java)
 
 #### `is_false`
 
@@ -1115,7 +1200,7 @@ Executes the functions if/unless the field value equals `false` or `0`.
 
 [Example in Playground](https://metafacture.org/playground/?example=is_false)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+is_false+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsFalse.java)
 
 #### `is_hash`
 
@@ -1123,7 +1208,7 @@ _Alias for [`is_object`](#is_object)._
 
 [Example in Playground](https://metafacture.org/playground/?example=is_hash)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+is_hash+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsHash.java)
 
 #### `is_number`
 
@@ -1131,7 +1216,7 @@ Executes the functions if/unless the field value is a number.
 
 [Example in Playground](https://metafacture.org/playground/?example=is_number)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+is_number+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsNumber.java)
 
 #### `is_object`
 
@@ -1139,13 +1224,15 @@ Executes the functions if/unless the field value is a hash (object).
 
 _Also aliased as [`is_hash`](#is_hash)._
 
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsObject.java)
+
 #### `is_string`
 
 Executes the functions if/unless the field value is a string (and not a number).
 
 [Example in Playground](https://metafacture.org/playground/?example=is_string)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+is_string+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsString.java)
 
 #### `is_true`
 
@@ -1153,7 +1240,7 @@ Executes the functions if/unless the field value equals `true` or `1`.
 
 [Example in Playground](https://metafacture.org/playground/?example=is_true)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+is_true+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/IsTrue.java)
 
 #### `less_than`
 
@@ -1161,7 +1248,7 @@ Executes the functions if/unless the field value is less than the given value.
 
 [Example in Playground](https://metafacture.org/playground/?example=less_than)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+less_than+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/LessThan.java)
 
 #### `match`
 
@@ -1171,7 +1258,7 @@ Executes the functions if/unless the field value matches the regular expression 
 
 [Example in Playground](https://metafacture.org/playground/?example=all_match)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+all_match+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/AllMatch.java)
 
 ##### `any_match`
 
@@ -1179,7 +1266,7 @@ Executes the functions if/unless the field value matches the regular expression 
 
 [Example in Playground](https://metafacture.org/playground/?example=any_match)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+any_match+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/AnyMatch.java)
 
 ##### `none_match`
 
@@ -1187,7 +1274,7 @@ Executes the functions if/unless the field value does not match the regular expr
 
 [Example in Playground](https://metafacture.org/playground/?example=none_match)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+none_match+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/NoneMatch.java)
 
 ##### `str_match`
 
@@ -1195,4 +1282,4 @@ Executes the functions if/unless the string matches the regular expression patte
 
 [Example in Playground](https://metafacture.org/playground/?example=str_match)
 
-[Java Code](https://github.com/search?type=code&q=repo:metafacture/metafacture-core+path:FixConditional.java+"+str_match+{")
+[Java Code](https://github.com/metafacture/metafacture-core/blob/master/metafix/src/main/java/org/metafacture/metafix/conditional/StrMatch.java)
