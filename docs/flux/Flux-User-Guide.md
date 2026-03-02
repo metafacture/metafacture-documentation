@@ -110,7 +110,7 @@ not yet been set on the command line. Without `default`, previous assignments, e
 
 ### File paths
 
-Paths are always relative to the directory within which Metafacture is executed. Paths can always be stated in UNIX style - even when running Metafacture under Windows. If using Windows style you have to escape the backslashes (`C:\my\path` > `C:\\my\\path`). To address files relative to the location of the executed Flux file, use the predefined `FLUX_DIR` variable. You can also use `..` for the parent directory. The use of a single dot to refer to the current directory `.` is optional (`./myFile` = `myFile`).
+Paths are always relative to the current working directory. Paths can always be stated in UNIX style - even when running Metafacture under Windows. If using Windows style you have to escape the backslashes (`C:\my\path` > `C:\\my\\path`). To address files relative to the location of the executed Flux file, use the predefined `FLUX_DIR` variable. You can also use `..` for the parent directory. The use of a single dot to refer to the current directory `.` is optional (`./myFile` = `myFile`).
 
 ### Comments
 Flux supports single line C/Java-style comments: `//comment`.
