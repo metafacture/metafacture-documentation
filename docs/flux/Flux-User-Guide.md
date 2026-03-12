@@ -109,7 +109,9 @@ Variables are always Strings and can be concatenated with the `+` operator. Esca
 The `default` keyword tells Flux to assign the respective value _only_ if the variable has 
 not yet been set on the command line. Without `default`, previous assignments, e.g. from command line variables, will be overridden by the explicitly assigned value.
 
-Paths are always relative to the directory within which the flux command is executed. To address files relative to the location of the executed flux file, use the predefined `FLUX_DIR` variable.
+### File paths
+
+Paths are always relative to the current working directory. Paths can always be stated in UNIX style - even when running Metafacture under Windows. If using Windows style you have to escape the backslashes (`C:\my\path` > `C:\\my\\path`). To address files relative to the location of the executed Flux file, use the predefined `FLUX_DIR` variable. You can also use `..` for the parent directory. The use of a single dot to refer to the current directory `.` is optional (`./myFile` = `myFile`).
 
 ### Comments
 Flux supports single line C/Java-style comments: `//comment`.

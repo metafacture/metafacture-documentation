@@ -230,6 +230,8 @@ vars.put("rights", "CC-0");
 final Metafix metafix = new metafix("fixdef.fix", vars);
 ```
 
+If you want to reuse the variables of the FLUX workflow: This is done with the * character added to the `fix` command: fix("tranformation.fix", *). In this case Fix gains access to all variable assignments made in Flux.
+
 ## Splitting Fixes for Reuse
 
 In a complex project setting there may be several Fixes in use,
@@ -292,3 +294,7 @@ You can use path wildcards to select fields matching a pattern. They only match 
 | `?` | Placeholder for exactly one character. |
 | `\|` | Alternation of multiple patterns. |
 | `[...]` | Enumeration of characters. |
+
+#### File paths
+
+Some Fix functions can refer to files on your system. Paths are by default relative to the current working directory. Paths can always be stated in UNIX style - even when running Metafacture under Windows. If using Windows style you have to escape the backslashes (`C:\my\path` > `C:\\my\\path`). If you want to address files relative to the Fix file add `.` as directory (`./myFile`). To address files relative to the location of the executed Flux file, use the predefined `FLUX_DIR` variable, but you need to add the `*` to the `fix` command in the Flux (see above). You can also use `..` for the parent directory. 
