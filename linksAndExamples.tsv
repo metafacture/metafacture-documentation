@@ -76,6 +76,7 @@ open-file	https://github.com/metafacture/metafacture-core/blob/master/metafactur
 open-http	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/HttpOpener.java	https://metafacture.org/playground/?example=open-http
 open-oaipmh	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/OaiPmhOpener.java	https://metafacture.org/playground/?example=open-oaipmh
 open-resource	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ResourceOpener.java	
+open-sru	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/SruOpener.java	https://metafacture.org/playground/?example=open-sru
 open-tar	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/TarReader.java	
 pass-through	https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/IdentityStreamPipe.java	
 print	https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectStdoutWriter.java	https://metafacture.org/playground/?example=print

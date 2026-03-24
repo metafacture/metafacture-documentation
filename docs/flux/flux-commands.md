@@ -552,7 +552,7 @@ open-file
 open-http
 ---------
 - description:	Opens an HTTP resource. Supports setting HTTP header fields `Accept`, `Accept-Charset`, `Accept-Encoding`, `Content-Encoding` and `Content-Type`, as well as generic headers (separated by `\n`). Defaults: request `method` = `GET`, request `url` = `@-` (input data), request `body` = `@-` (input data) if request method supports body and input data not already used, `Accept` header (`accept`) = `*/*`, `Accept-Charset` header (`acceptcharset`) = `UTF-8`, `errorprefix` = `ERROR: `.
-- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), contenttype (String), accept (String), errorprefix (String)
+- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), accept (String), errorprefix (String), contenttype (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-http)
 - java class:	[org.metafacture.io.HttpOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/HttpOpener.java)
@@ -578,7 +578,8 @@ open-sru
 The output is an XML document holding the user defined "maximumRecords" as documents - or all, if not set. If there are more documents than defined by "maximumRecords" and there are more documents wanted (defined by "totalRecords") there will be consecutive XML documents output as it pages through the SRU.
 - options:	startrecord (int), query (String), useragent (String), maximumrecords (int), totalrecords (int), recordschema (String), operation (String), version (String)
 - signature:	String -> Reader
-- java class:	org.metafacture.io.SruOpener
+- [example in Playground](https://metafacture.org/playground/?example=open-sru)
+- java class:	[org.metafacture.io.SruOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/SruOpener.java)
 
 open-tar
 --------
