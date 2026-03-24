@@ -53,14 +53,15 @@ add-preamble-epilogue	https://github.com/metafacture/metafacture-core/blob/maste
 
 First column is for the flux command, the second is for the code-link and the last is for a link to an example.
 
-## how to publish [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/28-use-jekyll-theme/docs/flux/flux-commands.md)
+## how to publish [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md)
 
-If you have updated some of these annotations, say "description", and these changes are released, generate a new `flux-commands.md`. Adjustments can be published before a runner unless it refers to an unreleased feature.
+If you have updated some of these annotations, say "description", and these changes are released, generate a new `flux-commands.md`. Adjustments can always be published before a release unless it refers to an unreleased feature.
 
 Steps:
 
-Download the latest released runner: https://github.com/metafacture/metafacture-core/releases . Unzip the downloaded runner distribution. Run the runner in the proper directory without arguments:./metafacture-core/flux.sh (note that the links will only generated if the git repo metafacture-documentation is checked out and the file linksAndExamples.tsv is accessible via ../linksAndExamples.tsv).
-Modify the generated output (i.e. the header) and commit it to http://metafacture.github.io/metafacture-documentation/docs/flux/flux-commands.html.
+- Download the latest released runner: https://github.com/metafacture/metafacture-core/releases
+- Unzip the downloaded runner distribution. Run the runner in the proper directory without arguments:./metafacture-core/flux.sh (note that the links will only generated if the git repo metafacture-documentation is checked out and the file linksAndExamples.tsv is accessible via ../linksAndExamples.tsv).
+- Copy the generated output to [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md), modify the documentation spefic arrangements (i.e. the header) and commit it to http://metafacture.github.io/metafacture-documentation/docs/flux/flux-commands.html.
 
 ## how to publish the changes for the fix documentation
 
