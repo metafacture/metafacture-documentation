@@ -60,7 +60,10 @@ If you have updated some of these annotations, say "description", and these chan
 Steps:
 
 - Download the latest released runner: https://github.com/metafacture/metafacture-core/releases
-- Unzip the downloaded runner distribution. Run the runner in the proper directory without arguments:./metafacture-core/flux.sh (note that the links will only generated if the git repo metafacture-documentation is checked out and the file linksAndExamples.tsv is accessible via ../linksAndExamples.tsv).
+- Unzip the downloaded runner distribution.
+- Check out the metafacture-documentation repo.
+- Change into that directory.
+- Run the runner in the this directory without arguments:./metafacture-core/flux.sh (note that the links will only generated if the git repo metafacture-documentation is checked out and the file linksAndExamples.tsv is accessible).
 - Copy the generated output to [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md), modify the documentation spefic arrangements (i.e. the header) and commit it to http://metafacture.github.io/metafacture-documentation/docs/flux/flux-commands.html.
 
 ## how to publish the changes for the fix documentation
