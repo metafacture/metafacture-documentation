@@ -44,7 +44,7 @@ The description of "options" is produced from all "public setter-methods", in th
 
 The option's name is produced by cutting away the "set" from the methods name, leaving "BatchSize" which is then lowercased. The parameter of this option is generated from the parameter type of the method - here an "int"eger.
 
-To add new example links to the playground or the metafacture runner or adjust existing links as well as the links to the JAVA code you have to update the flux example tsv: linksAndExamples.tsv 
+To add new example links to the playground or the metafacture runner or adjust existing links as well as the links to the JAVA code you have to update the flux example tsv: [`linksAndExamples.tsv`](https://github.com/metafacture/metafacture-documentation/blob/master/linksAndExamples.tsv). 
 
 ```tsv
 flux-commands	code-link	example
@@ -63,13 +63,13 @@ Steps:
 - Unzip the downloaded runner distribution.
 - Check out the metafacture-documentation repo.
 - Change into that directory.
-- Run the runner in the this directory without arguments:./metafacture-core/flux.sh (note that the links will only generated if the git repo metafacture-documentation is checked out and the file linksAndExamples.tsv is accessible).
+- Run the runner in the this directory without arguments:./metafacture-core/flux.sh (note that the links will only generated if the git repo metafacture-documentation is checked out and the file [`linksAndExamples.tsv`](https://github.com/metafacture/metafacture-documentation/blob/master/linksAndExamples.tsv) is accessible).
 - Copy the generated output to [docs/flux/flux-commands.md](https://github.com/metafacture/metafacture-documentation/blob/master/docs/flux/flux-commands.md), modify the documentation spefic arrangements (i.e. the header) and commit it to http://metafacture.github.io/metafacture-documentation/docs/flux/flux-commands.html.
 
 ## how to publish the changes for the fix documentation
 
 Check the README of the released metafacture-core tag: e.g. https://github.com/metafacture/metafacture-core/blob/metafacture-core-8.0.1/README.md#functions-and-cookbook
 
-Copy the `Best practices and guidelines for working with Metafacture Fix` and `Glossary` section to the corresponding section in `docs/fix/Fix-User-Guide.md` and the `Functions` section to `docs/fix/Fix-functions.md`.
+Copy the `Best practices and guidelines for working with Metafacture Fix` and `Glossary` section to the corresponding section in `docs/fix/Fix-User-Guide.md` and the `Functions` section to `docs/fix/Fix-functions.md`. Adjust whitespaces and links if needed.
 
 Commit the the changes and let it review before merging it to the master. The master of the documentation repo should always correpond with the status of  current release and its features. Therefore only changes before a release that improve the documentation are allowed but none that refer to unreleased features.
