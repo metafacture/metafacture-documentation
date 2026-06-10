@@ -11,6 +11,7 @@ catch-object-exception	https://github.com/metafacture/metafacture-core/blob/mast
 catch-stream-exception	https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/StreamExceptionCatcher.java	
 change-id	https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/RecordIdChanger.java	https://metafacture.org/playground/?example=change-id
 collect-triples	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleCollect.java	https://metafacture.org/playground/?example=collect-triples
+count-triples 	https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleCount.java	https://metafacture.org/playground/?example=count-triples
 decode-aseq	https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/AseqDecoder.java	https://metafacture.org/playground/?example=decode-aseq
 decode-csv	https://github.com/metafacture/metafacture-core/blob/master/metafacture-csv/src/main/java/org/metafacture/csv/CsvDecoder.java	https://metafacture.org/playground/?example=decode-csv
 decode-formeta	https://github.com/metafacture/metafacture-core/blob/master/metafacture-formeta/src/main/java/org/metafacture/formeta/FormetaDecoder.java	https://metafacture.org/playground/?example=decode-formeta
