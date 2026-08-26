@@ -38,10 +38,18 @@ If you are working with the source code directly, execute the class `org.metafac
 
 ### Run a Flux file
 
-Just provide the Flux file you wish to run as first argument.
+Just provide the Flux file you wish to run with the `-f` option:
 
 ```bash
-$ flux.sh FILE.flux
+$ flux.sh -f FILE.flux
+```
+
+### Run an inline Flux script
+
+Just provide the Flux statements directly with the `-e` option:
+
+```bash
+$ flux.sh -e '...'
 ```
 
 ### Provide Arguments
@@ -49,7 +57,7 @@ $ flux.sh FILE.flux
 To provide arguments add variable assignments after the first argument as follows:
 
 ```bash
-$ flux.sh FILE.flux var1=value1 var2=value2
+$ flux.sh -f FILE.flux -v var1=value1 -v var2=value2
 ```
 
 This sets the variables `var1` to the value 'value1' and `var2` to the value 'value2'.
@@ -98,15 +106,14 @@ The syntax for defining flows takes its cues from bash pipes. Commands are conca
 
 Some commands take a constructor argument. It is provided within brackets: `command("arg")`.
 Furthermore, some commands have named options. These are set as follows `command(optionname="arg1",annotheroption="arg2")` or with constructor argument: `command("arg",option="arg2")`.
-To learn about the available options of a command, execute Flux without arguments - it will list all available commands, including options. Or simply have a look at the [list of available Flux commands](flux-commands.html).
-
+To learn about the available options of a command, execute the Flux with the `-l`/`--list-commands` option - it will list all available commands, including options. Or simply have a look at the [list of available Flux commands](flux-commands.html).
 
 To some commands the entire environment can be given as an argument. This is done with the `*` character: `fix("tranformation.fix", *)`. In this case Fix gains access to all variable assignments made in Flux.
 (See also [Addressing Pieces of Data: Fix path and the record structure in Fix](../fix/Fix-User-Guide.html#addressing-pieces-of-data-fix-path-and-the-record-structure-in-fix)).
 
 Note that unlike shell pipes, the data flowing between Flux commands is _typed_. This means that only commands with matching signatures can be combined. Commands expect a certain input and provide a certain output like: `StreamReceiver`, `Object`, `Reader`, `String`, `Triple` and others.
 
-To look up the signatures, again: execute Flux without arguments. It will list all available commands, including signatures. Or simply have a look at the  [list of available Flux commands in this documentation](flux-commands.html).
+To look up the signatures, again: execute the Flux with the `-l`/`--list-commands` option. It will list all available commands, including signatures. Or simply have a look at the [list of available Flux commands in this documentation](flux-commands.html).
 
 ### Variables
 
@@ -124,7 +131,7 @@ Flux supports single line C/Java-style comments: `//comment`.
 
 ## Overview of the commands and some examples
 
-1. Have a look at the [list of available Flux commands](flux-commands.html) or execute the Flux without arguments to get a short help text along with a list of all registered commands. This is the list of Flux commands already mentioned above.
+1. Have a look at the [list of available Flux commands](flux-commands.html) or execute the Flux with the `-l`/`--list-commands` option to get a short help text along with a list of all registered commands. This is the list of Flux commands already mentioned above.
 2. There are several example Flux files along with sample data in the repo folder `examples/`: [https://github.com/metafacture/metafacture-core/tree/master/metafacture-runner/src/main/dist/examples](https://github.com/metafacture/metafacture-core/tree/master/metafacture-runner/src/main/dist/examples)
 
 _________________________

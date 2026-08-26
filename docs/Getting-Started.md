@@ -28,8 +28,8 @@ The code below assumes you moved the resulting folder to your home directory and
 
 Run a Flux workflow with:
 
-`$ ./metafacture/flux.sh /path/to/your.flux` on Unix/Linux/Mac or
-`$ ./metafacture/flux.bat /path/to/your.flux` on Windows.
+`$ ./metafacture/flux.sh -f /path/to/your.flux` on Unix/Linux/Mac or
+`$ ./metafacture/flux.bat -f /path/to/your.flux` on Windows.
 
 To get started, you can export a workflow from the Playground (last button, !["Export Workflow"](https://metafacture.org/img/export.png)).
 
