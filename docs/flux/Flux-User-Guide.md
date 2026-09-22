@@ -71,6 +71,12 @@ $ flux.sh -f FILE.flux -v var1=value1 -v var2=value2
 
 This sets the variables `var1` to the value 'value1' and `var2` to the value 'value2'.
 
+E.g.:
+
+```bash
+$ flux.sh -e 'var1 + " " + var2|print;' -v var1=hello -v var2=world
+```
+
 ## Writing Flux files
 
 The following snippet shows a simple Flux file:
