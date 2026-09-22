@@ -16,9 +16,11 @@ The Flux makes use of Metafacture as a stand-alone application - so you build wo
 
 ### Stand-alone application (without Java Code)
 
-Either use a prebuilt distribution by unzipping the Metafacture distribution archive.
+#### Released distribution
 
-Then execute the script `flux.sh` or `flux.bat` in the unzipped `bin/` folder.
+Use the [current released distribution](https://github.com/metafacture/metafacture-core/releases) by unzipping the Metafacture distribution archive.
+
+Then execute the script `flux.sh` or `flux.bat` in the unzipped distribution folder.
 
 ### More elaborate ways for developers:
 
