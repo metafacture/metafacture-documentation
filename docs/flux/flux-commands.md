@@ -5,7 +5,7 @@ parent: Flux
 nav_order: 2
 ---
 
-Status: [Core Release 8.0.1](https://github.com/metafacture/metafacture-core/releases/tag/metafacture-core-8.0.1)
+Status: [Core Release 9.0.0](https://github.com/metafacture/metafacture-core/releases/tag/metafacture-core-9.0.0)
 Available flux commands:
 
 add-oreaggregation
@@ -17,7 +17,7 @@ add-oreaggregation
 add-preamble-epilogue
 ---------------------
 - description:	Adds a String preamle and/or epilogue to the stream
-- options:	preamble (String), epilogue (String)
+- options:	epilogue (String), preamble (String)
 - signature:	String -> String
 - [example in Playground](https://metafacture.org/playground/?example=add-preamble-epilogue)
 - java class:	[org.metafacture.formatting.PreambleEpilogueAdder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-formatting/src/main/java/org/metafacture/formatting/PreambleEpilogueAdder.java)
@@ -39,23 +39,23 @@ as-lines
 as-records
 ----------
 - description:	Reads data from a Reader and splits it into individual records
-- options:	skipemptyrecords (boolean), separator (String)
+- options:	separator (String), skipEmptyRecords (boolean)
 - signature:	Reader -> String
 - [example in Playground](https://metafacture.org/playground/?example=as-records)
 - java class:	[org.metafacture.io.RecordReader](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/RecordReader.java)
 
 batch-log
 ---------
-- description:	Writes log info every BATCHSIZE records. 
-- options:	batchsize (int)
+- description:	Writes log info every BATCHSIZE records.
+- options:	batchSize (int), level (String)
 - signature:	StreamReceiver -> StreamReceiver
-- [example in Playground](https://github.com/metafacture/metafacture-core/blob/master/metafacture-flux-examples/blob/master/sample4/bib-data.pica%3Fraw%3Dtrue%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-pica%0A//+This+cannot+be+shown+by+the+Playground.+Since+it+outputs+to+stoud%3F%0A%7C+batch-log%28batchsize%3D%2220%22%29%0A%7C+encode-json%0A%7C+print%0A%3B)
+- [example for Metafacture Runner](https://github.com/metafacture/metafacture-core/blob/master/metafacture-flux-examples/blob/master/sample4/bib-data.pica%3Fraw%3Dtrue%22%0A%7C+open-http%0A%7C+as-lines%0A%7C+decode-pica%0A//+This+cannot+be+shown+by+the+Playground.+Since+it+outputs+to+stoud%3F%0A%7C+batch-log%28batchsize%3D%2220%22%29%0A%7C+encode-json%0A%7C+print%0A%3B)
 - java class:	[org.metafacture.monitoring.StreamBatchLogger](https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/StreamBatchLogger.java)
 
 batch-reset
 -----------
 - description:	Resets flow for every BATCHSIZE records.
-- options:	batchsize (int)
+- options:	batchSize (int)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.flowcontrol.StreamBatchResetter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/StreamBatchResetter.java)
 
@@ -68,7 +68,7 @@ calculate-metrics
 catch-object-exception
 ----------------------
 - description:	passes objects through and catches exceptions.
-- options:	logprefix (String), logstacktrace (boolean)
+- options:	logPrefix (String), logStackTrace (boolean)
 - signature:	Object -> Object
 - java class:	[org.metafacture.flowcontrol.ObjectExceptionCatcher](https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectExceptionCatcher.java)
 
@@ -81,7 +81,7 @@ catch-stream-exception
 change-id
 ---------
 - description:	By default changes the record ID to the value of the '_id' literal (if present). Use the contructor to choose another literal as ID source.
-- options:	keepidliteral (boolean), idliteral (String), keeprecordswithoutidliteral (boolean)
+- options:	idLiteral (String), keepIdLiteral (boolean), keepRecordsWithoutIdLiteral (boolean)
 - signature:	StreamReceiver -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=change-id)
 - java class:	[org.metafacture.mangling.RecordIdChanger](https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/RecordIdChanger.java)
@@ -96,7 +96,7 @@ collect-triples
 count-triples
 -------------
 - description:	Counts triples
-- options:	countpredicate (String), countby [SUBJECT, PREDICATE, OBJECT, ALL]
+- options:	countBy [SUBJECT, PREDICATE, OBJECT, ALL], countPredicate (String)
 - signature:	Triple -> Triple
 - java class:	org.metafacture.triples.TripleCount
 
@@ -110,7 +110,7 @@ decode-aseq
 decode-csv
 ----------
 - description:	Decodes lines of CSV files. First line may be interpreted as header.
-- options:	hasheader (boolean), separator (String)
+- options:	hasHeader (boolean), separator (String)
 - signature:	String -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-csv)
 - java class:	[org.metafacture.csv.CsvDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-csv/src/main/java/org/metafacture/csv/CsvDecoder.java)
@@ -125,7 +125,7 @@ decode-formeta
 decode-html
 -----------
 - description:	Decode HTML to metadata events. The attrValsAsSubfields option can be used to override the default attribute values to be used as subfields (e.g. by default `link rel="canonical" href="http://example.org"` becomes `link.canonical`). It expects an HTTP-style query string specifying as key the attributes whose value should be used as a subfield, and as value the attribute whose value should be the subfield value, e.g. the default contains `link.rel=href`. To use the HTML element text as the value (instead of another attribute), omit the value of the query-string key-value pair, e.g. `title.lang`. To add to the defaults, instead of replacing them, start with an `&`, e.g. `&h3.class`
-- options:	attrvalsassubfields (String)
+- options:	attrValsAsSubfields (String)
 - signature:	Reader -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-html)
 - java class:	[org.metafacture.html.HtmlDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-html/src/main/java/org/metafacture/html/HtmlDecoder.java)
@@ -133,7 +133,7 @@ decode-html
 decode-json
 -----------
 - description:	Decodes JSON to metadata events. The 'recordPath' option can be used to set a JsonPath to extract a path as JSON - or to split the data into multiple JSON documents.
-- options:	recordid (String), booleanmarker (String), recordcount (int), arraymarker (String), arrayname (String), recordpath (String), numbermarker (String), allowcomments (boolean)
+- options:	allowComments (boolean), arrayMarker (String), arrayName (String), booleanMarker (String), numberMarker (String), recordCount (int), recordId (String), recordPath (String)
 - signature:	String -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-json)
 - java class:	[org.metafacture.json.JsonDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-json/src/main/java/org/metafacture/json/JsonDecoder.java)
@@ -148,7 +148,7 @@ decode-mab
 decode-marc21
 -------------
 - description:	Decodes MARC 21 records (UTF-8 encoding expected).
-- options:	emitleaderaswhole (boolean), ignoremissingid (boolean)
+- options:	emitLeaderAsWhole (boolean), ignoreMissingId (boolean)
 - signature:	String -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-marc21)
 - java class:	[org.metafacture.biblio.marc21.Marc21Decoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Decoder.java)
@@ -156,7 +156,7 @@ decode-marc21
 decode-pica
 -----------
 - description:	Parses pica+ records. The parser only parses single records. A string containing multiple records must be split into individual records before passing it to PicaDecoder.
-- options:	trimfieldnames (boolean), normalizedserialization (boolean), ignoremissingidn (boolean), skipemptyfields (boolean), normalizeutf8 (boolean)
+- options:	ignoreMissingIdn (boolean), normalizeUTF8 (boolean), normalizedSerialization (boolean), skipEmptyFields (boolean), trimFieldNames (boolean)
 - signature:	String -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-pica)
 - java class:	[org.metafacture.biblio.pica.PicaDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaDecoder.java)
@@ -172,7 +172,7 @@ decode-string
 decode-xml
 ----------
 - description:	Reads an XML file and passes the XML events to a receiver. Set `totalEntitySizeLimit="0"` to allow unlimited XML entities.
-- options:	totalentitysizelimit (String)
+- options:	totalEntitySizeLimit (String)
 - signature:	Reader -> XmlReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-xml)
 - java class:	[org.metafacture.xml.XmlDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlDecoder.java)
@@ -180,7 +180,7 @@ decode-xml
 decode-yaml
 -----------
 - description:	Decodes YAML to metadata events.
-- options:	recordid (String), recordcount (int), arraymarker (String), arrayname (String)
+- options:	arrayMarker (String), arrayName (String), recordCount (int), recordId (String)
 - signature:	String -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=decode-yaml)
 - java class:	[org.metafacture.yaml.YamlDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-yaml/src/main/java/org/metafacture/yaml/YamlDecoder.java)
@@ -206,7 +206,7 @@ digest-file
 
 discard-events
 --------------
-- options:	discardlifecycleevents (boolean), discardliteralevents (boolean), discardentityevents (boolean), discardrecordevents (boolean)
+- options:	discardEntityEvents (boolean), discardLifecycleEvents (boolean), discardLiteralEvents (boolean), discardRecordEvents (boolean)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.mangling.StreamEventDiscarder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamEventDiscarder.java)
 
@@ -220,7 +220,7 @@ draw-uniform-sample
 encode-csv
 ----------
 - description:	Encodes each value in a record as a csv row.
-- options:	includeheader (boolean), noquotes (boolean), separator (String), includerecordid (boolean)
+- options:	includeHeader (boolean), includeRecordId (boolean), noQuotes (boolean), separator (String)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-csv)
 - java class:	[org.metafacture.csv.CsvEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-csv/src/main/java/org/metafacture/csv/CsvEncoder.java)
@@ -236,7 +236,7 @@ encode-formeta
 encode-json
 -----------
 - description:	Serialises an object as JSON
-- options:	booleanmarker (String), arraymarker (String), prettyprinting (boolean), numbermarker (String)
+- options:	arrayMarker (String), booleanMarker (String), numberMarker (String), prettyPrinting (boolean)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-json)
 - java class:	[org.metafacture.json.JsonEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-json/src/main/java/org/metafacture/json/JsonEncoder.java)
@@ -252,7 +252,7 @@ encode-literals
 encode-marc21
 -------------
 - description:	Encodes MARC21 records
-- options:	generateidfield (boolean), validateleader (boolean)
+- options:	generateIdField (boolean), validateLeader (boolean)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-marc21)
 - java class:	[org.metafacture.biblio.marc21.Marc21Encoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/Marc21Encoder.java)
@@ -260,7 +260,7 @@ encode-marc21
 encode-marcxml
 --------------
 - description:	Encodes a stream into MARCXML. If you can't ensure valid MARC21 (e.g. the leader isn't correct or not set as one literal) then set the parameter `ensureCorrectMarc21Xml` to `true`.
-- options:	ensurecorrectmarc21xml (boolean), escapeunicode (boolean), emitnamespace (boolean), xmlversion (String), formatted (boolean), xmlencoding (String)
+- options:	emitNamespace (boolean), ensureCorrectMarc21Xml (boolean), escapeUnicode (boolean), formatted (boolean), xmlEncoding (String), xmlVersion (String)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-marcxml)
 - java class:	[org.metafacture.biblio.marc21.MarcXmlEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlEncoder.java)
@@ -268,14 +268,14 @@ encode-marcxml
 encode-pica
 -----------
 - description:	Encodes a stream in pica+ format
-- options:	ignorerecordid (boolean)
+- options:	ignoreRecordId (boolean)
 - signature:	StreamReceiver -> String
 - java class:	[org.metafacture.biblio.pica.PicaEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaEncoder.java)
 
 encode-xml
 ----------
 - description:	Encodes a stream as XML. Defaults: `rootTag="records"`, `recordTag="record"`, no attributeMarker.
-- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean), namespaces (String)
+- options:	attributeMarker (String), namespaceFile (String), namespaces (String), recordTag (String), rootTag (String), separateRoots (boolean), valueTag (String), writeRootTag (boolean), writeXmlHeader (boolean), xmlHeaderEncoding (String), xmlHeaderVersion (String)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-xml)
 - java class:	[org.metafacture.xml.SimpleXmlEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/SimpleXmlEncoder.java)
@@ -283,7 +283,7 @@ encode-xml
 encode-yaml
 -----------
 - description:	Serialises an object as YAML.
-- options:	arraymarker (String), [deprecated] prettyprinting (boolean)
+- options:	arrayMarker (String), [deprecated] prettyPrinting (boolean)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=encode-yaml)
 - java class:	[org.metafacture.yaml.YamlEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-yaml/src/main/java/org/metafacture/yaml/YamlEncoder.java)
@@ -318,15 +318,15 @@ filter-null-values
 filter-records-by-path
 ----------------------
 - description:	Splits a stream into records based on entity path
-- options:	path (String), entityseparator (String), recordidformat (String)
+- options:	entitySeparator (String), path (String), recordIdFormat (String)
 - signature:	StreamReceiver -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=filter-records-by-path)
 - java class:	[org.metafacture.mangling.RecordPathFilter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/RecordPathFilter.java)
 
 filter-strings
 --------------
-- description:	Only forwards records which match (or do not match) a regular expression.
-- options:	passmatches (boolean)
+- description:	Only forwards records which match (or do not match) a regular expression. Patterns are not implicitly anchored and therefore without anchoring the filter works as long as the pattern matches a part of the incoming string.
+- options:	passMatches (boolean)
 - signature:	String -> String
 - [example in Playground](https://metafacture.org/playground/?example=filter-strings)
 - java class:	[org.metafacture.strings.StringFilter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StringFilter.java)
@@ -334,7 +334,7 @@ filter-strings
 filter-triples
 --------------
 - description:	Filters triple. The  patterns for subject, predicate and object are disjunctive.
-- options:	predicatepattern (String), objectpattern (String), passmatches (boolean), subjectpattern (String)
+- options:	objectPattern (String), passMatches (boolean), predicatePattern (String), subjectPattern (String)
 - signature:	Triple -> Triple
 - [example in Playground](https://metafacture.org/playground/?example=filter-triples)
 - java class:	[org.metafacture.triples.TripleFilter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleFilter.java)
@@ -349,14 +349,14 @@ find-fix-paths
 fix
 ---
 - description:	Applies a fix transformation to the event stream, given as the path to a fix file or the fixes themselves.
-- options:	repeatedfieldstoentities (boolean), strictness [PROCESS, RECORD, EXPRESSION], entitymembername (String), strictnesshandlesprocessexceptions (boolean)
+- options:	entityMemberName (String), repeatedFieldsToEntities (boolean), strictness [PROCESS, RECORD, EXPRESSION], strictnessHandlesProcessExceptions (boolean)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	org.metafacture.metafix.Metafix
 
 flatten
 -------
 - description:	flattens out entities in a stream by introducing dots in literal names
-- options:	entitymarker (String)
+- options:	entityMarker (String)
 - signature:	StreamReceiver -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=flatten_in_flux)
 - java class:	[org.metafacture.mangling.StreamFlattener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/StreamFlattener.java)
@@ -381,7 +381,7 @@ handle-comarcxml
 handle-generic-xml
 ------------------
 - description:	A generic XML reader. Separates XML data in distinct records with the defined record tag name (default: `recordtagname="record"`) If no matching record tag is found, the output will be empty. The handler breaks down XML elements with simple string values and optional attributes into entities with a value subfield (name configurable) and additional subfields for each attribute. Record tag and value tag names can be configured. Attributes can get an attributeMarker.
-- options:	emitnamespace (boolean), recordtagname (String), attributemarker (String), valuetagname (String)
+- options:	attributeMarker (String), emitNamespace (boolean), recordTagName (String), valueTagName (String)
 - signature:	XmlReceiver -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=handle-generic-xml)
 - java class:	[org.metafacture.xml.GenericXmlHandler](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/GenericXmlHandler.java)
@@ -395,16 +395,23 @@ handle-mabxml
 handle-marcxml
 --------------
 - description:	A MARC XML reader. To read marc data without namespace specification set option `namespace=""`. To ignore namespace specification set option `ignorenamespace="true".
-- options:	namespace (String), ignorenamespace (boolean), attributemarker (String)
+- options:	attributeMarker (String), ignoreNamespace (boolean), namespace (String)
 - signature:	XmlReceiver -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=handle-marcxml)
 - java class:	[org.metafacture.biblio.marc21.MarcXmlHandler](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/marc21/MarcXmlHandler.java)
 
 handle-picaxml
 --------------
-- description:	A pica xml reader
+- description:	A Pica XML reader. To read pica data without namespace specification set option `namespace=""`. To ignore namespace specification set option `ignorenamespace="true". For PPXML see `handle-ppxml`
+- options:	attributeMarker (String), ignoreNamespace (boolean), namespace (String)
 - signature:	XmlReceiver -> StreamReceiver
 - java class:	[org.metafacture.biblio.pica.PicaXmlHandler](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/pica/PicaXmlHandler.java)
+
+handle-ppxml
+------------
+- description:	A pica ppxml reader
+- signature:	XmlReceiver -> StreamReceiver
+- java class:	org.metafacture.biblio.pica.PpXmlHandler
 
 jscript
 -------
@@ -415,14 +422,14 @@ jscript
 
 json-to-elasticsearch-bulk
 --------------------------
-- options:	idkey (String), index (String), type (String)
+- options:	idKey (String), index (String), type (String)
 - signature:	String -> String
 - java class:	[org.metafacture.elasticsearch.JsonToElasticsearchBulk](https://github.com/metafacture/metafacture-core/blob/master/metafacture-elasticsearch/src/main/java/org/metafacture/elasticsearch/JsonToElasticsearchBulk.java)
 
 lines-to-records
 ----------------
 - description:	Collects strings and emits them as records when a line matches the pattern or the stream is closed.
-- options:	recordmarkerregexp (String)
+- options:	recordMarkerRegexp (String)
 - signature:	String -> String
 - [example in Playground](https://metafacture.org/playground/?example=lines-to-records)
 - java class:	[org.metafacture.strings.LineRecorder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/LineRecorder.java)
@@ -430,7 +437,7 @@ lines-to-records
 list-fix-paths
 --------------
 - description:	Lists all paths found in the input records. These paths can be used in a Fix to address fields. Options: `count` (output occurence frequency of each path, sorted by highest frequency first; default: `true`), `template` (for formatting the internal triple structure; default: `${o}	|	${s}` if count is true, else `${s}`)`index` (output individual repeated subfields and array elements with index numbers instead of '*'; default: `false`)
-- options:	template (String), count (boolean), index (boolean)
+- options:	count (boolean), index (boolean), template (String)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=list-fix-paths)
 - java class:	[org.metafacture.metafix.ListFixPaths](https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/ListFixPaths.java )
@@ -438,7 +445,7 @@ list-fix-paths
 list-fix-values
 ---------------
 - description:	Lists all values found for the given path. The paths can be found using fix-list-paths. Options: `count` (output occurence frequency of each value, sorted by highest frequency first; default: `true`)`template` (for formatting the internal triple structure; default: `${o}	|	${s}` if count is true, else `${s}`)
-- options:	template (String), count (boolean)
+- options:	count (boolean), template (String)
 - signature:	StreamReceiver -> String
 - [example in Playground](https://metafacture.org/playground/?example=list-fix-values)
 - java class:	[org.metafacture.metafix.ListFixValues](https://github.com/metafacture/metafacture-fix/blob/master/metafix/src/main/java/org/metafacture/metafix/ListFixValues.java)
@@ -454,12 +461,14 @@ literal-to-object
 log-object
 ----------
 - description:	logs objects with the toString method
+- options:	level (String), prefix (String)
 - signature:	Object -> Object
 - java class:	[org.metafacture.monitoring.ObjectLogger](https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/ObjectLogger.java)
 
 log-stream
 ----------
 - description:	logs events
+- options:	level (String), prefix (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.monitoring.StreamLogger](https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/StreamLogger.java)
 
@@ -491,7 +500,9 @@ match
 merge-batch-stream
 ------------------
 - description:	Merges a sequence of batchSize records
+- options:	batchSize (int)
 - signature:	StreamReceiver -> StreamReceiver
+- [example in Playground](https://metafacture.org/playground/?flux=inputFile%0A%7C+open-file%0A%7C+as-lines%0A%7C+decode-csv%28hasHeader%3D%22false%22%2Cseparator%3D%22\t%22%29%0A%7C+merge-batch-stream%28batchSize%3D%225%22%29%0A%7C+encode-xml%0A%7C+print%0A%3B&data=990213668520206441%09470880406%0A990192804750206441%09315335947%0A990210548350206441%09030182263%0A990218137340206441%09392293935%0A990226988020206441%09428431380%0A990196937520206441%09381140741%0A990365743670206441%09330924834%0A990190896350206441%09313544158%0A990223229430206441%09047235403%0A990218132640206441%09392303876%0A990188164550206441%09023181478%0A990365742500206441%09409596442%0A99375064692306441%09337262217%0A990197942460206441%09047235195%0A990197561590206441%0912149666X%0A990164965650206441%09277556147%0A99371783791906441%09275915549%0A990175689130206441%09084192593%0A990209452650206441%09435511157%0A990184143810206441%09322197090)
 - java class:	[org.metafacture.plumbing.StreamBatchMerger](https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/StreamBatchMerger.java)
 
 merge-same-ids
@@ -510,21 +521,21 @@ morph
 normalize-unicode-stream
 ------------------------
 - description:	Normalises composed and decomposed Unicode characters.
-- options:	normalizationform [NFD, NFC, NFKD, NFKC], normalizevalues (boolean), normalizeids (boolean), normalizekeys (boolean)
+- options:	normalizationForm [NFD, NFC, NFKD, NFKC], normalizeIds (boolean), normalizeKeys (boolean), normalizeValues (boolean)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.strings.StreamUnicodeNormalizer](https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/StreamUnicodeNormalizer.java)
 
 normalize-unicode-string
 ------------------------
 - description:	Normalizes diacritics in Unicode strings.
-- options:	normalizationform [NFD, NFC, NFKD, NFKC]
+- options:	normalizationForm [NFD, NFC, NFKD, NFKC]
 - signature:	String -> String
 - java class:	[org.metafacture.strings.UnicodeNormalizer](https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/UnicodeNormalizer.java)
 
 object-batch-log
 ----------------
 - description:	Writes log info for every BATCHSIZE records.
-- options:	batchsize (int)
+- options:	batchSize (int), level (String)
 - signature:	Object -> Object
 - java class:	[org.metafacture.monitoring.ObjectBatchLogger](https://github.com/metafacture/metafacture-core/blob/master/metafacture-monitoring/src/main/java/org/metafacture/monitoring/ObjectBatchLogger.java)
 
@@ -537,14 +548,14 @@ object-tee
 object-to-literal
 -----------------
 - description:	Outputs a record containing the input object as literal
-- options:	recordid (String), literalname (String)
+- options:	literalName (String), recordId (String)
 - signature:	Object -> StreamReceiver
 - java class:	[org.metafacture.mangling.ObjectToLiteral](https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/ObjectToLiteral.java)
 
 open-file
 ---------
 - description:	Opens a file.
-- options:	decompressconcatenated (boolean), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ]
+- options:	compression (String), decompressConcatenated (boolean), encoding (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-file)
 - java class:	[org.metafacture.io.FileOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/FileOpener.java)
@@ -552,7 +563,7 @@ open-file
 open-http
 ---------
 - description:	Opens an HTTP resource. Supports setting HTTP header fields `Accept`, `Accept-Charset`, `Accept-Encoding`, `Content-Encoding` and `Content-Type`, as well as generic headers (separated by `\n`). Defaults: request `method` = `GET`, request `url` = `@-` (input data), request `body` = `@-` (input data) if request method supports body and input data not already used, `Accept` header (`accept`) = `*/*`, `Accept-Charset` header (`acceptcharset`) = `UTF-8`, `errorprefix` = `ERROR: `.
-- options:	method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], contentencoding (String), header (String), [deprecated] encoding (String), body (String), acceptcharset (String), acceptencoding (String), url (String), accept (String), errorprefix (String), contenttype (String)
+- options:	accept (String), acceptCharset (String), acceptEncoding (String), body (String), contentEncoding (String), contentType (String), [deprecated] encoding (String), errorPrefix (String), header (String), method [DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE], url (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-http)
 - java class:	[org.metafacture.io.HttpOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/HttpOpener.java)
@@ -560,7 +571,7 @@ open-http
 open-oaipmh
 -----------
 - description:	Opens an OAI-PMH stream and passes a reader to the receiver. Mandatory arguments are: BASE_URL, DATE_FROM, DATE_UNTIL, METADATA_PREFIX, SET_SPEC .
-- options:	setspec (String), datefrom (String), encoding (String), dateuntil (String), metadataprefix (String)
+- options:	dateFrom (String), dateUntil (String), encoding (String), metadataPrefix (String), setSpec (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-oaipmh)
 - java class:	[org.metafacture.biblio.OaiPmhOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-biblio/src/main/java/org/metafacture/biblio/OaiPmhOpener.java)
@@ -576,7 +587,7 @@ open-sru
 --------
 - description:	Opens a SRU stream and passes a reader to the receiver. The input is the base URL of the SRU service to be retrieved from. Mandatory argument is: QUERY.
 The output is an XML document holding the user defined "maximumRecords" as documents - or all, if not set. If there are more documents than defined by "maximumRecords" and there are more documents wanted (defined by "totalRecords") there will be consecutive XML documents output as it pages through the SRU.
-- options:	startrecord (int), query (String), useragent (String), maximumrecords (int), totalrecords (int), recordschema (String), operation (String), version (String)
+- options:	maximumRecords (int), operation (String), query (String), recordSchema (String), startRecord (int), totalRecords (int), userAgent (String), version (String)
 - signature:	String -> Reader
 - [example in Playground](https://metafacture.org/playground/?example=open-sru)
 - java class:	[org.metafacture.io.SruOpener](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/SruOpener.java)
@@ -596,7 +607,7 @@ pass-through
 print
 -----
 - description:	Writes objects to stdout
-- options:	footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], encoding (String), footer (String), header (String), separator (String)
 - signature:	Object -> Void
 - [example in Playground](https://metafacture.org/playground/?example=print)
 - java class:	[org.metafacture.io.ObjectStdoutWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectStdoutWriter.java)
@@ -604,14 +615,14 @@ print
 rdf-macros
 ----------
 - description:	Expands some macros for RDF/XML. When using Fix, configure `referenceMarker` to any char but the default `*`
-- options:	autoaddedsubject (String), referencemarker (String), languagemarker (String)
+- options:	autoAddedSubject (String), languageMarker (String), referenceMarker (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.linkeddata.RdfMacroPipe](https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/RdfMacroPipe.java)
 
 read-beacon
 -----------
 - description:	Reads BEACON format
-- options:	metadatafilter (String), buffersize (int), relation (String)
+- options:	bufferSize (int), metaDataFilter (String), relation (String)
 - signature:	Reader -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=read-beacon)
 - java class:	[org.metafacture.linkeddata.BeaconReader](https://github.com/metafacture/metafacture-core/blob/master/metafacture-linkeddata/src/main/java/org/metafacture/linkeddata/BeaconReader.java)
@@ -619,7 +630,7 @@ read-beacon
 read-dir
 --------
 - description:	Reads a directory and emits all filenames found.
-- options:	filenamepattern (String), recursive (boolean)
+- options:	filenamePattern (String), recursive (boolean)
 - signature:	String -> String
 - java class:	[org.metafacture.files.DirReader](https://github.com/metafacture/metafacture-core/blob/master/metafacture-files/src/main/java/org/metafacture/files/DirReader.java)
 
@@ -638,14 +649,14 @@ read-triples
 
 record-to-entity
 ----------------
-- options:	entityname (String), idliteralname (String)
+- options:	entityName (String), idLiteralName (String)
 - signature:	StreamReceiver -> StreamReceiver
 - java class:	[org.metafacture.mangling.RecordToEntity](https://github.com/metafacture/metafacture-core/blob/master/metafacture-mangling/src/main/java/org/metafacture/mangling/RecordToEntity.java)
 
 regex-decode
 ------------
 - description:	Decodes a string based on a regular expression using named capture groups
-- options:	rawinputliteral (String)
+- options:	rawInputLiteral (String)
 - signature:	String -> StreamReceiver
 - [example in Playground](https://metafacture.org/playground/?example=regex-decode)
 - java class:	[org.metafacture.strings.RegexDecoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-strings/src/main/java/org/metafacture/strings/RegexDecoder.java)
@@ -659,28 +670,28 @@ remodel-pica-multiscript
 reorder-triple
 --------------
 - description:	Shifts subjectTo predicateTo and objectTo around
-- options:	subjectfrom [SUBJECT, PREDICATE, OBJECT], objectfrom [SUBJECT, PREDICATE, OBJECT], predicatefrom [SUBJECT, PREDICATE, OBJECT]
+- options:	objectFrom [SUBJECT, PREDICATE, OBJECT], predicateFrom [SUBJECT, PREDICATE, OBJECT], subjectFrom [SUBJECT, PREDICATE, OBJECT]
 - signature:	Triple -> Triple
 - java class:	[org.metafacture.triples.TripleReorder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleReorder.java)
 
 reset-object-batch
 ------------------
 - description:	Resets the downstream modules every batch-size objects
-- options:	batchsize (int)
+- options:	batchSize (int)
 - signature:	Object -> Object
 - java class:	[org.metafacture.flowcontrol.ObjectBatchResetter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-flowcontrol/src/main/java/org/metafacture/flowcontrol/ObjectBatchResetter.java)
 
 retrieve-triple-objects
 -----------------------
 - description:	Uses the object value of the triple as a URL and emits a new triple in which the object value is replaced with the contents of the resource identified by the URL.
-- options:	defaultencoding (String)
+- options:	defaultEncoding (String)
 - signature:	Triple -> Triple
 - java class:	[org.metafacture.triples.TripleObjectRetriever](https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/TripleObjectRetriever.java)
 
 sleep
 -----
 - description:	Lets the process sleep for a specific amount of time between objects.
-- options:	sleeptime (int), timeunit (String)
+- options:	sleepTime (int), timeUnit (String)
 - signature:	Object -> Object
 - java class:	org.metafacture.flowcontrol.ObjectSleeper
 
@@ -701,7 +712,7 @@ split-lines
 split-xml-elements
 ------------------
 - description:	Splits elements (e.g. defining single records) residing in one XML document into multiple single XML documents.
-- options:	elementname (String), xmldeclaration (String), toplevelelement (String)
+- options:	elementName (String), topLevelElement (String), xmlDeclaration (String)
 - signature:	XmlReceiver -> StreamReceiver
 - java class:	[org.metafacture.xml.XmlElementSplitter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlElementSplitter.java)
 
@@ -720,7 +731,7 @@ stream-tee
 stream-to-triples
 -----------------
 - description:	Emits the literals which are received as triples such that the name and value become the predicate and the object of the triple. The record id containing the literal becomes the subject. If 'redirect' is true, the value of the subject is determined by using either the value of a literal named '_id', or for individual literals by prefixing their name with '{to:ID}'. Set 'recordPredicate' to encode a complete record in one triple. The value of 'recordPredicate' is used as the predicate of the triple. If 'recordPredicate' is set, no {to:ID}NAME-style redirects are possible.
-- options:	redirect (boolean), recordpredicate (String)
+- options:	recordPredicate (String), redirect (boolean)
 - signature:	StreamReceiver -> Triple
 - [example in Playground](https://metafacture.org/playground/?example=stream-to-triples)
 - java class:	[org.metafacture.triples.StreamToTriples](https://github.com/metafacture/metafacture-core/blob/master/metafacture-triples/src/main/java/org/metafacture/triples/StreamToTriples.java)
@@ -728,7 +739,7 @@ stream-to-triples
 stream-to-xml
 -------------
 - description:	Encodes a stream as XML. Defaults: `rootTag="records"`, `recordTag="record"`, no attributeMarker.
-- options:	recordtag (String), namespacefile (String), xmlheaderversion (String), writexmlheader (boolean), xmlheaderencoding (String), separateroots (boolean), roottag (String), valuetag (String), attributemarker (String), writeroottag (boolean), namespaces (String)
+- options:	attributeMarker (String), namespaceFile (String), namespaces (String), recordTag (String), rootTag (String), separateRoots (boolean), valueTag (String), writeRootTag (boolean), writeXmlHeader (boolean), xmlHeaderEncoding (String), xmlHeaderVersion (String)
 - signature:	StreamReceiver -> String
 - java class:	[org.metafacture.xml.SimpleXmlEncoder](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/SimpleXmlEncoder.java)
 
@@ -765,7 +776,7 @@ triples-to-stream
 validate-json
 -------------
 - description:	Validate JSON against a given schema, send only valid input to the receiver. Pass the schema location to validate against. Write valid and/or invalid output to locations specified with `writeValid` and `writeInvalid`. Set the JSON key for the record ID value with `idKey` (for logging output, defaults to `id`).
-- options:	idkey (String), writeinvalid (String), writevalid (String)
+- options:	idKey (String), writeInvalid (String), writeValid (String)
 - signature:	String -> String
 - java class:	[org.metafacture.json.JsonValidator](https://github.com/metafacture/metafacture-core/blob/4bfe2d09df6423a55c20f6ff057b8e24c18ad9f0/metafacture-json/src/main/java/org/metafacture/json/JsonValidator.java)
 
@@ -780,14 +791,15 @@ write
 -----
 - description:	Writes objects to stdout or a file
 - arguments:	[stdout, PATH]
-- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	appendIfFileExists (boolean), compression (String), encoding (String), footer (String), header (String), separator (String)
 - signature:	Object -> Void
+- [example in Playground](https://metafacture.org/playground/?example=write)
 - java class:	[org.metafacture.io.ObjectWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectWriter.java)
 
 write-files
 -----------
 - description:	Writes objects to one (or more) file(s)
-- options:	appendiffileexists (boolean), footer (String), header (String), encoding (String), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], separator (String)
+- options:	appendIfFileExists (boolean), compression [NONE, AUTO, BZIP2, GZIP, PACK200, XZ], encoding (String), footer (String), header (String), separator (String)
 - signature:	Object -> Void
 - java class:	[org.metafacture.io.ObjectFileWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-io/src/main/java/org/metafacture/io/ObjectFileWriter.java)
 
@@ -807,7 +819,7 @@ write-triples
 write-xml-files
 ---------------
 - description:	Writes the XML into the filesystem. The filename is constructed from the XPATH given as 'property'. Variables are:`target` (determining the output directory), `property` (the element in the XML entity. Constitutes the main part of the file's name.), `startIndex` ( a subfolder will be extracted out of the filename. This marks the index' beginning ), `stopIndex` ( a subfolder will be extracted out of the filename. This marks the index' end )
-- options:	endindex (int), startindex (int), property (String), filesuffix (String), encoding (String), compression (String), target (String)
+- options:	compression (String), encoding (String), endIndex (int), fileSuffix (String), property (String), startIndex (int), target (String)
 - signature:	StreamReceiver -> Void
 - java class:	[org.metafacture.xml.XmlFilenameWriter](https://github.com/metafacture/metafacture-core/blob/master/metafacture-xml/src/main/java/org/metafacture/xml/XmlFilenameWriter.java)
 
@@ -815,6 +827,5 @@ xml-tee
 -------
 - description:	Sends an object to more than one receiver.
 - signature:	XmlReceiver -> XmlReceiver
-- [example in Playground](https://metafacture.org/playground/?example=write)
 - java class:	[org.metafacture.plumbing.XmlTee](https://github.com/metafacture/metafacture-core/blob/master/metafacture-plumbing/src/main/java/org/metafacture/plumbing/XmlTee.java)
 
