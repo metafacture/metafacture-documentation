@@ -37,10 +37,10 @@ If you are working with the source code directly, execute the class `org.metafac
 
 ### Run a Flux-File
 
-Just provide the flux file you wish to run as first argument.
+Just provide the flux file you wish to run as first argument with `-f`.
 
 ```bash
-$> flux.sh FILE.flux
+$> flux.sh -f FILE.flux
 ```
 
 ### Provide Arguments
