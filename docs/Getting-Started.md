@@ -14,7 +14,7 @@ For commands available in the Flux, see [the Flux commands documentation](flux/f
 
 For functions of the Fix, see [the Fix functions](fix/Fix-functions.html).
 
-For next steps get familar with [FLUX](flux/Flux-User-Guide.html) and [FIX](fix/Fix-User-Guide.html). And try out some Metafacture workflows.
+For the next steps get familiar with [Flux](flux/Flux-User-Guide.html) and [Fix](fix/Fix-User-Guide.html) and try out some Metafacture workflows.
 
 ## Command line
 
@@ -22,26 +22,26 @@ Check if Java 11 or higher is installed with `java -version` in your terminal. I
 
 To use Metafacture as a command-line tool, download the latest Metafacture release from our [releases page](https://github.com/metafacture/metafacture-core/releases).
 
-Download metafacture-core-$VERSION-dist.tar.gz or the zip version and extract the archive to your choosen folder. In the folder you find the flux.bat and flux.sh
+Download `metafacture-core-$VERSION-dist.tar.gz` or the ZIP version and extract the archive to your chosen folder. In the folder you find the `flux.bat` and `flux.sh` scripts.
 
 The code below assumes you moved the resulting folder to your home directory and renamed it to "metafacture".
 
 Run a Flux workflow with:
 
-`$ ./metafacture/flux.sh /path/to/your.flux` on Unix/Linux/Mac or
-`$ ./metafacture/flux.bat /path/to/your.flux` on Windows.
+`$ ./metafacture/flux.sh -f /path/to/your.flux` on Unix/Linux/Mac or
+`$ ./metafacture/flux.bat -f /path/to/your.flux` on Windows.
 
 To get started, you can export a workflow from the Playground (last button, !["Export Workflow"](https://metafacture.org/img/export.png)).
 
 To set up IDE support for editing your Flux and Fix files, see [the IDE extensions page](https://metafacture.org/ide-extensions.html).
 
-For next steps get familar with [FLUX](flux/Flux-User-Guide.html) and [FIX](fix/Fix-User-Guide.html). And try out some Metafacture workflows.
+For the next steps get familiar with [Flux](flux/Flux-User-Guide.html) and [Fix](fix/Fix-User-Guide.html) and try out some Metafacture workflows.
 
 ## Using Metafacture as a Java library
 
 If you want to use Metafacture in your own Java projects all you need is to add some dependencies to your project. As of Metafacture 5, the single metafacture-core package has been replaced with a number of domain-specific packages. You can find the list of packages on [Maven Central](https://search.maven.org/search?q=g:org.metafacture).
 
-Alternatively, you can simply guess the package names from the top-level folders in the source code repository -- they are the same. 
+Alternatively, you can simply guess the package names from the top-level folders in the source code repository -- they are the same.
 
 For instance, if you want to use the `metafacture-io` library in your project, simply add the following dependency to your `pom.xml`:
 
@@ -61,9 +61,9 @@ dependencies {
 }
 ```
 
-To use Fix you would declare `metafix` instead of `metafacture-io` as in the example above. Note that `metafix` is not published to maven central but only to [github releases](https://github.com/metafacture/metafacture-fix/releases).
+To use Fix you would declare `metafix` instead of `metafacture-io` as in the example above. Note that `metafix` is not published to maven central but only to [GitHub releases](https://github.com/metafacture/metafacture-fix/releases).
 
-Occasionally, we publish snapshot builds on [Sonatype OSS Repository](https://oss.sonatype.org/index.html#nexus-search;gav~org.metafacture~~~~~kw,versionexpand). The version number is derived from the branch name. Snapshot builds from the master branch always have the version `master-SNAPSHOT`. We also provide sometimes pre releases as github packages.
+Occasionally, we publish snapshot builds on [Sonatype OSS Repository](https://oss.sonatype.org/index.html#nexus-search;gav~org.metafacture~~~~~kw,versionexpand). The version number is derived from the branch name. Snapshot builds from the master branch always have the version `master-SNAPSHOT`. We also provide sometimes pre-releases as GitHub packages.
 
 
 If you plan to use Metafacture as a Java library or if you wish to add commands to Flux you should get familar with the [Framework](java-integration/Framework-User-Guide.html).
